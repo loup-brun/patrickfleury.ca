@@ -21,35 +21,54 @@
 <body <?php body_class(); ?>>
 
 <header class="header">
-  <div data-collapse="medium" data-animation="over-right" data-duration="400" data-doc-height="1" class="navbar w-nav">
-    <div class="w-layout-grid navbar-row1"><a href="index.html" id="w-node-348566b9f745-66b9f741" class="brand w-nav-brand w--current"></a><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/Logo.svg" height="50" alt="PFleury" id="w-node-348566b9f747-66b9f741" class="p-logo">
-      <div id="w-node-0eedaaa78c05-66b9f741" class="w-nav-button">
-        <div class="w-icon-nav-menu"></div>
-      </div>
-      <nav role="navigation" id="w-node-348566b9f748-66b9f741" class="w-nav-menu"><a href="#" data-w-id="82b64436-12c9-6f7f-1907-348566b9f749" class="nav-link w-nav-link">Follow</a><a href="#" data-w-id="82b64436-12c9-6f7f-1907-348566b9f74b" class="nav-link w-nav-link">Contact</a><a href="#" class="nav-link w-nav-link">̶ Fr</a></nav>
+  <nav class="navbar navbar-fluid">
+    <a href="<?php bloginfo('url'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row">
+      <span class="sr-only"><?php bloginfo('name'); ?></span>
+
+      <img src="<?php echo get_theme_mod( 'brand_name_img', get_theme_root_uri() . '/' . get_template() . '/assets/Nom.svg'); ?>" height="50" alt="<?php bloginfo('name'); ?>"
+           class="brand-name">
+
+      <img src="<?php echo get_theme_mod( 'brand_logo_img', get_theme_root_uri() . '/' . get_template() . '/assets/Logo.svg'); ?>"
+           alt="Logo"
+           class="brand-logo" />
+
+
+    </a>
+    <div id="w-node-0eedaaa78c05-66b9f741" class="w-nav-button">
+      <div class="w-icon-nav-menu"></div>
     </div>
 
+    <!-- Top menu -->
+    <ul class="navbar-nav ml-auto d-flex flex-row">
+      <li>
+        <a href="#" class="nav-link ml-3">Follow</a>
+      </li>
+      <li>
+        <a href="#" class="nav-link ml-3">Contact</a>
+      </li>
+
+      <!-- Language switch -->
+      <li>
+        <a href="#" class="nav-link ml-3">–Fr</a>
+      </li>
+    </ul>
+
     <?php
     // Header Menu
-    wp_nav_menu( array(
-      'theme_location'=> 'header-menu',
-      'menu_class'    => 'w-layout-grid follow-media',
-      ''              => '',
-    ) );
+//    wp_nav_menu( array(
+//      'theme_location'=> 'header-menu',
+//      'menu_class'    => 'navbar-nav follow-media ml-auto d-flex flex-row',
+//      'container'              => 'ul',
+//    ) );
     ?>
+  </nav>
 
+  <nav class="nav-row2">
+    <!-- Secondary Nav -->
+    <a href="design.html" class="nav-biglink">Design</a>
+    <a id="w-node-348566b9f752-66b9f741" href="studio.html" class="nav-biglink">Studio</a>
+  </nav>
 
-    <?php
-    // Header Menu
-    wp_nav_menu( array(
-      'theme_location'=> 'social-menu',
-      'menu_class'    => 'w-layout-grid follow-media',
-      ''              => '',
-    ) );
-    ?>
-
-    <div class="nav-row2"><a href="design.html" class="nav-biglink">Design</a><a id="w-node-348566b9f752-66b9f741" href="studio.html" class="nav-biglink">Studio</a></div>
-  </div>
-  <div class="header-img"><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home.jpg" width="1240" srcset="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home-p-500.jpeg 500w, assets/header-home-p-800.jpeg 800w, assets/header-home-p-1600.jpeg 1600w, assets/header-home-p-2000.jpeg 2000w, assets/header-home.jpg 2480w" sizes="84vw" alt="" class="image"></div>
+  <div class="header-img"><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home.jpg" width="1240" srcset="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home-p-500.jpeg 500w" sizes="84vw" alt="" class="image"></div>
 </header>
 

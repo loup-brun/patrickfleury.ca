@@ -1,12 +1,9 @@
 /* global IS_DEV */
 
-import devtools from './devtools';
-import button from './components/button';
+import slider from './components/slider';
 
 function loaded() {
-  devtools.init(IS_DEV);
-
-  button();
+  slider();
 }
 
 document.addEventListener('DOMContentLoaded', loaded);

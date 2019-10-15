@@ -42,3 +42,35 @@ add_filter('upload_mimes', function($mimes) {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 });
+
+/**
+ * Adds the individual sections, settings, and controls to the theme customizer
+ */
+function theme_customizer( $wp_customize ) {
+  $wp_customize->add_section(
+    'theme_settings',
+    array(
+      'title' => 'Theme Settings',
+      'description' => 'Theme-specific settings for customization',
+      'priority' => 35,
+    )
+  );
+
+  $wp_customize->add_setting(
+    'copyright_text',
+      array(
+        'default' => 'Default copyright text'
+      )
+  );
+
+  $wp_customize->add_control(
+    'copyright_text',
+    array(
+        'label' => 'Copyright text',
+        'section' => 'theme_settings',
+        'type' => 'text',
+    )
+);
+}
+add_action( 'customize_register', 'theme_customizer' );
+

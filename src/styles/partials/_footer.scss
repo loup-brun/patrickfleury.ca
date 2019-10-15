@@ -1,0 +1,25 @@
+// footer
+
+.footer {
+  padding: $spacer $page-margin;
+  width: 100%;
+  background-color: $white;
+  font-size: 12px;
+  @media (min-width: 700px) {
+    font-size: $font-size-sm;
+  }
+  @extend .text-uppercase;
+  line-height: 0.9; // reduce line height
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.copyright-text {
+  max-width: 330px;
+}
+
+.footer-links {
+  margin-left: 40px;
+}

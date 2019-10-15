@@ -1,0 +1,119 @@
+.swipe-js {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-js-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-js-slide {
+  float: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+
+  // demo purposes
+
+  min-height: 300px;
+  background: orange;
+}
+
+
+.swipe-js-nav {
+  position: absolute;
+  z-index: 2;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding-top: 10px;
+  height: 40px;
+  text-align: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.swipe-js-nav {
+  ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    > li {
+      display: inline-block;
+      > a {
+        border-radius: 100%;
+      }
+    }
+  }
+}
+.swipe-js-nav.w-num > div {
+  width: auto;
+  height: auto;
+  padding: 0.2em 0.5em;
+  font-size: inherit;
+  line-height: inherit;
+}
+.swipe-js-nav.w-shadow > div {
+  box-shadow: 0 0 3px rgba(51, 51, 51, 0.4);
+}
+.swipe-js-nav-invert {
+  color: #fff;
+}
+.swipe-js-nav-invert > div {
+  background-color: rgba(34, 34, 34, 0.4);
+}
+.swipe-js-nav-invert > div.w-active {
+  background-color: #222;
+}
+.swipe-js-nav ul > li > a {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  margin: 0 3px 0.5em;
+  transition: background-color 100ms, color 100ms;
+}
+.swipe-js-nav ul > li > a {
+  background-color: #fff;
+}
+.swipe-js-btn {
+  position: absolute;
+  width: 80px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
+  overflow: hidden;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 40px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.-prev {
+    z-index: 3;
+    right: auto;
+  }
+  &.-next {
+    z-index: 4;
+    left: auto;
+  }
+}
+.swipe-js-prev [class^="w-icon-"],
+.swipe-js-next [class*=" w-icon-"] {
+  position: absolute;
+}

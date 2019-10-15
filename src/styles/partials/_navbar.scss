@@ -32,6 +32,34 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  &--main {
+    width: 100%;
+
+    font-size: $font-size-lg;
+
+    > ul {
+      width: 100%;
+
+      > li {
+        @extend .flex-grow-1;
+
+        &.active {
+          a {
+            border-bottom: $border-width solid $border-color;
+          }
+        }
+
+        a {
+          border-bottom: $border-width solid $border-color;
+          padding: .15rem .1rem;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -55,6 +83,14 @@
   }
 }
 
+img.brand-text {
+  height: $brand-height;
+}
+
+.brand-logo {
+  height: $brand-height;
+}
+
 
 // Navbar nav
 //
@@ -68,8 +104,8 @@
   list-style: none;
 
   .nav-link {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: $spacer;
+    padding-left: $spacer;
   }
 
   .dropdown-menu {

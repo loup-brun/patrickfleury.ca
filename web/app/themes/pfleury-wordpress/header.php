@@ -21,8 +21,8 @@
 <body <?php body_class(); ?>>
 
 <header class="header">
-  <nav class="navbar navbar-fluid">
-    <a href="<?php bloginfo('url'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row">
+  <nav class="navbar align-items-center">
+    <a href="<?php bloginfo('url'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center flex-fill">
       <span class="sr-only"><?php bloginfo('name'); ?></span>
 
       <img src="<?php echo get_theme_mod( 'brand_name_img', get_theme_root_uri() . '/' . get_template() . '/assets/Nom.svg'); ?>" height="50" alt="<?php bloginfo('name'); ?>"
@@ -30,26 +30,68 @@
 
       <img src="<?php echo get_theme_mod( 'brand_logo_img', get_theme_root_uri() . '/' . get_template() . '/assets/Logo.svg'); ?>"
            alt="Logo"
-           class="brand-logo" />
-
-
+           class="brand-logo flex-fill ml-3" />
     </a>
+
+    <!-- Expandable links menu -->
+    <ul class="navbar-nav ml-auto d-flex flex-row nav--expandable-links">
+      <li class="ml-3">
+        <a href="#follow" class="nav-link">Follow</a>
+      </li>
+      <li class="ml-3">
+        <a href="#contact" class="nav-link ">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Language switch -->
+    <a href="#" class="nav-link ml-3">–Fr</a>
+
     <div id="w-node-0eedaaa78c05-66b9f741" class="w-nav-button">
       <div class="w-icon-nav-menu"></div>
     </div>
+  </nav>
 
-    <!-- Top menu -->
-    <ul class="navbar-nav ml-auto d-flex flex-row">
-      <li>
-        <a href="#" class="nav-link ml-3">Follow</a>
-      </li>
-      <li>
-        <a href="#" class="nav-link ml-3">Contact</a>
-      </li>
+  <div class="expand-menus">
 
-      <!-- Language switch -->
+    <div class="expand--follow hidden">
+      <!-- Facebook -->
+      <?php if (get_option('follow_facebook')) { ?>
+      <a href="<?php echo get_theme_mod('follow_facebook'); ?>">Facebook</a>
+      <?php } ?>
+      <!-- Twitter -->
+      <?php if (get_option('follow_twitter')) { ?>
+      <a href="<?php echo get_theme_mod('follow_twitter'); ?>">Twitter</a>
+      <?php } ?>
+      <!-- Instagram -->
+      <?php if (get_option('follow_instagram')) { ?>
+      <a href="<?php echo get_theme_mod('follow_instagram'); ?>">Instagram</a>
+      <?php } ?>
+      <!-- LinkedIn -->
+      <?php if (get_option('follow_linkedin')) { ?>
+      <a href="<?php echo get_theme_mod('follow_linkedin'); ?>">LinkedIn</a>
+      <?php } ?>
+      <!-- Behance -->
+      <?php if (get_option('follow_behance')) { ?>
+      <a href="<?php echo get_theme_mod('follow_behance'); ?>">Behance</a>
+      <?php } ?>
+      <!-- News -->
+      <?php if (get_option('follow_news')) { ?>
+      <a href="<?php echo get_theme_mod('follow_news'); ?>"><?php __('News'); ?></a>
+      <?php } ?>
+    </div>
+
+    <div class="expand--contact hidden">
+    </div>
+  </div>
+
+  <nav class="navbar navbar--main">
+    <!-- Main Nav -->
+    <ul class="navbar-nav d-flex flex-row">
       <li>
-        <a href="#" class="nav-link ml-3">–Fr</a>
+        <a href="design.html">Design</a>
+      </li>
+        <li>
+        <a id="w-node-348566b9f752-66b9f741" href="studio.html" class="">Studio</a>
       </li>
     </ul>
 
@@ -61,12 +103,6 @@
 //      'container'              => 'ul',
 //    ) );
     ?>
-  </nav>
-
-  <nav class="nav-row2">
-    <!-- Secondary Nav -->
-    <a href="design.html" class="nav-biglink">Design</a>
-    <a id="w-node-348566b9f752-66b9f741" href="studio.html" class="nav-biglink">Studio</a>
   </nav>
 
   <div class="header-img"><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home.jpg" width="1240" srcset="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home-p-500.jpeg 500w" sizes="84vw" alt="" class="image"></div>

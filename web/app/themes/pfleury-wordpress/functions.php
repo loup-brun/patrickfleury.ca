@@ -70,7 +70,33 @@ function theme_customizer( $wp_customize ) {
         'section' => 'theme_settings',
         'type' => 'text',
     )
-);
+  );
+
+  $wp_customize->add_section(
+    'social_settings',
+    array(
+      'title' => 'Social Settings',
+      'description' => 'Theme-specific settings for customization',
+      'priority' => 35
+    )
+  );
+
+  $wp_customize->add_setting(
+    'follow_facebook',
+      array(
+        'default' => '',
+        'placeholder' => 'https://facebook.com/username'
+      )
+  );
+
+  $wp_customize->add_control(
+    'follow_facebook',
+    array(
+        'label' => 'Facebook URL',
+        'section' => 'social_settings',
+        'type' => 'text',
+    )
+  );
 }
 add_action( 'customize_register', 'theme_customizer' );
 

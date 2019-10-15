@@ -52,6 +52,10 @@ h6, .h6 {
   font-weight: $lead-font-weight;
 }
 
+.big-text {
+  font-size: $h3-font-size;
+}
+
 // Type display classes
 .display-1 {
   @include font-size($display1-size);
@@ -124,6 +128,14 @@ mark,
   }
 }
 
+//
+// Links
+//
+
+.link-animated {
+  @extend .link-animated;
+}
+
 
 //
 // Misc
@@ -150,3 +162,17 @@ mark,
     content: "\2014\00A0"; // em dash, nbsp
   }
 }
+
+//
+// Content
+//
+
+// user-generated content should go inside `.content`
+
+.content {
+
+  a {
+    @extend .link-animated;
+  }
+}
+

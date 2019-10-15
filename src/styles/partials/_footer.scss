@@ -1,25 +1,44 @@
 // footer
 
 .footer {
-  padding: $spacer $page-margin;
+  padding: $spacer 0;
   width: 100%;
   background-color: $white;
-  font-size: 12px;
-  @media (min-width: 700px) {
-    font-size: $font-size-sm;
+  font-size: 11px;
+  @include media-breakpoint-up(md) {
+    font-size: 1vw;
   }
   @extend .text-uppercase;
-  line-height: 0.9; // reduce line height
+  line-height: 1.1; // reduce line height
 
   a {
-    text-decoration: underline;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 .copyright-text {
-  max-width: 330px;
+//  max-width: 400px;
 }
 
 .footer-links {
   margin-left: 40px;
+
+  ul {
+    > li {
+      margin-left: $spacer / 3;
+
+      &:not(:first-child) {
+        &::before {
+          content: '—'; // &mdash;
+          display: inline-block;
+          margin-left: .25em;
+          margin-right: .25em;
+        }
+      }
+    }
+  }
 }

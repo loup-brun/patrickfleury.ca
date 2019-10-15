@@ -33,30 +33,20 @@
     justify-content: space-between;
   }
 
-  &--main {
-    width: 100%;
+  &--primary {
+    padding-top: $spacer * 2;
+  }
 
-    font-size: $font-size-lg;
+  &--secondary {
+    width: 100%;
+    font-size: $h3-font-size;
+    margin-bottom: $grid-gutter-width / 2;
 
     > ul {
       width: 100%;
 
       > li {
         @extend .flex-grow-1;
-
-        &.active {
-          a {
-            border-bottom: $border-width solid $border-color;
-          }
-        }
-
-        a {
-          border-bottom: $border-width solid $border-color;
-          padding: .15rem .1rem;
-          &:hover {
-            text-decoration: none;
-          }
-        }
       }
     }
   }
@@ -71,8 +61,6 @@
   display: inline-block;
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  margin-top: 30px;
-  margin-bottom: 5%;
   margin-right: $navbar-padding-x;
   @include font-size($navbar-brand-font-size);
   line-height: inherit;

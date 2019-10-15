@@ -21,8 +21,8 @@
 <body <?php body_class(); ?>>
 
 <header class="header">
-  <nav class="navbar align-items-center">
-    <a href="<?php bloginfo('url'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center flex-fill">
+  <nav class="navbar navbar--primary align-items-center">
+    <a href="<?php bloginfo('url'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center">
       <span class="sr-only"><?php bloginfo('name'); ?></span>
 
       <img src="<?php echo get_theme_mod( 'brand_name_img', get_theme_root_uri() . '/' . get_template() . '/assets/Nom.svg'); ?>" height="50" alt="<?php bloginfo('name'); ?>"
@@ -30,68 +30,93 @@
 
       <img src="<?php echo get_theme_mod( 'brand_logo_img', get_theme_root_uri() . '/' . get_template() . '/assets/Logo.svg'); ?>"
            alt="Logo"
-           class="brand-logo flex-fill ml-3" />
+           class="brand-logo flex-fill ml-5" />
     </a>
 
     <!-- Expandable links menu -->
-    <ul class="navbar-nav ml-auto d-flex flex-row nav--expandable-links">
+    <ul class="navbar-nav nav-collapse ml-auto d-flex flex-row nav--expandable-links">
       <li class="ml-3">
-        <a href="#follow" class="nav-link">Follow</a>
+        <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#follow" aria-controls="follow">Follow</a>
       </li>
       <li class="ml-3">
-        <a href="#contact" class="nav-link ">Contact</a>
+        <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#contact" aria-controls="contact">Contact</a>
       </li>
     </ul>
 
     <!-- Language switch -->
     <a href="#" class="nav-link ml-3">–Fr</a>
 
-    <div id="w-node-0eedaaa78c05-66b9f741" class="w-nav-button">
-      <div class="w-icon-nav-menu"></div>
+    <div class="hidden">
+      <div class="w-icon-nav-menu">H</div>
     </div>
   </nav>
 
-  <div class="expand-menus">
+  <nav class="nav-giantlinks">
+    <div class="container-fluid">
+      <div id="follow" class="collapse">
+        <a href="#" class="link-animated">
+          Facebook
+        </a>
+        <a href="#" class="link-animated">
+          Facebook
+        </a>
+        <a href="#" class="link-animated">
+          Facebook
+        </a>
+        <a href="#" class="link-animated">
+          Facebook
+        </a>
+        <!-- Facebook -->
+        <?php if (get_option('follow_facebook')) { ?>
+        <a href="<?php echo get_theme_mod('follow_facebook'); ?>" class="nav-item">Facebook</a>
+        <?php } ?>
+        <!-- Twitter -->
+        <?php if (get_option('follow_twitter')) { ?>
+        <a href="<?php echo get_theme_mod('follow_twitter'); ?>" class="nav-item">Twitter</a>
+        <?php } ?>
+        <!-- Instagram -->
+        <?php if (get_option('follow_instagram')) { ?>
+        <a href="<?php echo get_theme_mod('follow_instagram'); ?>" class="nav-item">Instagram</a>
+        <?php } ?>
+        <!-- LinkedIn -->
+        <?php if (get_option('follow_linkedin')) { ?>
+        <a href="<?php echo get_theme_mod('follow_linkedin'); ?>" class="nav-item">LinkedIn</a>
+        <?php } ?>
+        <!-- Behance -->
+        <?php if (get_option('follow_behance')) { ?>
+        <a href="<?php echo get_theme_mod('follow_behance'); ?>" class="nav-item">Behance</a>
+        <?php } ?>
+        <!-- News -->
+        <?php if (get_option('follow_news')) { ?>
+        <a href="<?php echo get_theme_mod('follow_news'); ?>" class="nav-item"><?php __('News'); ?></a>
+        <?php } ?>
+      </div>
 
-    <div class="expand--follow hidden">
-      <!-- Facebook -->
-      <?php if (get_option('follow_facebook')) { ?>
-      <a href="<?php echo get_theme_mod('follow_facebook'); ?>">Facebook</a>
-      <?php } ?>
-      <!-- Twitter -->
-      <?php if (get_option('follow_twitter')) { ?>
-      <a href="<?php echo get_theme_mod('follow_twitter'); ?>">Twitter</a>
-      <?php } ?>
-      <!-- Instagram -->
-      <?php if (get_option('follow_instagram')) { ?>
-      <a href="<?php echo get_theme_mod('follow_instagram'); ?>">Instagram</a>
-      <?php } ?>
-      <!-- LinkedIn -->
-      <?php if (get_option('follow_linkedin')) { ?>
-      <a href="<?php echo get_theme_mod('follow_linkedin'); ?>">LinkedIn</a>
-      <?php } ?>
-      <!-- Behance -->
-      <?php if (get_option('follow_behance')) { ?>
-      <a href="<?php echo get_theme_mod('follow_behance'); ?>">Behance</a>
-      <?php } ?>
-      <!-- News -->
-      <?php if (get_option('follow_news')) { ?>
-      <a href="<?php echo get_theme_mod('follow_news'); ?>"><?php __('News'); ?></a>
-      <?php } ?>
+      <div id="contact" class="collapse collapse--contact">
+        <a href="mailto:info@patrickfleury.com" class="link-animated">
+          <?php echo __('Email', 'pfleury-wordpress'); ?>
+        </a>
+        <a href="tel:+1231231234" class="link-animated">
+          <?php echo __('Phone', 'pfleury-wordpress'); ?>
+        </a>
+      </div>
     </div>
+  </nav>
 
-    <div class="expand--contact hidden">
-    </div>
-  </div>
-
-  <nav class="navbar navbar--main">
+  <nav class="navbar navbar--secondary">
     <!-- Main Nav -->
-    <ul class="navbar-nav d-flex flex-row">
-      <li>
-        <a href="design.html">Design</a>
+    <ul class="navbar-nav nav--secondary d-flex flex-row">
+      <li class="nav-item">
+        <a href="design.htm" class="nav-link">
+          Design
+          <span class="link-animated-superscript">Explore my work</span>
+        </a>
       </li>
-        <li>
-        <a id="w-node-348566b9f752-66b9f741" href="studio.html" class="">Studio</a>
+      <li class="nav-item">
+        <a href="studio.html" class="nav-link">
+          Studio
+          <span class="link-animated-superscript">About</span>
+        </a>
       </li>
     </ul>
 
@@ -104,7 +129,4 @@
 //    ) );
     ?>
   </nav>
-
-  <div class="header-img"><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home.jpg" width="1240" srcset="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home-p-500.jpeg 500w" sizes="84vw" alt="" class="image"></div>
 </header>
-

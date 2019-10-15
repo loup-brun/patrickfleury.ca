@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
-<div class="w-container">
+<div class="container-fluid">
+
+  <div class="header-img">
+    <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home.jpg" width="1240" srcset="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home-p-500.jpeg 500w" sizes="84vw" alt="" class="img-fluid"></div>
   <h1>Heading 1</h1>
   <h2 >Heading 2</h2>
   <h2 class="text-center">Heading 2</h2>
@@ -14,26 +17,21 @@
     <div class="link-social">Facebook</div><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/hover-fleche.svg" alt="" class="fleche-media"></div>
 </div>
 
-<div class="carrousel-home">
-  <h3 class="h3-center"><strong>What I’ve been up to lately</strong></h3>
+<section class="py-5">
+  <h3 class="text-center"><strong>What I’ve been up to lately</strong></h3>
+
   <div class="swipe-js" data-animation="slide" data-duration="500" data-infinite="1" >
     <div class="swipe-js-wrap">
       <?php
       if (have_posts()) {
         while (have_posts()) { ?>
           <section class="swipe-js-slide">
-            <?php the_post();
-                  the_content();
-              ?>
+            <div class="container">
+              <?php the_post();
+                    the_content();
+                ?>
+            </div>
           </section>
-        <?php
-        }
-        while (have_posts()) { ?>
-          <div class="swipe-js-slide">
-            <?php the_post();
-                  the_content();
-              ?>
-          </div>
         <?php
         }
       }
@@ -48,34 +46,56 @@
     <nav class="swipe-js-nav">
     </nav>
   </div>
-</div>
-<div class="project-titles">
-  <h2 class="text-center">Latest additions</h2>
-  <div class="w-dyn-list">
-    <div class="w-dyn-items">
-      <div class="w-dyn-item"><img src="" alt="" class="img-accueil">
-        <div class="identification---projet w-clearfix">
-          <div class="footer-titre-projet"></div><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/tiret.svg" alt="Separateur" class="tiret">
-          <div class="footer-tag-projets"></div>
+</section>
+
+<section class="section--projects">
+  <div class="content container">
+    <h2 class="text-center">Latest additions</h2>
+    <div class="w-dyn-list">
+      <div class="w-dyn-items">
+        <div class="w-dyn-item"><img src="" alt="" class="img-accueil">
+          <div class="identification---projet w-clearfix">
+            <div class="footer-titre-projet"></div><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/tiret.svg" alt="Separateur" class="tiret">
+            <div class="footer-tag-projets"></div>
+          </div>
         </div>
       </div>
+      <div class="w-dyn-empty">
+        <div>No items found.</div>
+      </div>
     </div>
-    <div class="w-dyn-empty">
-      <div>No items found.</div>
-    </div>
+    <a href="#" class="cta-button-right w-inline-block">
+      <div class="cta-button-right link"><strong>See all projects</strong></div><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-right.svg" alt=""></a>
   </div>
-  <a href="#" class="cta-button-right w-inline-block">
-    <div class="cta-button-right link"><strong>See all projects</strong></div><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-right.svg" alt=""></a>
-</div>
-<div class="about-me">
-  <div class="desc-studio">I am a passionnate designer who loves helping you finding your way.</div>
-  <a href="#" class="cta-button-right w-inline-block">
-    <div class="cta-button-right link"><strong>About me</strong></div><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-right.svg" data-w-id="91fe89bd-2882-2ec6-d642-c30fd3b6ba69" alt="" class="cta-arrow"></a>
-</div>
-<div class="cta-section w-clearfix">
-  <div class="cta-title">Convinced? Reach out!</div>
-  <div class="cta-text"><strong class="bold-text">Email</strong></div>
-  <div class="cta-text"><strong class="bold-text-2">+514 865-7775</strong></div>
-</div>
+</section>
+<section class="about-me py-5">
+  <div class="container-fluid content">
+    <div class="desc-studio">I am a passionnate designer who loves helping you finding your way.</div>
+
+    <a href="#" class="cta-button-right w-inline-block">
+      <div class="cta-button-right link"><strong>About me</strong></div>
+      <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-right.svg" data-w-id="91fe89bd-2882-2ec6-d642-c30fd3b6ba69" alt="" class="cta-arrow">
+    </a>
+  </div>
+</section>
+
+<section class="section-cta py-5 bg-yellow">
+  <div class="container">
+    <span class="h2 font-weight-normal mb-3">
+      Convinced? Reach out!
+    </span>
+
+    <p class="lead">
+      <nav class="nav nav-links">
+        <a href="mailto:info@patrickfleury.ca" class="mr-4">
+          Email
+        </a>
+        <a href="tel:+1514 865-7775" class="mr-4">
+          +514&nbsp;865-7775
+        </a>
+      </nav>
+    </p>
+  </div>
+</section>
 <?php
 get_footer();

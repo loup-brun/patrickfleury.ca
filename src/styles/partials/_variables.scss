@@ -142,8 +142,6 @@ $spacers: map-merge(
   $spacers
 );
 
-$page-margin: 8%;
-
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -174,7 +172,7 @@ $body-color:                $dark;
 $link-color:                              $black;
 $link-decoration:                         none !default;
 $link-hover-color:                        darken($link-color, 15%) !default;
-$link-hover-decoration:                   underline !default;
+$link-hover-decoration:                   none;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
 
@@ -221,7 +219,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           8% ;
+$grid-gutter-width:           6% ;
 
 
 // Components
@@ -280,8 +278,8 @@ $font-family-base:            $font-family-sans-serif !default;
 
 $font-size-root:              22px;
 $font-size-base:              1rem; // root
-$font-size-lg:                $font-size-base * 1.636;
-$font-size-sm:                $font-size-base * .727;
+$font-size-lg:                $font-size-base * 2.5; // 55px
+$font-size-sm:                $font-size-base * .636; // 14px
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -292,17 +290,17 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h1-font-size:                $font-size-base * 3.273; // 72px
+$h2-font-size:                $font-size-base * 2.5; // 55px
+$h3-font-size:                $font-size-base * 1.636; // 36px
+$h4-font-size:                $font-size-base * 1.091; // 24px
+$h5-font-size:                $font-size-base * 1; // 22px
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        $font-family-sans-serif;
 $headings-font-weight:        700;
-$headings-line-height:        1.2 !default;
+$headings-line-height:        1.5;
 $headings-color:              null !default;
 
 $display1-size:               6rem !default;
@@ -310,16 +308,16 @@ $display2-size:               5.5rem !default;
 $display3-size:               4.5rem !default;
 $display4-size:               3.5rem !default;
 
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
+$display1-weight:             700;
+$display2-weight:             700;
+$display3-weight:             500;
+$display4-weight:             500;
 $display-line-height:         $headings-line-height !default;
 
-$lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$lead-font-size:              $h3-font-size;
+$lead-font-weight:            400;
 
-$small-font-size:             80% !default;
+$small-font-size:             $font-size-sm;
 
 $text-muted:                  $gray-600 !default;
 
@@ -690,8 +688,8 @@ $zindex-tooltip:                    1070 !default;
 
 // Navs
 
-$nav-link-padding-y:                .5rem !default;
-$nav-link-padding-x:                1rem !default;
+$nav-link-padding-y:                .3rem;
+$nav-link-padding-x:                .15rem;
 $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
@@ -713,7 +711,7 @@ $nav-divider-margin-y:              $spacer / 2 !default;
 // Navbar
 
 $navbar-padding-y:                  $spacer;
-$navbar-padding-x:                  $page-margin;
+$navbar-padding-x:                  $grid-gutter-width;
 
 $navbar-nav-link-padding-x:         .5rem !default;
 

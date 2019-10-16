@@ -169,6 +169,8 @@ $body-color:                $dark;
 //
 // Style anchor elements.
 
+$link-cursor:                             url('../assets/cursor.png'), pointer;
+$body-default-cursor:                     url('../assets/cursor.png'), default;
 $link-color:                              $black;
 $link-decoration:                         none !default;
 $link-hover-color:                        darken($link-color, 15%) !default;
@@ -713,7 +715,7 @@ $nav-divider-margin-y:              $spacer / 2 !default;
 $navbar-padding-y:                  $spacer;
 $navbar-padding-x:                  $grid-gutter-width;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         .05rem;
 
 $brand-height:                      60px;
 

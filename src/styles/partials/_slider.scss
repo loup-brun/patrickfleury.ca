@@ -13,11 +13,6 @@
   position: relative;
   overflow: hidden;
   padding: 20px;
-
-  // demo purposes
-
-  min-height: 300px;
-  background: orange;
 }
 
 
@@ -35,6 +30,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 .swipe-js-nav {
   ul {
     list-style: none outside none;
@@ -50,6 +46,7 @@
     }
   }
 }
+
 .swipe-js-nav.w-num > div {
   width: auto;
   height: auto;
@@ -75,7 +72,6 @@
   width: 1em;
   height: 1em;
   background-color: rgba(255, 255, 255, 0.4);
-  cursor: pointer;
   margin: 0 3px 0.5em;
   transition: background-color 100ms, color 100ms;
 }
@@ -90,7 +86,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  cursor: pointer;
+  cursor: $link-cursor;
   overflow: hidden;
   border: 0;
   outline: none;
@@ -111,9 +107,30 @@
   &.-next {
     z-index: 4;
     left: auto;
+    right: 0;
   }
 }
 .swipe-js-prev [class^="w-icon-"],
 .swipe-js-next [class*=" w-icon-"] {
   position: absolute;
+}
+
+.swipe-js-numbers {
+  position: relative;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding-top: 10px;
+  height: 40px;
+  text-align: center;
+
+  .slider-number-current {
+
+  }
+
+  .slider-number-total {
+
+  }
 }

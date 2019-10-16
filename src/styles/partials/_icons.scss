@@ -1,0 +1,111 @@
+// icons
+
+.icon {
+  display: inline-block;
+  margin: 0;
+  height: 0.8em;
+  width: 0.8em;
+  vertical-align: baseline;
+  margin: 0 .1em;
+
+  // image
+  // set background-image: url('../assets/<image-file>)
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon-arrow-left {
+  background-image: url('../assets/fleche-fine-gauche.svg');
+}
+
+.icon-arrow-right {
+  background-image: url('../assets/fleche-fine-droite.svg');
+}
+
+.icon-arrow-up {
+  background-image: url('../assets/fleche-fine-haut.svg');
+}
+
+.icon-arrow-down {
+  background-image: url('../assets/fleche-fine-bas.svg');
+}
+
+.icon-arrow-medium-left {
+  background-image: url('../assets/fleche-medium-gauche.svg');
+}
+
+.icon-arrow-medium-right {
+  background-image: url('../assets/fleche-medium-droite.svg');
+}
+
+.icon-arrow-medium-up {
+  background-image: url('../assets/fleche-medium-haut.svg');
+}
+
+.icon-arrow-medium-down {
+  background-image: url('../assets/fleche-medium-bas.svg');
+}
+
+//
+// Pure css elements
+//
+
+.element-hamburger {
+  display: block;
+  background-color: transparent;
+  padding: .25em;
+  cursor: $link-cursor;
+  z-index: 3;
+
+  > span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: #000;
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.5s;
+    right: 0;
+    margin-left: auto;
+    transform: rotate(0) translateY(0);
+    transform-origin: 100% 50%;
+
+    &:nth-child(2) {
+      margin: 5px 0 5px auto;
+    }
+  }
+
+  &[aria-expanded="true"],
+  &[aria-expanded="true"]:hover {
+    > span {
+      transition-duration: .3s;
+      transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); // easeOutExpo
+    }
+    > span:nth-child(1) {
+      transform: rotate(-45deg) translateY(-3px) scaleX(1);
+    }
+
+    > span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(80%) scaleX(0);
+      transition-duration: .2s; // get out quick!
+    }
+
+    > span:nth-child(3) {
+      transform: rotate(45deg) translateY(3px) scaleX(1);
+    }
+  }
+
+  &:hover {
+    > span:nth-child(1) {
+      transform: scaleX(1.5);
+      transition-duration: .25s;
+//      transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); // easeInOutBack
+    }
+    > span:nth-child(2) {
+      transform: scaleX(0.6);
+      transition-duration: .25s;
+//      transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); // easeInOutBack
+    }
+  }
+}
+

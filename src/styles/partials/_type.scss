@@ -171,6 +171,10 @@ mark,
 
 .content {
 
+  img {
+    @extend .img-fluid;
+  }
+
   a {
     @extend .link-animated;
   }

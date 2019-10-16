@@ -41,6 +41,8 @@
     width: 100%;
     font-size: $h3-font-size;
     margin-bottom: $grid-gutter-width / 2;
+    padding-top: 0;
+    padding-bottom: 0;
 
     > ul {
       width: 100%;
@@ -61,7 +63,6 @@
   display: inline-block;
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  margin-right: $navbar-padding-x;
   @include font-size($navbar-brand-font-size);
   line-height: inherit;
   white-space: nowrap;
@@ -92,8 +93,8 @@ img.brand-text {
   list-style: none;
 
   .nav-link {
-    padding-right: $spacer;
-    padding-left: $spacer;
+    padding-right: .1em;
+    padding-left: .1em;
   }
 
   .dropdown-menu {

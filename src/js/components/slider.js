@@ -37,8 +37,22 @@ function init() {
 }
 
 function createSlider(swipeElem) {
-  let swipeInstance = new Swipe(swipeElem, {/* Swipe config */});
+  let currentElem = swipeElem.querySelector('.slider-number-current');
+  let totalElem = swipeElem.querySelector('.slider-number-total');
+
+  let swipeInstance = new Swipe(swipeElem, {
+    callback: function (pos) {
+      if (currentElem) {
+        updateSliderNumbers(currentElem, pos);
+      }
+    }
+  });
+
   makeSliderNavigation(swipeElem, swipeInstance);
+
+  if (totalElem) {
+    updateSliderNumbers(currentElem, pos);
+  }
 
   return swipeInstance;
 }
@@ -127,4 +141,12 @@ function updateSliderNav(sliderElem, swipeInstance) {
       a.classList.remove('active');
     }
   }
+}
+
+function makeSliderNumbers(totalElem, totalSlides) {
+  totalElem.innerHTML = totalSlides;
+}
+
+function updateSliderNumbers(currentElem, swipeInstance) {
+  currentElem.innerHTML = swipeInstance.getPos() + 1;
 }

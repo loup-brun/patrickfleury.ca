@@ -28,6 +28,8 @@ html {
   font-size: $font-size-root;
   -webkit-text-size-adjust: 100%; // 4
   -webkit-tap-highlight-color: rgba($black, 0); // 5
+
+  cursor: $body-default-cursor;
 }
 
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
@@ -357,7 +359,11 @@ button,
   [type="reset"],
   [type="submit"] {
     &:not(:disabled) {
-      cursor: pointer;
+      cursor: $link-cursor;
+
+      &:hover {
+        cursor: $link-cursor;
+      }
     }
   }
 }
@@ -470,7 +476,7 @@ output {
 
 summary {
   display: list-item; // Add the correct display in all browsers
-  cursor: pointer;
+  cursor: $link-cursor;
 }
 
 template {

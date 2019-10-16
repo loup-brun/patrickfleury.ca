@@ -483,7 +483,7 @@
     }
 
     &::-webkit-slider-runnable-track {
-      cursor: default;
+      cursor: $body-default-cursor;
     }
 
     &::-moz-range-thumb {
@@ -491,7 +491,7 @@
     }
 
     &::-moz-range-track {
-      cursor: default;
+      cursor: $body-default-cursor;
     }
 
     &::-ms-thumb {

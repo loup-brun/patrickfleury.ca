@@ -14,6 +14,7 @@
 .nav-link {
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
+  cursor: $link-cursor;
 
   @include hover-focus {
     text-decoration: none;
@@ -23,11 +24,12 @@
   &.disabled {
     color: $nav-link-disabled-color;
     pointer-events: none;
-    cursor: default;
+    cursor: $body-default-cursor; // default
   }
 }
 
-.nav--expandable-links {
+.expand-into-menu {
+
 
   .nav-link {
     border-bottom: $border-width solid transparent;
@@ -131,15 +133,22 @@
 }
 
 .nav-giantlinks {
-  font-size: $h1-font-size;
-
   a {
     @extend .link-animated;
+    font-size: $h1-font-size * 0.65;
+
+    @include media-breakpoint-up(md) {
+      font-size: $h1-font-size;
+    }
   }
 }
 
 .nav-biglinks {
-  font-size: $h2-font-size;
+  font-size: $h2-font-size * 0.65;
+
+  @include media-breakpoint-up(md) {
+    font-size: $h2-font-size;
+  }
 
   a {
     @extend .link-animated;

@@ -13,7 +13,7 @@
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
 
   <link href="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/webclip.png" rel="apple-touch-icon">
+  <link href="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/apple-touch-icon.png" rel="apple-touch-icon">
 
   <?php wp_head(); ?>
 </head>
@@ -21,8 +21,8 @@
 <body <?php body_class(); ?>>
 
 <header class="header">
-  <nav class="navbar navbar--primary align-items-center">
-    <a href="<?php bloginfo('url'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center">
+  <nav class="navbar navbar-expand-md navbar--primary align-items-center">
+    <a href="<?php bloginfo('url'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center flex-grow-1 align-content-start">
       <span class="sr-only"><?php bloginfo('name'); ?></span>
 
       <img src="<?php echo get_theme_mod( 'brand_name_img', get_theme_root_uri() . '/' . get_template() . '/assets/Nom.svg'); ?>" height="50" alt="<?php bloginfo('name'); ?>"
@@ -30,30 +30,37 @@
 
       <img src="<?php echo get_theme_mod( 'brand_logo_img', get_theme_root_uri() . '/' . get_template() . '/assets/Logo.svg'); ?>"
            alt="Logo"
-           class="brand-logo flex-fill ml-5" />
+           class="brand-logo ml-3 ml-sm-5" />
     </a>
 
+    <button class="navbar-toggler element-hamburger ml-auto" role="button" data-toggle="collapse" aria-expanded="false" data-target="#topNav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <!-- Expandable links menu -->
-    <ul class="navbar-nav nav-collapse ml-auto d-flex flex-row nav--expandable-links">
-      <li class="ml-3">
-        <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#follow" aria-controls="follow">Follow</a>
-      </li>
-      <li class="ml-3">
-        <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#contact" aria-controls="contact">Contact</a>
-      </li>
-    </ul>
-
-    <!-- Language switch -->
-    <a href="#" class="nav-link ml-3">–Fr</a>
-
-    <div class="hidden">
-      <div class="w-icon-nav-menu">H</div>
+    <div class="collapse navbar-collapse expand-into-menu" id="topNav">
+      <ul class="navbar-nav d-flex flex-column align-items-start justify-content-between align-content-between flex-md-row flex-grow-1">
+        <li class="nav-item ml-3">
+          <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#follow" aria-controls="follow">Follow</a>
+        </li>
+        <li class="nav-item ml-3">
+          <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#contact" aria-controls="contact">Contact</a>
+        </li>
+        <li class="nav-item ml-3">
+          <!-- Language switch -->
+          <a href="#" class="nav-link">–&nbsp;Fr</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
   <nav class="nav-giantlinks">
     <div class="container-fluid">
       <div id="follow" class="collapse">
+        <div class="help-block text-bold small text-uppercase">&mdash; <?php echo __('Follow Me', 'pfleury-wordpress'); ?></div>
+
         <a href="#" class="link-animated">
           Facebook
         </a>
@@ -93,6 +100,7 @@
       </div>
 
       <div id="contact" class="collapse collapse--contact">
+        <div class="help-block text-bold small text-uppercase">&mdash; <?php echo __('Contact Me', 'pfleury-wordpress'); ?></div>
         <a href="mailto:info@patrickfleury.com" class="link-animated">
           <?php echo __('Email', 'pfleury-wordpress'); ?>
         </a>
@@ -105,15 +113,15 @@
 
   <nav class="navbar navbar--secondary">
     <!-- Main Nav -->
-    <ul class="navbar-nav nav--secondary d-flex flex-row">
+    <ul class="navbar-nav nav--secondary d-flex flex-column flex-sm-row">
       <li class="nav-item">
-        <a href="design.htm" class="nav-link">
+        <a href="/work/" class="nav-link">
           Design
           <span class="link-animated-superscript">Explore my work</span>
         </a>
       </li>
       <li class="nav-item">
-        <a href="studio.html" class="nav-link">
+        <a href="/about/" class="nav-link">
           Studio
           <span class="link-animated-superscript">About</span>
         </a>

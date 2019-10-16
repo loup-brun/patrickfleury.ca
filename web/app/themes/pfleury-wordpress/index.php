@@ -9,26 +9,47 @@
   <h2 class="text-center">Heading 2</h2>
   <h3>Heading 3</h3>
   <h3 class="text-center">Heading 3</h3>
-  <h4>Heading 4</h4><a href="#" class="cta-button-left w-inline-block w-clearfix"><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-left.svg" alt="" class="cta-arrow"><div class="cta-button-left link"><strong>About me</strong></div></a>
+  <h4>Heading 4</h4><a href="#" class="cta-button-left w-inline-block w-clearfix">
+  <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-left.svg" alt="" class="cta-arrow">
+
+  <div class="cta-button-left link"><strong>About me</strong></div></a>
+
   <a href="#" class="cta-button-right w-inline-block">
-    <div class="cta-button-right link"><strong>About me</strong></div><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-right.svg" alt="" class="cta-arrow"></a><a href="#" class="link">Text Link</a>
+    <div class="cta-button-right link">
+      <strong>About me</strong> <span class="icon icon-arrow-medium-right"></span>
+    </div>
+    <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-right.svg" alt="" class="cta-arrow">
+  </a>
+
+  <a href="#" class="link">
+      Text Link
+  </a>
   <div class="p">This is some text inside of a div block.</div>
+
   <div class="link-social w-clearfix">
-    <div class="link-social">Facebook</div><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/hover-fleche.svg" alt="" class="fleche-media"></div>
+    <div class="animated-link">Facebook</div>
+
+    <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/hover-fleche.svg" alt="" class="fleche-media">
+  </div>
 </div>
 
 <section class="py-5">
   <h3 class="text-center"><strong>What I’ve been up to lately</strong></h3>
 
-  <div class="swipe-js" data-animation="slide" data-duration="500" data-infinite="1" >
-    <div class="swipe-js-wrap">
+  <div class="swipe-js">
+    <div class="swipe-js-wrap d-flex flex-row">
       <?php
       if (have_posts()) {
         while (have_posts()) { ?>
-          <section class="swipe-js-slide">
-            <div class="container">
-              <?php the_post();
-                    the_content();
+          <section class="swipe-js-slide d-flex flex-column justify-content-center">
+            <div class="container d-flex justify-content-center">
+              <blockquote class="big-quote">
+                <p>Nous avons aimé travailler avec Patrick.</p>
+                <cite>John Doe</cite>
+              </blockquote>
+              <?php
+                    the_post();
+                  //  the_content();
                 ?>
             </div>
           </section>
@@ -38,10 +59,10 @@
       ?>
     </div>
     <button class="swipe-js-btn -prev">
-      <div class="icon w-icon-slider-left"></div>
+      <div class="icon icon-arrow-left"></div>
     </button>
     <button class="swipe-js-btn -next">
-      <div class="icon-2 w-icon-slider-right"></div>
+      <div class="icon icon-arrow-right"></div>
     </button>
     <nav class="swipe-js-nav">
     </nav>

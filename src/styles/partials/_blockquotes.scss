@@ -1,0 +1,32 @@
+.big-quote {
+  font-size: $h3-font-size;
+  position: relative;
+  max-width: 14em;
+
+  > p:first-child {
+    &::before {
+      content: '«';
+      display: inline-block;
+      position: absolute;
+      left: -.7em;
+    }
+
+    &::after {
+      content: '»';
+      display: inline-block;
+      margin-left: .3em;
+    }
+  }
+
+  cite {
+    font-size: $font-size-base;
+    font-weight: 700;
+    font-style: normal;
+
+    &::before {
+      content: '—';
+      display: inline-block;
+      margin-right: .25em;
+    }
+  }
+}

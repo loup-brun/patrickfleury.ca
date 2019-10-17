@@ -72,21 +72,6 @@
 <section class="section--projects">
   <div class="content container">
     <h2 class="text-center">Latest additions</h2>
-    <div class="w-dyn-list">
-      <div class="w-dyn-items">
-        <div class="w-dyn-item"><img src="" alt="" class="img-accueil">
-          <div class="identification---projet w-clearfix">
-            <div class="footer-titre-projet"></div><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/tiret.svg" alt="Separateur" class="tiret">
-            <div class="footer-tag-projets"></div>
-          </div>
-        </div>
-      </div>
-      <div class="w-dyn-empty">
-        <div>No items found.</div>
-      </div>
-    </div>
-    <a href="#" class="cta-button-right w-inline-block">
-      <div class="cta-button-right link"><strong>See all projects</strong></div><img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-right.svg" alt=""></a>
   </div>
 </section>
 <section class="about-me py-5">

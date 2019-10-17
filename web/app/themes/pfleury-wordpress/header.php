@@ -22,37 +22,41 @@
 
 <header class="header">
   <nav class="navbar navbar-expand-md navbar--primary align-items-center">
-    <a href="<?php bloginfo('url'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center flex-grow-1 align-content-start">
-      <span class="sr-only"><?php bloginfo('name'); ?></span>
+    <div class="row flex-fill">
+      <div class="col-8 col-md-6">
+        <a href="<?php echo get_option('home'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center align-content-start">
+          <span class="sr-only"><?php bloginfo('name'); ?></span>
 
-      <img src="<?php echo get_theme_mod( 'brand_name_img', get_theme_root_uri() . '/' . get_template() . '/assets/Nom.svg'); ?>" height="50" alt="<?php bloginfo('name'); ?>"
-           class="brand-name">
+          <img src="<?php echo get_theme_mod( 'brand_name_img', get_theme_root_uri() . '/' . get_template() . '/assets/Nom.svg'); ?>" height="50" alt="<?php bloginfo('name'); ?>"
+               class="brand-name">
 
-      <img src="<?php echo get_theme_mod( 'brand_logo_img', get_theme_root_uri() . '/' . get_template() . '/assets/Logo.svg'); ?>"
-           alt="Logo"
-           class="brand-logo ml-3 ml-sm-5" />
-    </a>
+          <img src="<?php echo get_theme_mod( 'brand_logo_img', get_theme_root_uri() . '/' . get_template() . '/assets/Logo.svg'); ?>"
+               alt="Logo"
+               class="brand-logo ml-3 ml-sm-5" />
+        </a>
+      </div>
 
-    <button class="navbar-toggler element-hamburger ml-auto" role="button" data-toggle="collapse" aria-expanded="false" data-target="#topNav">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button class="navbar-toggler element-hamburger ml-auto col-4" role="button" data-toggle="collapse" aria-expanded="false" data-target="#topNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <!-- Expandable links menu -->
-    <div class="collapse navbar-collapse expand-into-menu" id="topNav">
-      <ul class="navbar-nav d-flex flex-column align-items-start justify-content-between align-content-between flex-md-row flex-grow-1">
-        <li class="nav-item ml-3">
-          <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#follow" aria-controls="follow">Follow</a>
-        </li>
-        <li class="nav-item ml-3">
-          <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#contact" aria-controls="contact">Contact</a>
-        </li>
-        <li class="nav-item ml-3">
-          <!-- Language switch -->
-          <a href="#" class="nav-link">–&nbsp;Fr</a>
-        </li>
-      </ul>
+      <!-- Expandable links menu -->
+      <div class="collapse navbar-collapse expand-into-menu col-md-5 col-lg-5 ml-md-auto" id="topNav">
+        <ul class="navbar-nav d-flex flex-column align-items-start justify-content-between align-content-between flex-md-row flex-grow-1">
+          <li class="nav-item mr-md-3 mr-lg-5">
+            <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#follow" aria-controls="follow">Follow</a>
+          </li>
+          <li class="nav-item mr-md-3 mr-lg-5">
+            <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#contact" aria-controls="contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <!-- Language switch -->
+            <a href="#" class="nav-link">–&nbsp;Fr</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -65,13 +69,16 @@
           Facebook
         </a>
         <a href="#" class="link-animated">
-          Facebook
+          Instagram
         </a>
         <a href="#" class="link-animated">
-          Facebook
+          LinkedIn
         </a>
         <a href="#" class="link-animated">
-          Facebook
+          Behance
+        </a>
+        <a href="#" class="link-animated">
+          News
         </a>
         <!-- Facebook -->
         <?php if (get_option('follow_facebook')) { ?>
@@ -113,14 +120,14 @@
 
   <nav class="navbar navbar--secondary">
     <!-- Main Nav -->
-    <ul class="navbar-nav nav--secondary d-flex flex-column flex-sm-row">
-      <li class="nav-item">
+    <ul class="navbar-nav nav--secondary d-flex flex-column flex-sm-row row flex-fill">
+      <li class="nav-item col-sm-7<?php if (is_page('work')) { echo ' current_page_item'; } ?>">
         <a href="/work/" class="nav-link">
           Design
           <span class="link-animated-superscript">Explore my work</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item col-sm-5<?php if (is_page('about')) { echo ' current_page_item'; } ?>">
         <a href="/about/" class="nav-link">
           Studio
           <span class="link-animated-superscript">About</span>

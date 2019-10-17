@@ -44,6 +44,12 @@ add_filter('upload_mimes', function($mimes) {
 });
 
 /**
+ * Add theme support for header images
+ */
+//add_theme_support( 'custom-header' );
+add_theme_support( 'post-thumbnails' );
+
+/**
  * Adds the individual sections, settings, and controls to the theme customizer
  */
 function theme_customizer( $wp_customize ) {

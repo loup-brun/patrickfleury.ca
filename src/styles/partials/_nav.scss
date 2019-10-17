@@ -32,10 +32,24 @@
 
 
   .nav-link {
-    border-bottom: $border-width solid transparent;
+    position: relative;
 
-    &[aria-expanded="true"] {
-      border-bottom-color: $border-color;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: $border-width;
+      background-color: $border-color;
+      width: 0;
+      transition: width .3s $easeInOutCirc;
+    }
+
+    &[aria-expanded="true"], &:hover {
+
+      &::after {
+        width: 100%;
+      }
     }
   }
 }
@@ -166,16 +180,15 @@
 .nav--secondary {
   .nav-item {
     > a {
-      padding-right: .5em;
       @extend .link-animated;
       @extend .link-animated-with-superscript;
-      padding: .7rem .05rem;
+      padding: .35rem .05rem .7rem;
       position: relative;
       &:hover {
         text-decoration: none;
       }
     }
-    &.active {
+    &.current_page_item {
       > a {
         &::before {
           // use before to not conflict with link-animated

@@ -13,21 +13,17 @@
 
     <nav class="footer-links contact-links">
       <ul class="navbar-nav d-flex flex-row">
-        <li>
-          <a href="#"><?php echo __('phone', 'pfleury-wordpress'); ?></a>
-        </li>
-        <li>
-          <a href="#"><?php echo __('email', 'pfleury-wordpress'); ?></a>
-        </li>
+        <li><a href="#"><?php echo __('phone', 'pfleury-wordpress'); ?></a></li>
+        <li><a href="#"><?php echo __('email', 'pfleury-wordpress'); ?></a></li>
       </ul>
     </nav>
 
-    <nav class="footer-links">
+    <nav class="footer-links social-links">
       <?php
       // Header Menu
       wp_nav_menu( array(
         'theme_location'=> 'footer-menu',
-        'menu_class'    => 'navbar-nav',
+        'menu_class'    => 'navbar-nav d-flex flex-row',
         'container'     => 'ul',
       ) );
       ?>

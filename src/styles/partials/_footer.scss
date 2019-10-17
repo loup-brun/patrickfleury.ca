@@ -29,7 +29,6 @@
 
   ul {
     > li {
-      margin-left: $spacer / 3;
 
       &:not(:first-child) {
         &::before {

@@ -136,6 +136,22 @@ mark,
   @extend .link-animated;
 }
 
+.bold-link {
+  font-weight: $font-weight-bold;
+
+  [class^="icon"] {
+    transition: transform .35s $easeOutCirc;
+    will-change: transform;
+  }
+
+
+  &:hover {
+    [class*="left"] {
+      transform: translateX(-.33em);
+    }
+  }
+}
+
 
 //
 // Misc
@@ -175,10 +191,6 @@ mark,
 
   img {
     @extend .img-fluid;
-  }
-
-  a {
-    @extend .link-animated;
   }
 }
 

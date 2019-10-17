@@ -41,6 +41,12 @@ get_header();
 
     <?php the_content(); ?>
 
+    <footer class="text-center">
+      <a class="h3" href="/work/">
+        <span class="icon icon-arrow-medium-left"></span> <?php __('Back to all projects', 'pfleury-wordpress'); ?>
+      </a>
+    </footer>
+
   </article>
 
   <?php endwhile // end of the loop. ?>

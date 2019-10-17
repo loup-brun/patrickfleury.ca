@@ -5,8 +5,10 @@
   margin: 0;
   height: 0.8em;
   width: 0.8em;
+  line-height: $line-height-base;
   vertical-align: baseline;
-  margin: 0 .1em;
+  margin: 0 .1em -.1em; // correct spacing
+
 
   // image
   // set background-image: url('../assets/<image-file>)

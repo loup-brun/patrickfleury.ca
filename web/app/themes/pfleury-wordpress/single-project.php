@@ -65,7 +65,7 @@ while (have_posts()):
 
     <footer class="text-center">
       <a class="h3 bold-link" href="/work/">
-        <span class="icon icon-arrow-medium-left"></span> <?php echo __('Back to all projects', 'pfleury-wordpress'); ?>
+        <span class="icon icon-arrow-medium-left"></span> <?php _e('Back to all projects', 'pfleury-wordpress'); ?>
       </a>
     </footer>
 

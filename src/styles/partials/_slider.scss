@@ -134,3 +134,27 @@
 
   }
 }
+
+// instagram stuff
+
+.instagram-feed-slide {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.instagram-feed-figure {
+//  overflow: hidden;
+//  min-width: 15vw;
+
+  width: 30%;
+
+  width: 22%;
+
+  .instagram-feed-image {
+    width: 100%;
+    padding-bottom: 100%; // 1:1 ratio
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}

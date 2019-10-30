@@ -37,6 +37,17 @@ add_action('init', function() {
   );
 });
 
+
+// Load instagram embed feed plugin
+//add_action('after_setup_theme', 'load_social_feed_plugin');
+//function load_social_feed_plugin() {
+//  if (!class_exists('Social')) {
+//    // load Social if not already loaded
+//    include_once(TEMPLATEPATH.'/plugins/catch-instagram-feed-gallery-widget/public/catch-instagram-feed-gallery-widget.php');
+//  }
+//}
+
+
 // Allow SVG uploads
 add_filter('upload_mimes', function($mimes) {
   $mimes['svg'] = 'image/svg+xml';
@@ -48,6 +59,17 @@ add_filter('upload_mimes', function($mimes) {
  */
 //add_theme_support( 'custom-header' );
 add_theme_support( 'post-thumbnails' );
+
+/**
+ * i18n support
+ */
+
+//load_theme_textdomain( 'pfleury-wordpress', get_template_directory() . '/languages' );
+
+add_action( 'after_setup_theme', 'pfleury_theme_setup' );
+function pfleury_theme_setup() {
+    load_theme_textdomain( 'pfleury-wordpress', get_template_directory() . '/languages' );
+}
 
 /**
  * Adds the individual sections, settings, and controls to the theme customizer

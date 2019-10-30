@@ -6,15 +6,15 @@
       if (!get_theme_mod('copyright_text')) {
         echo get_theme_mod('copyright_text');
       } else {
-        echo __('All rights reserved.', 'pfleury-wordpress');
+        _e('All rights reserved.', 'pfleury-wordpress');
       }
       ?>
     </div>
 
     <nav class="footer-links contact-links">
       <ul class="navbar-nav d-flex flex-row">
-        <li><a href="#"><?php echo __('phone', 'pfleury-wordpress'); ?></a></li>
-        <li><a href="#"><?php echo __('email', 'pfleury-wordpress'); ?></a></li>
+        <li><a href="#"><?php _e('phone', 'pfleury-wordpress'); ?></a></li>
+        <li><a href="#"><?php _e('email', 'pfleury-wordpress'); ?></a></li>
       </ul>
     </nav>
 
@@ -30,7 +30,7 @@
     </nav>
 
     <a href="http://sgiroux.net" class="footer-credits-link">
-      <?php echo __('Credits', 'pfleury-wordpress'); ?>
+      <?php _e('Credits', 'pfleury-wordpress'); ?>
     </a>
   </div>
 </footer>

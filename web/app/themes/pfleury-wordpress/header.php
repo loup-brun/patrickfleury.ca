@@ -63,7 +63,7 @@
   <nav class="nav-giantlinks">
     <div class="container-fluid">
       <div id="follow" class="collapse">
-        <div class="help-block text-bold small text-uppercase">&mdash; <?php echo __('Follow Me', 'pfleury-wordpress'); ?></div>
+        <div class="help-block text-bold small text-uppercase">&mdash; <?php _e('Follow Me', 'pfleury-wordpress'); ?></div>
 
         <a href="#" class="link-animated">
           Facebook
@@ -107,12 +107,12 @@
       </div>
 
       <div id="contact" class="collapse collapse--contact">
-        <div class="help-block text-bold small text-uppercase">&mdash; <?php echo __('Contact Me', 'pfleury-wordpress'); ?></div>
+        <div class="help-block text-bold small text-uppercase">&mdash; <?php _e('Contact Me', 'pfleury-wordpress'); ?></div>
         <a href="mailto:info@patrickfleury.com" class="link-animated">
-          <?php echo __('Email', 'pfleury-wordpress'); ?>
+          <?php _e('Email', 'pfleury-wordpress'); ?>
         </a>
         <a href="tel:+1231231234" class="link-animated">
-          <?php echo __('Phone', 'pfleury-wordpress'); ?>
+          <?php _e('Phone', 'pfleury-wordpress'); ?>
         </a>
       </div>
     </div>

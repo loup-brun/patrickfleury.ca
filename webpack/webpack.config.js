@@ -23,6 +23,8 @@ function removeNil(as) {
 const wordpressCssBanner = `/*
 Theme Name: ${WP_THEME_NAME}
 Author: Louis-Olivier Brassard.
+Text Domain: pfleury-wordpress
+Domain Path: /languages/
 */`;
 
 module.exports = {

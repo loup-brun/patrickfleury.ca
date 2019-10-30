@@ -72,6 +72,12 @@
 <section class="section--projects">
   <div class="content container">
     <h2 class="text-center">Latest additions</h2>
+
+    <footer class="footer--all-projects text-center">
+      <a class="h3" href="/work/">
+        <?php _e('See All Projects', 'pfleury-wordpress'); ?> <span class="icon icon-arrow-medium-right"></span>
+      </a>
+    </footer>
   </div>
 </section>
 <section class="about-me py-5">

@@ -53,7 +53,26 @@
           </li>
           <li class="nav-item">
             <!-- Language switch -->
-            <a href="#" class="nav-link">–&nbsp;Fr</a>
+            <?php
+            $translations = pll_the_languages( array('raw' => 1) );
+
+            foreach ($translations as $translation) {
+              if (!$translation['current_lang']) { ?>
+                <a href="<?php echo $translation['url']; ?>" class="nav-link">—<?php echo strtoupper($translation['slug']); ?></a>
+              <?php
+              }
+//              var_dump($translation);s
+//              if ($translation['id'] === pll_current_language()['id']) {
+//                echo $translation['name'];
+//              }
+            }
+            //if ($translations[0] === pll_current_language) {
+            //  echo $translations;
+            //} else {
+            //  echo $translations;
+            //}
+            ?>
+<!--            <a href="#" class="nav-link">–&nbsp;Fr</a>-->
           </li>
         </ul>
       </div>

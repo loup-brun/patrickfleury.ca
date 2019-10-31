@@ -36,48 +36,28 @@
     list-style: none outside none;
     margin: 0;
     padding: 0;
-    text-align: center;
 
     > li {
       display: inline-block;
       > a {
+        display: inline-block;
         border-radius: 100%;
+        height: $spacer * .33;
+        width: $spacer * .33;
+        background-color: $body-color;
+        transition: opacity .3s;
+        margin: 0 .25em;
+
+        opacity: .6;
+
+        &.active {
+          opacity: 1;
+        }
       }
     }
   }
 }
 
-.swipe-js-nav.w-num > div {
-  width: auto;
-  height: auto;
-  padding: 0.2em 0.5em;
-  font-size: inherit;
-  line-height: inherit;
-}
-.swipe-js-nav.w-shadow > div {
-  box-shadow: 0 0 3px rgba(51, 51, 51, 0.4);
-}
-.swipe-js-nav-invert {
-  color: #fff;
-}
-.swipe-js-nav-invert > div {
-  background-color: rgba(34, 34, 34, 0.4);
-}
-.swipe-js-nav-invert > div.w-active {
-  background-color: #222;
-}
-.swipe-js-nav ul > li > a {
-  position: relative;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  background-color: rgba(255, 255, 255, 0.4);
-  margin: 0 3px 0.5em;
-  transition: background-color 100ms, color 100ms;
-}
-.swipe-js-nav ul > li > a {
-  background-color: #fff;
-}
 .swipe-js-btn {
   position: absolute;
   width: 80px;
@@ -146,9 +126,20 @@
 //  overflow: hidden;
 //  min-width: 15vw;
 
-  width: 30%;
+  width: 49%;
+  margin-bottom: 2%;
 
-  width: 22%;
+  figcaption {
+    display: none;
+  }
+
+  @include media-breakpoint-up('md', $grid-breakpoints) {
+    width: 23%;
+
+    figcaption {
+      display: block;
+    }
+  }
 
   .instagram-feed-image {
     width: 100%;

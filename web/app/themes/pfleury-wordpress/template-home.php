@@ -11,13 +11,8 @@ get_header(); ?>
 </div>
 <section id="instagram">
   <div class="container">
-    <h3 class="text-center">What I’ve been up to</h3>
+    <h3 class="text-center"><?php _e('What I’ve been up to lately'); ?></h3>
   </div>
-
-  <?php
-    //while (have_posts() ) : the_post();
-    //the_content();
-    //endwhile ?>
 
   <div class="swipe-js instagram-swipe" id="instagram-swipe">
     <div class="swipe-js-wrap d-flex flex-row">
@@ -25,16 +20,16 @@ get_header(); ?>
         <figure class="instagram-feed-figure">
           <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
           </div>
-          <figcaption class="mt-1">
+          <figcaption>
             <small>
               –2019.09.01
             </small>
           </figcaption>
         </figure>
-        <figure class="instagram-feed-figure mt-5">
+        <figure class="instagram-feed-figure mt-md-5">
           <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
           </div>
-          <figcaption class="mt-1">
+          <figcaption>
             <small>
               –2019.09.01
             </small>
@@ -43,16 +38,92 @@ get_header(); ?>
         <figure class="instagram-feed-figure">
           <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
           </div>
-          <figcaption class="mt-1">
+          <figcaption>
             <small>
               –2019.09.01
             </small>
           </figcaption>
         </figure>
-        <figure class="instagram-feed-figure mt-5">
+        <figure class="instagram-feed-figure mt-md-5">
           <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
           </div>
-          <figcaption class="mt-1">
+          <figcaption>
+            <small>
+              –2019.09.01
+            </small>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="swipe-js-slide d-flex flex-row align-items-start justify-content-between flex-wrap instagram-feed-slide">
+        <figure class="instagram-feed-figure">
+          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+          </div>
+          <figcaption>
+            <small>
+              –2019.09.01
+            </small>
+          </figcaption>
+        </figure>
+        <figure class="instagram-feed-figure mt-md-5">
+          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+          </div>
+          <figcaption>
+            <small>
+              –2019.09.01
+            </small>
+          </figcaption>
+        </figure>
+        <figure class="instagram-feed-figure">
+          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+          </div>
+          <figcaption>
+            <small>
+              –2019.09.01
+            </small>
+          </figcaption>
+        </figure>
+        <figure class="instagram-feed-figure mt-md-5">
+          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+          </div>
+          <figcaption>
+            <small>
+              –2019.09.01
+            </small>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="swipe-js-slide d-flex flex-row align-items-start justify-content-between flex-wrap instagram-feed-slide">
+        <figure class="instagram-feed-figure">
+          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+          </div>
+          <figcaption>
+            <small>
+              –2019.09.01
+            </small>
+          </figcaption>
+        </figure>
+        <figure class="instagram-feed-figure mt-md-5">
+          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+          </div>
+          <figcaption>
+            <small>
+              –2019.09.01
+            </small>
+          </figcaption>
+        </figure>
+        <figure class="instagram-feed-figure">
+          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+          </div>
+          <figcaption>
+            <small>
+              –2019.09.01
+            </small>
+          </figcaption>
+        </figure>
+        <figure class="instagram-feed-figure mt-md-5">
+          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+          </div>
+          <figcaption>
             <small>
               –2019.09.01
             </small>
@@ -60,14 +131,19 @@ get_header(); ?>
         </figure>
       </section>
     </div>
+    <footer class="swipe-js-numbers text-center">
+      <span class="slider-number-current"></span>
+      &nbsp;
+      <span class="slider-number-separator">/</span>
+      &nbsp;
+      <span class="slider-number-total"></span>
+    </footer>
     <button class="swipe-js-btn -prev">
       <div class="icon icon-arrow-left"></div>
     </button>
     <button class="swipe-js-btn -next">
       <div class="icon icon-arrow-right"></div>
     </button>
-    <nav class="swipe-js-nav">
-    </nav>
   </div>
 </section>
 
@@ -80,6 +156,14 @@ get_header(); ?>
   <h3 class="text-center">Heading 3</h3>
   <h4>Heading 4</h4><a href="#" class="cta-button-left w-inline-block w-clearfix">
   <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-left.svg" alt="" class="cta-arrow">
+
+
+  <?php
+    while (have_posts() ) : the_post();
+      the_content();
+    endwhile
+  ?>
+
 
   <div class="cta-button-left link"><strong>About me</strong></div></a>
 
@@ -103,7 +187,7 @@ get_header(); ?>
 </div>
 
 <section class="py-5">
-  <h3 class="text-center"><strong>What I’ve been up to lately</strong></h3>
+  <h3 class="text-center">What clients are saying</h3>
 
   <div class="swipe-js">
     <div class="swipe-js-wrap d-flex flex-row">
@@ -122,6 +206,17 @@ get_header(); ?>
                 ?>
             </div>
           </section>
+          <section class="swipe-js-slide d-flex flex-column justify-content-center">
+            <div class="container d-flex justify-content-center">
+              <blockquote class="big-quote">
+                <p>Nous avons aimé travailler avec Patrick.</p>
+                <cite>John Doe</cite>
+              </blockquote>
+              <?php
+                  //  the_content();
+                ?>
+            </div>
+          </section>
         <?php
         }
       }
@@ -133,7 +228,7 @@ get_header(); ?>
     <button class="swipe-js-btn -next">
       <div class="icon icon-arrow-right"></div>
     </button>
-    <nav class="swipe-js-nav">
+    <nav class="swipe-js-nav text-center">
     </nav>
   </div>
 </section>

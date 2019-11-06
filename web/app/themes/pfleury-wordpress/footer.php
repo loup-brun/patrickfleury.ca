@@ -12,6 +12,14 @@
     </div>
 
     <nav class="footer-links contact-links">
+            <?php
+      // Footer Menu
+//      wp_nav_menu( array(
+//        'theme_location'=> 'footer-menu',
+//        'menu_class'    => 'navbar-nav d-flex flex-row',
+//        'container'     => 'ul',
+//      ) );
+      ?>
       <ul class="navbar-nav d-flex flex-row">
         <li><a href="#"><?php _e('phone', 'pfleury-wordpress'); ?></a></li>
         <li><a href="#"><?php _e('email', 'pfleury-wordpress'); ?></a></li>
@@ -19,14 +27,45 @@
     </nav>
 
     <nav class="footer-links social-links">
-      <?php
-      // Header Menu
-      wp_nav_menu( array(
-        'theme_location'=> 'footer-menu',
-        'menu_class'    => 'navbar-nav d-flex flex-row',
-        'container'     => 'ul',
-      ) );
-      ?>
+
+      <ul>
+        <?php if (get_option('follow_facebook')) { ?>
+        <!-- Facebook -->
+        <li>
+          <a href="<?php echo get_theme_mod('follow_facebook'); ?>" class="nav-item">Facebook</a>
+        </li>
+        <?php } ?>
+        <?php if (get_option('follow_twitter')) { ?>
+        <!-- Twitter -->
+        <li>
+          <a href="<?php echo get_theme_mod('follow_twitter'); ?>" class="nav-item">Twitter</a>
+        </li>
+        <?php } ?>
+        <?php if (get_option('follow_instagram')) { ?>
+        <!-- Instagram -->
+        <li>
+          <a href="<?php echo get_theme_mod('follow_instagram'); ?>" class="nav-item">Instagram</a>
+        </li>
+        <?php } ?>
+        <?php if (get_option('follow_linkedin')) { ?>
+        <!-- LinkedIn -->
+        <li>
+          <a href="<?php echo get_theme_mod('follow_linkedin'); ?>" class="nav-item">LinkedIn</a>
+        </li>
+        <?php } ?>
+        <?php if (get_option('follow_behance')) { ?>
+        <!-- Behance -->
+        <li>
+          <a href="<?php echo get_theme_mod('follow_behance'); ?>" class="nav-item">Behance</a>
+        </li>
+        <?php } ?>
+        <?php if (get_option('follow_news')) { ?>
+        <!-- News -->
+        <li>
+          <a href="<?php echo get_theme_mod('follow_news'); ?>" class="nav-item"><?php __('News'); ?></a>
+        </li>
+        <?php } ?>
+        </ul>
     </nav>
 
     <a href="http://sgiroux.net" class="footer-credits-link">

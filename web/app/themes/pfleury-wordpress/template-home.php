@@ -9,7 +9,7 @@ get_header(); ?>
     <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home.jpg" width="1240" srcset="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home-p-500.jpeg 500w" sizes="84vw" alt="" class="img-fluid">
   </div>
 </div>
-<section id="instagram">
+<section id="instagram" class="py-3">
   <div class="container">
     <h3 class="text-center"><?php _e('What I’ve been up to lately'); ?></h3>
   </div>
@@ -22,7 +22,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -31,7 +31,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -40,7 +40,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -49,7 +49,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -60,7 +60,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -69,7 +69,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -78,7 +78,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -87,7 +87,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -98,7 +98,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -107,7 +107,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -116,7 +116,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -125,7 +125,7 @@ get_header(); ?>
           </div>
           <figcaption>
             <small>
-              –2019.09.01
+              — 2019.09.01
             </small>
           </figcaption>
         </figure>
@@ -147,44 +147,84 @@ get_header(); ?>
   </div>
 </section>
 
-<div class="container-fluid">
+<section id="curated-projects" class="py-5">
+  <div class="container">
 
-  <h1>Heading 1</h1>
-  <h2 >Heading 2</h2>
-  <h2 class="text-center">Heading 2</h2>
-  <h3>Heading 3</h3>
-  <h3 class="text-center">Heading 3</h3>
-  <h4>Heading 4</h4><a href="#" class="cta-button-left w-inline-block w-clearfix">
-  <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-left.svg" alt="" class="cta-arrow">
+    <h2 class="text-center mb-5">Latest additions</h2>
 
+    <div class="row">
+      <div class="col col-md-8">
+        <figure class="figure-featured">
+          <img class="figure-featured__img img-fluid"
+               src="https://source.unsplash.com/random/1600x900"
+               alt="Project title" />
+          <figcaption class="figure-featured__caption mt-2">
+            <strong class="figure-featured__title">Project Title</strong>
 
-  <?php
-    while (have_posts() ) : the_post();
-      the_content();
-    endwhile
-  ?>
-
-
-  <div class="cta-button-left link"><strong>About me</strong></div></a>
-
-  <a href="#" class="cta-button-right w-inline-block">
-    <div class="cta-button-right link">
-      <strong>About me</strong> <span class="icon icon-arrow-medium-right"></span>
+            —
+            <span class="figure-featured__tags">Branding, Print</span>
+          </figcaption>
+        </figure>
+      </div>
     </div>
-    <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-right.svg" alt="" class="cta-arrow">
-  </a>
+    <div class="row">
+      <div class="col col-md-5 mt-5 ml-md-4">
+        <figure class="figure-featured">
+          <img class="figure-featured__img img-fluid"
+               src="https://source.unsplash.com/random/900x900"
+               alt="Project title" />
+          <figcaption class="figure-featured__caption mt-2">
+            <strong class="figure-featured__title">Project Title</strong>
 
-  <a href="#" class="link">
-      Text Link
-  </a>
-  <div class="p">This is some text inside of a div block.</div>
+            —
+            <span class="figure-featured__tags">Branding, Print</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col col-md-6">
+        <figure class="figure-featured">
+          <img class="figure-featured__img img-fluid"
+               src="https://source.unsplash.com/random/1600x900"
+               alt="Project title" />
+          <figcaption class="figure-featured__caption mt-2">
+            <strong class="figure-featured__title">Project Title</strong>
 
-  <div class="link-social w-clearfix">
-    <div class="animated-link">Facebook</div>
+            —
+            <span class="figure-featured__tags">Branding, Print</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
 
-    <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/hover-fleche.svg" alt="" class="fleche-media">
+    <footer class="footer--all-projects text-center mt-5">
+      <a class="h3" href="/work/">
+        <?php _e('See All Projects', 'pfleury-wordpress'); ?> <span class="icon icon-arrow-medium-right"></span>
+      </a>
+    </footer>
   </div>
-</div>
+</section>
+
+
+<section id="about" class="py-5 my-3">
+  <div class="container">
+    <div class="row">
+      <div class="col col-sm-6">
+        <p class="lead">
+          I am a passionnate designer who loves helping you finding your way.
+        </p>
+      </div>
+      <div class="col col-sm-6 d-flex flex-column align-items-end justify-content-end">
+        <p class="lead">
+
+          <a href="#" class="">
+            <strong>About me</strong> <span class="icon icon-arrow-medium-right"></span>
+          </a>
+
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="py-5">
   <h3 class="text-center">What clients are saying</h3>
@@ -230,28 +270,6 @@ get_header(); ?>
     </button>
     <nav class="swipe-js-nav text-center">
     </nav>
-  </div>
-</section>
-
-<section class="section--projects">
-  <div class="content container">
-    <h2 class="text-center">Latest additions</h2>
-
-    <footer class="footer--all-projects text-center">
-      <a class="h3" href="/work/">
-        <?php _e('See All Projects', 'pfleury-wordpress'); ?> <span class="icon icon-arrow-medium-right"></span>
-      </a>
-    </footer>
-  </div>
-</section>
-<section class="about-me py-5">
-  <div class="container-fluid content">
-    <div class="desc-studio">I am a passionnate designer who loves helping you finding your way.</div>
-
-    <a href="#" class="cta-button-right w-inline-block">
-      <div class="cta-button-right link"><strong>About me</strong></div>
-      <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/cta-arrow-right.svg" data-w-id="91fe89bd-2882-2ec6-d642-c30fd3b6ba69" alt="" class="cta-arrow">
-    </a>
   </div>
 </section>
 

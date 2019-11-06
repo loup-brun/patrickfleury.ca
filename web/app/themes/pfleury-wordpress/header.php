@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
 
-<header class="header">
+<header class="header accordion" id="toggle-big-links">
   <nav class="navbar navbar-expand-md navbar--primary align-items-center">
     <div class="row flex-fill">
       <div class="col-8 col-md-6">
@@ -46,10 +46,10 @@
       <div class="collapse navbar-collapse expand-into-menu col-md-5 col-lg-5 ml-md-auto" id="topNav">
         <ul class="navbar-nav d-flex flex-column align-items-start justify-content-between align-content-between flex-md-row flex-grow-1">
           <li class="nav-item mr-md-3 mr-lg-5">
-            <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#follow" aria-controls="follow">Follow</a>
+            <a href="#" class="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" data-target="#follow" aria-controls="follow">Follow</a>
           </li>
           <li class="nav-item mr-md-3 mr-lg-5">
-            <a href="#" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" data-target="#contact" aria-controls="contact">Contact</a>
+            <a href="#" class="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" data-target="#contact" aria-controls="contact">Contact</a>
           </li>
           <li class="nav-item">
             <!-- Language switch -->
@@ -81,7 +81,7 @@
 
   <nav class="nav-giantlinks">
     <div class="container-fluid">
-      <div id="follow" class="collapse">
+      <div id="follow" class="collapse" aria-expanded="false" data-parent="#toggle-big-links">
         <div class="help-block text-bold small text-uppercase">&mdash; <?php _e('Follow Me', 'pfleury-wordpress'); ?></div>
 
         <a href="#" class="link-animated">
@@ -125,7 +125,7 @@
         <?php } ?>
       </div>
 
-      <div id="contact" class="collapse collapse--contact">
+      <div id="contact" class="collapse collapse--contact" aria-expanded="false" data-parent="#toggle-big-links">
         <div class="help-block text-bold small text-uppercase">&mdash; <?php _e('Contact Me', 'pfleury-wordpress'); ?></div>
         <a href="mailto:info@patrickfleury.com" class="link-animated">
           <?php _e('Email', 'pfleury-wordpress'); ?>

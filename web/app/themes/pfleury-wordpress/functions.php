@@ -314,6 +314,9 @@ function theme_customizer( $wp_customize ) {
     )
   );
 
+  // Social Settings
+  // ---------------
+
   $wp_customize->add_section(
     'social_settings',
     array(
@@ -323,6 +326,7 @@ function theme_customizer( $wp_customize ) {
     )
   );
 
+  // Facebook
   $wp_customize->add_setting(
     'follow_facebook',
       array(
@@ -334,7 +338,115 @@ function theme_customizer( $wp_customize ) {
   $wp_customize->add_control(
     'follow_facebook',
     array(
-        'label' => 'Facebook URL',
+        'label' => 'Facebook Full URL',
+        'section' => 'social_settings',
+        'type' => 'text',
+    )
+  );
+
+  // Twitter
+  $wp_customize->add_setting(
+    'follow_twitter',
+      array(
+        'default' => '',
+        'placeholder' => '@username'
+      )
+  );
+
+  $wp_customize->add_control(
+    'follow_twitter',
+    array(
+        'label' => 'Twitter Username',
+        'section' => 'social_settings',
+        'type' => 'text',
+    )
+  );
+
+  // Instagram
+  $wp_customize->add_setting(
+    'follow_instagram',
+      array(
+        'default' => '',
+        'placeholder' => '@username'
+      )
+  );
+
+  $wp_customize->add_control(
+    'follow_instagram',
+    array(
+        'label' => 'Instagram Username',
+        'section' => 'social_settings',
+        'type' => 'text',
+    )
+  );
+
+  // LinkedIn
+    $wp_customize->add_setting(
+    'follow_LinkedIn',
+      array(
+        'default' => '',
+        'placeholder' => 'https://LinkedIn.com/slug'
+      )
+  );
+
+  $wp_customize->add_control(
+    'follow_LinkedIn',
+    array(
+        'label' => 'LinkedIn Full URL',
+        'section' => 'social_settings',
+        'type' => 'text',
+    )
+  );
+
+  // Behance
+    $wp_customize->add_setting(
+    'follow_behance',
+      array(
+        'default' => '',
+        'placeholder' => '@username'
+      )
+  );
+
+  $wp_customize->add_control(
+    'follow_behance',
+    array(
+        'label' => 'Behance Username',
+        'section' => 'social_settings',
+        'type' => 'text',
+    )
+  );
+
+  // Pinterest
+    $wp_customize->add_setting(
+    'follow_pinterest',
+      array(
+        'default' => '',
+        'placeholder' => '@username'
+      )
+  );
+
+  $wp_customize->add_control(
+    'follow_pinterest',
+    array(
+        'label' => 'Pinterest Username',
+        'section' => 'social_settings',
+        'type' => 'text',
+    )
+  );
+
+  // News
+    $wp_customize->add_setting(
+    'follow_news',
+      array(
+        'default' => '',
+        'placeholder' => 'https://example.com'
+      )
+  );
+
+  $wp_customize->add_control(
+    'follow_news',
+    array(
+        'label' => 'News URL',
         'section' => 'social_settings',
         'type' => 'text',
     )

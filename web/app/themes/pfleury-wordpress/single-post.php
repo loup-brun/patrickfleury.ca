@@ -12,7 +12,7 @@ while (have_posts()):
 <div class="blog">
   <span class="blog__date"><?php echo $date; ?></span>
   <h1 class="blog__headline"><?php echo $headline; ?></h1>
-  <div class="blog__content"><?php echo $content; ?></div>
+
   <ul class="blog__tags">
     <?php
     if ($tags):
@@ -28,7 +28,7 @@ while (have_posts()):
       <?php endforeach; ?>
     <?php endif; ?>
   </ul>
-  </div>
+  <div class="blog__content"><?php echo $content; ?></div>
 </div>
 
 <?php

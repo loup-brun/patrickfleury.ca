@@ -50,3 +50,9 @@
 @if $enable-grid-classes {
   @include make-grid-columns();
 }
+
+
+// Misc
+.main {
+  min-height: 80vh;
+}

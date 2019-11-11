@@ -150,6 +150,7 @@
   a {
     @extend .link-animated;
     font-size: $h1-font-size * 0.65;
+    transition: padding .3s;
 
     @include media-breakpoint-up(md) {
       font-size: $h1-font-size;

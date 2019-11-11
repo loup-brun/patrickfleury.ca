@@ -48,7 +48,9 @@ h6, .h6 {
 }
 
 .lead {
-  @include font-size($lead-font-size);
+  @include media-breakpoint-up(md){
+    @include font-size($lead-font-size);
+  }
   font-weight: $lead-font-weight;
 }
 
@@ -148,6 +150,15 @@ mark,
   &:hover {
     [class*="left"] {
       transform: translateX(-.33em);
+    }
+    [class*="right"] {
+      transform: translateX(.33em);
+    }
+    [class*="up"] {
+      transform: translateY(-.33em);
+    }
+    [class*="down"] {
+      transform: translateY(.33em);
     }
   }
 }

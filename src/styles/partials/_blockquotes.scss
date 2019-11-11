@@ -1,5 +1,8 @@
 .big-quote {
-  font-size: $h3-font-size;
+  font-size: $h5-font-size;
+  @include media-breakpoint-up(md) {
+    font-size: $h3-font-size;
+  }
   position: relative;
   max-width: 14em;
 

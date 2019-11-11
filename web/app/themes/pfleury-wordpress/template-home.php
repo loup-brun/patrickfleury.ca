@@ -18,8 +18,10 @@ get_header(); ?>
     <div class="swipe-js-wrap d-flex flex-row">
       <section class="swipe-js-slide d-flex flex-row align-items-start justify-content-between flex-wrap instagram-feed-slide">
         <figure class="instagram-feed-figure">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -27,8 +29,10 @@ get_header(); ?>
           </figcaption>
         </figure>
         <figure class="instagram-feed-figure mt-md-5">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -36,8 +40,10 @@ get_header(); ?>
           </figcaption>
         </figure>
         <figure class="instagram-feed-figure">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -45,8 +51,10 @@ get_header(); ?>
           </figcaption>
         </figure>
         <figure class="instagram-feed-figure mt-md-5">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -56,8 +64,10 @@ get_header(); ?>
       </section>
       <section class="swipe-js-slide d-flex flex-row align-items-start justify-content-between flex-wrap instagram-feed-slide">
         <figure class="instagram-feed-figure">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -65,8 +75,10 @@ get_header(); ?>
           </figcaption>
         </figure>
         <figure class="instagram-feed-figure mt-md-5">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -74,8 +86,10 @@ get_header(); ?>
           </figcaption>
         </figure>
         <figure class="instagram-feed-figure">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -83,8 +97,10 @@ get_header(); ?>
           </figcaption>
         </figure>
         <figure class="instagram-feed-figure mt-md-5">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -94,8 +110,10 @@ get_header(); ?>
       </section>
       <section class="swipe-js-slide d-flex flex-row align-items-start justify-content-between flex-wrap instagram-feed-slide">
         <figure class="instagram-feed-figure">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -103,8 +121,10 @@ get_header(); ?>
           </figcaption>
         </figure>
         <figure class="instagram-feed-figure mt-md-5">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -112,8 +132,10 @@ get_header(); ?>
           </figcaption>
         </figure>
         <figure class="instagram-feed-figure">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -121,8 +143,10 @@ get_header(); ?>
           </figcaption>
         </figure>
         <figure class="instagram-feed-figure mt-md-5">
-          <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-          </div>
+          <a href="#" class="instagram-anchor">
+            <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
+            </div>
+          </a>
           <figcaption>
             <small>
               — 2019.09.01
@@ -155,9 +179,15 @@ get_header(); ?>
     <div class="row">
       <div class="col col-md-8">
         <figure class="figure-featured">
-          <img class="figure-featured__img img-fluid"
-               src="https://source.unsplash.com/random/1600x900"
-               alt="Project title" />
+          <div class="figure-featured__image-wrapper">
+            <a class="figure-featured__link overlay" href="#">
+              <?php _e('View project', 'pfleury-wordpress'); ?>
+              <span class="icon icon-arrow-medium-right"></span>
+            </a>
+            <img class="figure-featured__img img-fluid"
+                 src="https://source.unsplash.com/random/1200x900"
+                 alt="Project title" />
+          </div>
           <figcaption class="figure-featured__caption mt-2">
             <strong class="figure-featured__title">Project Title</strong>
 
@@ -170,9 +200,15 @@ get_header(); ?>
     <div class="row">
       <div class="col col-md-5 mt-5 ml-md-4">
         <figure class="figure-featured">
-          <img class="figure-featured__img img-fluid"
-               src="https://source.unsplash.com/random/900x900"
-               alt="Project title" />
+          <div class="figure-featured__image-wrapper">
+            <a class="figure-featured__link overlay" href="#">
+              <?php _e('View project', 'pfleury-wordpress'); ?>
+              <span class="icon icon-arrow-medium-right"></span>
+            </a>
+            <img class="figure-featured__img img-fluid"
+                 src="https://source.unsplash.com/random/900x900"
+                 alt="Project title" />
+          </div>
           <figcaption class="figure-featured__caption mt-2">
             <strong class="figure-featured__title">Project Title</strong>
 
@@ -183,9 +219,15 @@ get_header(); ?>
       </div>
       <div class="col col-md-6">
         <figure class="figure-featured">
-          <img class="figure-featured__img img-fluid"
-               src="https://source.unsplash.com/random/1600x900"
-               alt="Project title" />
+          <div class="figure-featured__image-wrapper">
+            <a class="figure-featured__link overlay" href="#">
+              <?php _e('View project', 'pfleury-wordpress'); ?>
+              <span class="icon icon-arrow-medium-right"></span>
+            </a>
+            <img class="figure-featured__img img-fluid"
+                 src="https://source.unsplash.com/random/1600x900"
+                 alt="Project title" />
+          </div>
           <figcaption class="figure-featured__caption mt-2">
             <strong class="figure-featured__title">Project Title</strong>
 

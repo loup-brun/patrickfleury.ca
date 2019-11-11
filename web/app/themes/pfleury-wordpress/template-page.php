@@ -4,9 +4,9 @@
 get_header();
 ?>
 
-<main class="main content">
+<main class="main container-fluid">
   <?php while (have_posts()) : the_post(); ?>
-  <article class="container-fluid">
+  <article class="content">
 
     <header class="header-page-article">
 

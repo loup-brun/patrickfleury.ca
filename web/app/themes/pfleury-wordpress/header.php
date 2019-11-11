@@ -24,7 +24,7 @@
   <nav class="navbar navbar-expand-md navbar--primary align-items-center">
     <div class="row flex-fill">
       <div class="col-8 col-md-6">
-        <a href="<?php echo get_option('home'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center align-content-start">
+        <a href="<?php echo get_theme_mod('home'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center align-content-start">
           <span class="sr-only"><?php bloginfo('name'); ?></span>
 
           <img src="<?php echo get_theme_mod( 'brand_name_img', get_theme_root_uri() . '/' . get_template() . '/assets/Nom.svg'); ?>" height="50" alt="<?php bloginfo('name'); ?>"
@@ -36,7 +36,7 @@
         </a>
       </div>
 
-      <button class="navbar-toggler element-hamburger ml-auto col-4" role="button" data-toggle="collapse" aria-expanded="false" data-target="#topNav">
+      <button class="navbar-toggler element-hamburger ml-auto col-3" role="button" data-toggle="collapse" aria-expanded="false" data-target="#topNav">
         <span></span>
         <span></span>
         <span></span>
@@ -82,51 +82,38 @@
   <nav class="nav-giantlinks">
     <div class="container-fluid">
       <div id="follow" class="collapse" aria-expanded="false" data-parent="#toggle-big-links">
-        <div class="help-block text-bold small text-uppercase">&mdash; <?php _e('Follow Me', 'pfleury-wordpress'); ?></div>
 
-        <a href="#" class="link-animated">
-          Facebook
-        </a>
-        <a href="#" class="link-animated">
-          Instagram
-        </a>
-        <a href="#" class="link-animated">
-          LinkedIn
-        </a>
-        <a href="#" class="link-animated">
-          Behance
-        </a>
-        <a href="#" class="link-animated">
-          News
-        </a>
         <!-- Facebook -->
-        <?php if (get_option('follow_facebook')) { ?>
+        <?php if (get_theme_mod('follow_facebook')) { ?>
         <a href="<?php echo get_theme_mod('follow_facebook'); ?>" class="nav-item">Facebook</a>
         <?php } ?>
         <!-- Twitter -->
-        <?php if (get_option('follow_twitter')) { ?>
-        <a href="<?php echo get_theme_mod('follow_twitter'); ?>" class="nav-item">Twitter</a>
+        <?php if (get_theme_mod('follow_twitter')) { ?>
+        <a href="https://twitter.com/<?php echo get_theme_mod('follow_twitter'); ?>" class="nav-item">Twitter</a>
         <?php } ?>
         <!-- Instagram -->
-        <?php if (get_option('follow_instagram')) { ?>
-        <a href="<?php echo get_theme_mod('follow_instagram'); ?>" class="nav-item">Instagram</a>
+        <?php if (get_theme_mod('follow_instagram')) { ?>
+        <a href="https://instagram.com/<?php echo get_theme_mod('follow_instagram'); ?>" class="nav-item">Instagram</a>
         <?php } ?>
         <!-- LinkedIn -->
-        <?php if (get_option('follow_linkedin')) { ?>
+        <?php if (get_theme_mod('follow_linkedin')) { ?>
         <a href="<?php echo get_theme_mod('follow_linkedin'); ?>" class="nav-item">LinkedIn</a>
         <?php } ?>
         <!-- Behance -->
-        <?php if (get_option('follow_behance')) { ?>
-        <a href="<?php echo get_theme_mod('follow_behance'); ?>" class="nav-item">Behance</a>
+        <?php if (get_theme_mod('follow_behance')) { ?>
+        <a href="https://behance.net/<?php echo get_theme_mod('follow_behance'); ?>" class="nav-item">Behance</a>
+        <?php } ?>
+        <!-- Pinterest -->
+        <?php if (get_theme_mod('follow_pinterest')) { ?>
+        <a href="https://behance.net/<?php echo get_theme_mod('follow_pinterest'); ?>" class="nav-item">Pinterest</a>
         <?php } ?>
         <!-- News -->
-        <?php if (get_option('follow_news')) { ?>
-        <a href="<?php echo get_theme_mod('follow_news'); ?>" class="nav-item"><?php __('News'); ?></a>
+        <?php if (get_theme_mod('follow_news')) { ?>
+        <a href="<?php echo get_theme_mod('follow_news'); ?>" class="nav-item"><?php _e('News'); ?></a>
         <?php } ?>
       </div>
 
       <div id="contact" class="collapse collapse--contact" aria-expanded="false" data-parent="#toggle-big-links">
-        <div class="help-block text-bold small text-uppercase">&mdash; <?php _e('Contact Me', 'pfleury-wordpress'); ?></div>
         <a href="mailto:info@patrickfleury.com" class="link-animated">
           <?php _e('Email', 'pfleury-wordpress'); ?>
         </a>

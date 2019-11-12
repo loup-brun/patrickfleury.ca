@@ -126,17 +126,25 @@
 
   <nav class="navbar navbar--secondary">
     <!-- Main Nav -->
+    <?php
+    $work_url = pll_current_language() === 'fr' ? '/fr/travail/' : '/en/work/';
+    $about_url = pll_current_language() === 'fr' ? '/en/a-propos/' : '/en/about/';
+    ?>
     <ul class="navbar-nav nav--secondary d-flex flex-column flex-sm-row row flex-fill">
-      <li class="nav-item col-sm-7<?php if (is_page('work')) { echo ' current_page_item'; } ?>">
-        <a href="/work/" class="nav-link">
-          Design
-          <span class="link-animated-superscript">Explore my work</span>
+      <li class="nav-item col-sm-7<?php if (is_home() || is_page( array('work', 'travail', 'design') )) { echo ' current_page_item'; } ?>">
+        <a href="<?php echo $work_url; ?>" class="nav-link">
+          <?php _e('Design', 'pfleury-wordpress'); ?>
+          <span class="link-animated-superscript">
+            <?php _e('Explore my work', 'pfleury-wordpress'); ?>
+          </span>
         </a>
       </li>
-      <li class="nav-item col-sm-5<?php if (is_page('about')) { echo ' current_page_item'; } ?>">
-        <a href="/about/" class="nav-link">
-          Studio
-          <span class="link-animated-superscript">About</span>
+      <li class="nav-item col-sm-5<?php if (is_page( array('about', 'a-propos', 'studio') )) { echo ' current_page_item'; } ?>">
+        <a href="<?php echo $about_url; ?>" class="nav-link">
+          <?php _e('Studio', 'pfleury-wordpress'); ?>
+          <span class="link-animated-superscript">
+            <?php _e('About', 'pfleury-wordpress'); ?>
+          </span>
         </a>
       </li>
     </ul>

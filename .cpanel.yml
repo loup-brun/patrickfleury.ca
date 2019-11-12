@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/patric15/staging.patrickfleury.ca/wp-content/themes/
+    - /bin/cp -R web/app/themes/pfleury-wordpress $DEPLOYPATH

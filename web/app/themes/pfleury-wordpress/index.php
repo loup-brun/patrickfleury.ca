@@ -91,7 +91,7 @@ get_header();
           </figcaption>
         </figure>
       </div>
-      <div class="col col-md-4">
+      <div class="col col-md-4 d-flex flex-column justify-content-center">
         <figure class="figure-featured mb-5">
           <div class="figure-featured__image-wrapper">
             <a class="figure-featured__link overlay" href="#">
@@ -140,7 +140,7 @@ get_header();
                  src="https://source.unsplash.com/random/1600x900"
                  alt="Project title" />
           </div>
-          <figcaption class="figure-featured__caption mt-2">
+          <figcaption class="figure-featured__caption d-flex flex-column justify-content-center">
             <strong class="figure-featured__title">Project Title</strong>
 
             —

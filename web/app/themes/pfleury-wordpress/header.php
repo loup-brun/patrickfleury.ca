@@ -16,9 +16,25 @@
   <link href="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/apple-touch-icon.png" rel="apple-touch-icon">
 
   <?php wp_head(); ?>
+
+  <?php
+  // random background classes
+  $classes = [
+    'skyblue',
+    'violet',
+    'blue',
+    'turquoise',
+    'terracota',
+    'yellow'
+  ];
+
+  $randomClass = $classes[rand(0, sizeof($classes)-1)];
+
+  $backgroundClass = 'bg-' . $randomClass;
+  ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class($backgroundClass); ?>>
 
 <header class="header accordion" id="toggle-big-links">
   <nav class="navbar navbar-expand-md navbar--primary align-items-center">

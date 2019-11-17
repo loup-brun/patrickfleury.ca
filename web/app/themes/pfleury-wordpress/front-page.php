@@ -255,8 +255,8 @@ get_header(); ?>
         <div class="col col-sm-6 d-flex flex-column align-items-end justify-content-end">
           <p class="lead">
 
-            <a href="#" class="">
-              <strong>About me</strong> <span class="icon icon-arrow-medium-right"></span>
+            <a href="#" class="bold-link">
+              About me <span class="icon icon-arrow-medium-right"></span>
             </a>
 
           </p>

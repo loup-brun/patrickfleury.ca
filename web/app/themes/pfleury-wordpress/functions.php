@@ -225,6 +225,11 @@ function pfleury_wordpress_register_required_plugins() {
 }
 /* END TGM_Plugin_Activation class */
 
+// Add posts type for testimonials
+function testimonials_posts_formats_setup() {
+ add_theme_support( 'post-formats', array( 'testimonials' ) );
+}
+add_action( 'after_setup_theme', 'testimonials_posts_formats_setup' );
 
 // If we're running a development version this will be set, otherwise it's not
 if (!defined('IS_DEV')) {

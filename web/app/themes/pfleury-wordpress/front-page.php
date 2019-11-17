@@ -236,70 +236,51 @@ get_header(); ?>
       </div>
 
       <footer class="footer--all-projects text-center mt-5">
-        <a class="h3 bold-link" href="/work/">
+        <a class="h3 bold-link" href="<?php ?>">
           <?php _e('See All Projects', 'pfleury-wordpress'); ?> <span class="icon icon-arrow-medium-right"></span>
         </a>
       </footer>
     </div>
   </section>
 
-
   <section id="about" class="py-5 my-3">
-    <div class="container">
-      <div class="row">
-        <div class="col col-sm-6">
-          <p class="lead">
-            I am a passionnate designer who loves helping you finding your way.
-          </p>
-        </div>
-        <div class="col col-sm-6 d-flex flex-column align-items-end justify-content-end">
-          <p class="lead">
-
-            <a href="#" class="bold-link">
-              About me <span class="icon icon-arrow-medium-right"></span>
-            </a>
-
-          </p>
-        </div>
-      </div>
-    </div>
+    <?php
+    if ( have_posts() ) :
+    while ( have_posts() ) : the_post();
+    the_content();
+    endwhile;
+    endif; ?>
   </section>
 
-  <section class="py-5">
+  <section id="testimonials" class="py-5">
     <h3 class="text-center">What clients are saying</h3>
-
+      <?php
+      $slides = array();
+      $testimonials = new WP_Query( array('post_type', 'testimonials') );
+      if ($testimonials->have_posts()) {
+        while ($testimonials->have_posts()) {
+          $testimonials->the_post();
+        }
+      }
+      wp_reset_postdata();
+      ?>
+    <?php if (count($slides) > 0) { ?>
     <div class="swipe-js">
       <div class="swipe-js-wrap d-flex flex-row">
-        <?php
-        if (have_posts()) {
-          while (have_posts()) { ?>
-            <section class="swipe-js-slide d-flex flex-column justify-content-center">
-              <div class="container d-flex justify-content-center">
-                <blockquote class="big-quote">
-                  <p>Nous avons aimé travailler avec Patrick.</p>
-                  <cite>John Doe</cite>
-                </blockquote>
-                <?php
-                      the_post();
-                    //  the_content();
-                  ?>
-              </div>
-            </section>
-            <section class="swipe-js-slide d-flex flex-column justify-content-center">
-              <div class="container d-flex justify-content-center">
-                <blockquote class="big-quote">
-                  <p>Nous avons aimé travailler avec Patrick.</p>
-                  <cite>John Doe</cite>
-                </blockquote>
-                <?php
-                    //  the_content();
-                  ?>
-              </div>
-            </section>
-          <?php
-          }
-        }
-        ?>
+        <?php $i = 0; foreach($slides as $slide) { extract($slide); ?>
+
+        <section class="swipe-js-slide d-flex flex-column justify-content-center">
+          <div class="container d-flex justify-content-center">
+            <blockquote class="big-quote">
+              <p>Nous avons aimé travailler avec Patrick.</p>
+              <cite>John Doe</cite>
+            </blockquote>
+            <?php
+                                                  echo $excerpt;
+              ?>
+          </div>
+          <?php $i++; } ?>
+        </section>
       </div>
       <button class="swipe-js-btn -prev">
         <div class="icon icon-arrow-left"></div>
@@ -310,6 +291,11 @@ get_header(); ?>
       <nav class="swipe-js-nav text-center">
       </nav>
     </div>
+    <?php } else  { ?>
+    <div class="text-center">
+      No slides!
+    </div>
+    <?php } ?>
   </section>
 
   <section class="section-cta py-5 bg-yellow">

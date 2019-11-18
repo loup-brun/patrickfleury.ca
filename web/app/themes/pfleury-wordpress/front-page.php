@@ -4,11 +4,24 @@
 get_header(); ?>
 
 <main class="main">
-  <div class="container-fluid">
-    <div class="header-img">
-      <img src="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home.jpg" width="1240" srcset="<?php echo get_theme_root_uri() . '/' . get_template() ?>/assets/header-home-p-500.jpeg 500w" sizes="84vw" alt="" class="img-fluid">
+  <?php
+  // Featured header image
+  while (have_posts()): the_post();
+  if (has_post_thumbnail()): ?>
+
+  <header class="header-img">
+    <div class="container-fluid">
+
+      <?php
+      $homeFeaturedImage = get_the_post_thumbnail( $size = 'full' );
+      the_post_thumbnail('full', array('class'=> 'img-fluid'));
+      ?>
     </div>
-  </div>
+  </header>
+  <?php
+  endif;
+  endwhile;
+  ?>
   <section id="instagram" class="py-3">
     <div class="container">
       <h3 class="text-center"><?php _e('What I’ve been up to lately'); ?></h3>
@@ -176,6 +189,11 @@ get_header(); ?>
 
       <h2 class="text-center mb-5">Latest additions</h2>
 
+      <?php
+      $latestProjects = new WP_Query( array('tags' => 'featured') );
+      wp_reset_query();
+      ?>
+
       <div class="row">
         <div class="col col-md-8">
           <figure class="figure-featured">
@@ -236,23 +254,63 @@ get_header(); ?>
       </div>
 
       <footer class="footer--all-projects text-center mt-5">
-        <a class="h3 bold-link" href="<?php ?>">
+        <a class="h3 bold-link" href="<?php if (pll_current_language() === 'en') { echo get_permalink( get_page_by_path( 'work' ) ); } else { echo get_permalink( get_page_by_path( 'travail' ) ); } ?>">
           <?php _e('See All Projects', 'pfleury-wordpress'); ?> <span class="icon icon-arrow-medium-right"></span>
         </a>
       </footer>
     </div>
   </section>
 
-  <section id="about" class="py-5 my-3">
-    <?php
-    if ( have_posts() ) :
-    while ( have_posts() ) : the_post();
-    the_content();
-    endwhile;
-    endif; ?>
-  </section>
+  <?php
+  // Link to about page
+  $aboutPage = array();
 
-  <section id="testimonials" class="py-5">
+  if (pll_current_language() === 'en') {
+    $aboutPage = get_page_by_path('about');
+  } else if (pll_current_language() === 'fr') {
+    $aboutPage = get_page_by_path('a-propos');
+  }
+  if (!empty($aboutPage)) {
+  ?>
+  <section id="about" class="py-5 my-3">
+    <div class="container content">
+      <div class="row">
+        <div class="col col-sm-7">
+          <p class="lead large-text">
+            <?php echo get_the_excerpt($aboutPage->ID); ?>
+          </p>
+        </div>
+        <div class="col col-sm-5 d-flex flex-column align-items-end justify-content-end">
+          <p class="lead">
+            <a href="<?php the_permalink($aboutPage->ID); ?>" class="bold-link">
+              About me <span class="icon icon-arrow-medium-right"></span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <?php
+  }
+  ?>
+
+  <?php
+  while (have_posts()) : the_post();
+  if (!empty(the_content())):
+  ?>
+  <section class="py-5" id="home-content">
+    <div class="container content">
+      <?php
+      the_content();
+      ?>
+    </div>
+  </section>
+  <?php
+  endif;
+  endwhile;
+  ?>
+
+  <section class="py-5" id="testimonials">
     <h3 class="text-center">What clients are saying</h3>
       <?php
       $slides = array();

@@ -40,7 +40,7 @@
   <nav class="navbar navbar-expand-md navbar--primary align-items-center">
     <div class="row flex-fill">
       <div class="col-8 col-md-6">
-        <a href="<?php echo get_theme_mod('home'); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center align-content-start">
+        <a href="<?php echo home_url(); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center align-content-start">
           <span class="sr-only"><?php bloginfo('name'); ?></span>
 
           <img src="<?php echo get_theme_mod( 'brand_name_img', get_theme_root_uri() . '/' . get_template() . '/assets/Nom.svg'); ?>" height="50" alt="<?php bloginfo('name'); ?>"

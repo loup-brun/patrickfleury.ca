@@ -277,8 +277,12 @@ add_filter('upload_mimes', function($mimes) {
  * Add theme support for header images
  */
 //add_theme_support( 'custom-header' );
-add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-thumbnails', array('post', 'page') );
 
+// Add tags for pages
+add_post_type_support( 'page', array(
+    'author', 'excerpt', 'tag'
+) );
 /**
  * i18n support
  */

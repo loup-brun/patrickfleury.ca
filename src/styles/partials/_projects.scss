@@ -3,6 +3,9 @@
 
   &__image-wrapper {
     position: relative;
+    background-color: $body-color;
+    color: $body-color;
+    min-height: 10vw;
   }
 
   &__link.overlay {

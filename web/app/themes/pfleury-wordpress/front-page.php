@@ -270,6 +270,7 @@ get_header(); ?>
   } else if (pll_current_language() === 'fr') {
     $aboutPage = get_page_by_path('a-propos');
   }
+
   if (!empty($aboutPage)) {
   ?>
   <section id="about" class="py-5 my-3">
@@ -311,34 +312,34 @@ get_header(); ?>
   ?>
 
   <section class="py-5" id="testimonials">
-    <h3 class="text-center">What clients are saying</h3>
-      <?php
-      $slides = array();
-      $testimonials = new WP_Query( array('post_type', 'testimonials') );
-      if ($testimonials->have_posts()) {
-        while ($testimonials->have_posts()) {
-          $testimonials->the_post();
-        }
-      }
-      wp_reset_postdata();
-      ?>
-    <?php if (count($slides) > 0) { ?>
+    <h3 class="text-center"><?php _e('What clients are saying', 'pfleury-wordpress'); ?></h3>
+    <?php
+    // Query testimonials
+    $testimonialsQuery = array();
+
+    if (pll_current_language() === 'fr') {
+      $testimonialsQuery = new WP_Query( array('category_name' => 'Témoignages') );
+    } else if (pll_current_language() === 'en') {
+      $testimonialsQuery = new WP_Query( array('category_name' => 'Testimonies') );
+    }
+
+    if ($testimonialsQuery->have_posts()) { ?>
     <div class="swipe-js">
       <div class="swipe-js-wrap d-flex flex-row">
-        <?php $i = 0; foreach($slides as $slide) { extract($slide); ?>
+        <?php while ($testimonialsQuery->have_posts()) : $testimonialsQuery->the_post(); ?>
 
         <section class="swipe-js-slide d-flex flex-column justify-content-center">
           <div class="container d-flex justify-content-center">
             <blockquote class="big-quote">
-              <p>Nous avons aimé travailler avec Patrick.</p>
-              <cite>John Doe</cite>
+              <?php the_content(); ?>
+              <?php if (get_field('testimony_author')): ?>
+              <cite><?php echo get_field('testimony_author'); ?></cite>
+              <?php endif; ?>
             </blockquote>
-            <?php
-                                                  echo $excerpt;
-              ?>
           </div>
-          <?php $i++; } ?>
         </section>
+
+        <?php endwhile; ?>
       </div>
       <button class="swipe-js-btn -prev">
         <div class="icon icon-arrow-left"></div>

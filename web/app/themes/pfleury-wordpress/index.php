@@ -150,13 +150,48 @@ get_header();
       </div>
     </div>
 
-    <?php while (have_posts()) : the_post(); ?>
+    <?php
+    // Query projects
+    $projectsQuery = array();
 
-    <h3><?php the_title(); ?></h3>
+    if (pll_current_language() === 'fr') {
+      $projectsQuery = new WP_Query( array('category_name' => 'projets') );
+    } else if (pll_current_language() === 'en') {
+      $projectsQuery = new WP_Query( array('category_name' => 'projects') );
+    }
 
-    <?php the_content(); ?>
+    if ($projectsQuery->have_posts()): ?>
+    <div class="row">
+      <?php while ($projectsQuery->have_posts()) : $projectsQuery->the_post(); ?>
 
-  <?php endwhile // end of the loop. ?>
+      <div class="col col-md-8">
+        <figure class="figure-featured mb-5">
+          <div class="figure-featured__image-wrapper">
+            <a class="figure-featured__link overlay" href="<?php the_permalink(); ?>">
+              <?php _e('View project', 'pfleury-wordpress'); ?>
+            </a>
+            <?php
+            if (get_the_post_thumbnail()) {
+              the_post_thumbnail('large', array('class'=> 'img-fluid'));
+            } else { ?>
+            <div class="figure-featured__image--default"></div>
+            <?php } ?>
+          </div>
+          <figcaption class="figure-featured__caption d-flex flex-column justify-content-center mt-2">
+            <a href="<?php the_permalink(); ?>">
+              <strong class="figure-featured__title"><?php the_title(); ?></strong>
+            </a>
+
+            —
+            <span class="sr-only"><?php _e('Tags:', 'pfleury-wordpress'); ?></span>
+            <?php the_tags('<ul class="figure-featured__tags list-inline mb-0"><li class="list-inline-item">', '</li><li class="list-inline-item">', '</li></ul>'); ?>
+            </ul>
+          </figcaption>
+        </figure>
+      </div>
+      <?php endwhile; // end of the projects loop. ?>
+    </div>
+    <?php endif; ?>
   </article>
 </main>
 

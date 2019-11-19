@@ -8,6 +8,11 @@
     min-height: 10vw;
   }
 
+  &__image--default {
+    padding-bottom: 56%;
+    background-color: orange;
+  }
+
   &__link.overlay {
     position: absolute;
     top: 0;
@@ -33,6 +38,12 @@
     &:hover {
       opacity: 1;
       visibility: visible;
+    }
+  }
+
+  &__tags {
+    li:not(:last-child)::after {
+      content: ',';
     }
   }
 }

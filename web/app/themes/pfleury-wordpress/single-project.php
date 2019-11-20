@@ -38,18 +38,10 @@ while (have_posts()):
 
         <?php if ($tags): ?>
         <div class="col">
-          <ul class="nav nav-inline">
-            <?php foreach ($tags as $tag):
-              $tag_text = $tag->name;
-              $tag_link = '/tag/'.$tag->slug;
-            ?>
-            <li class="blog__tag">
-              <a href="<?php echo $tag_link; ?>">
-                <?php echo $tag_text; ?>
-              </a>
-            </li>
-          <?php endforeach; ?>
+          <span class="sr-only"><?php _e('Tags:', 'pfleury-wordpress'); ?></span>
+          <?php the_tags('<ul class="figure-featured__tags list-inline d-inline mb-0"><li class="list-inline-item">', '</li><li class="list-inline-item">', '</li></ul>'); ?>
           </ul>
+          <?php } ?>
         </div>
         <?php endif; ?>
 

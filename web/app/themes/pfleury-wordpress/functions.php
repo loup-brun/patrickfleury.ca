@@ -283,6 +283,13 @@ add_theme_support( 'post-thumbnails', array('post', 'page') );
 add_post_type_support( 'page', array(
     'author', 'excerpt', 'tag'
 ) );
+
+/**
+ * Add page attributes to posts
+ */
+add_post_type_support( 'post', 'page-attributes' );
+
+
 /**
  * i18n support
  */

@@ -154,7 +154,10 @@
     $about_url = pll_current_language() === 'fr' ? '/en/a-propos/' : '/en/about/';
     ?>
     <ul class="navbar-nav nav--secondary d-flex flex-column flex-sm-row row flex-fill">
-      <li class="nav-item col-sm-7<?php if (is_home() || is_page( array('work', 'travail', 'design') )) { echo ' current_page_item'; } ?>">
+      <li class="nav-item col-sm-7
+        <?php if (
+        (is_home() || is_page( array('work', 'travail', 'design') )) || in_category( array('projets', projects) )
+        ) { echo ' current_page_item'; } ?>">
         <a href="<?php echo $work_url; ?>" class="nav-link">
           <?php _e('Design', 'pfleury-wordpress'); ?>
           <span class="link-animated-superscript">

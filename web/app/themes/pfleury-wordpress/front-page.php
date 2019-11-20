@@ -184,73 +184,38 @@ get_header(); ?>
     </div>
   </section>
 
+  <?php
+  // Query projects
+  $featuredProjectsQuery = array();
+  $featuredProjectsCounter = 1;
+
+  if (pll_current_language() === 'fr') {
+    $featuredProjectsQuery = new WP_Query( array('category_name' => 'projets', 'orderby' => 'weight', 'order' => 'ASC', 'meta_key' => 'featured') );
+  } else if (pll_current_language() === 'en') {
+    $featuredProjectsQuery = new WP_Query( array('category_name' => 'projects', 'order' => 'weight', 'order_by' => 'ASC') );
+  }
+
+  if ($featuredProjectsQuery->have_posts()): ?>
   <section id="curated-projects" class="py-5">
     <div class="container">
 
       <h2 class="text-center mb-5">Latest additions</h2>
 
-      <?php
-      $latestProjects = new WP_Query( array('tags' => 'featured') );
-      wp_reset_query();
-      ?>
+      <div class="row d-flex flex-row flex-wrap">
+        <?php while ($featuredProjectsQuery->have_posts()) : $featuredProjectsQuery->the_post(); ?>
 
-      <div class="row">
-        <div class="col col-md-8">
-          <figure class="figure-featured">
-            <div class="figure-featured__image-wrapper">
-              <a class="figure-featured__link overlay" href="#">
-                <?php _e('View project', 'pfleury-wordpress'); ?>
-              </a>
-              <img class="figure-featured__img img-fluid"
-                   src="https://source.unsplash.com/random/1200x900"
-                   alt="Project title" />
-            </div>
-            <figcaption class="figure-featured__caption mt-2">
-              <strong class="figure-featured__title">Project Title</strong>
-
-              —
-              <span class="figure-featured__tags">Branding, Print</span>
-            </figcaption>
-          </figure>
+        <?php // Cycle through the different layouts ?>
+        <?php if ($featuredProjectsCounter % 3 === 0) { ?>
+        <div class="col col-12 col-md-6">
+        <?php } else if ($featuredProjectsCounter % 2 === 0) { ?>
+        <div class="col col-10 col-md-5 ml-md-3 mt-md-5">
+        <?php } else { ?>
+        <div class="col col-12 col-md-8">
+        <?php } ?>
+          <?php get_template_part('components/figure-featured'); ?>
         </div>
-      </div>
-      <div class="row">
-        <div class="col col-md-5 mt-5 ml-md-4">
-          <figure class="figure-featured">
-            <div class="figure-featured__image-wrapper">
-              <a class="figure-featured__link overlay" href="#">
-                <?php _e('View project', 'pfleury-wordpress'); ?>
-              </a>
-              <img class="figure-featured__img img-fluid"
-                   src="https://source.unsplash.com/random/900x900"
-                   alt="Project title" />
-            </div>
-            <figcaption class="figure-featured__caption mt-2">
-              <strong class="figure-featured__title">Project Title</strong>
-
-              —
-              <span class="figure-featured__tags">Branding, Print</span>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col col-md-6">
-          <figure class="figure-featured">
-            <div class="figure-featured__image-wrapper">
-              <a class="figure-featured__link overlay" href="#">
-                <?php _e('View project', 'pfleury-wordpress'); ?>
-              </a>
-              <img class="figure-featured__img img-fluid"
-                   src="https://source.unsplash.com/random/1600x900"
-                   alt="Project title" />
-            </div>
-            <figcaption class="figure-featured__caption mt-2">
-              <strong class="figure-featured__title">Project Title</strong>
-
-              —
-              <span class="figure-featured__tags">Branding, Print</span>
-            </figcaption>
-          </figure>
-        </div>
+        <?php $featuredProjectsCounter++; ?>
+        <?php endwhile; // end of the projects loop. ?>
       </div>
 
       <footer class="footer--all-projects text-center mt-5">
@@ -260,6 +225,8 @@ get_header(); ?>
       </footer>
     </div>
   </section>
+  <?php wp_reset_query(); ?>
+  <?php endif; ?>
 
   <?php
   // Link to about page
@@ -318,9 +285,9 @@ get_header(); ?>
     $testimonialsQuery = array();
 
     if (pll_current_language() === 'fr') {
-      $testimonialsQuery = new WP_Query( array('category_name' => 'Témoignages') );
+      $testimonialsQuery = new WP_Query( array('category_name' => 'Témoignages', 'nopaging' => true, 'orderby' => 'weight', 'order' => 'ASC') );
     } else if (pll_current_language() === 'en') {
-      $testimonialsQuery = new WP_Query( array('category_name' => 'Testimonials') );
+      $testimonialsQuery = new WP_Query( array('category_name' => 'Testimonials', 'nopaging' => true, 'orderby' => 'weight', 'order' => 'ASC' ) );
     }
 
     if ($testimonialsQuery->have_posts()) { ?>

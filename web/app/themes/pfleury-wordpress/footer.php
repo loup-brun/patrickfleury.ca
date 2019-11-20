@@ -21,16 +21,22 @@
 //      ) );
       ?>
       <ul class="navbar-nav d-flex flex-row">
+        <?php if (get_theme_mod('business_email')) { ?>
+        <!-- Email -->
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <?php _e('phone', 'pfleury-wordpress'); ?>
+          <a href="mailto:<?php echo get_theme_mod('business_email'); ?>" class="nav-link">
+            <?php _e('Email', 'pfleury-wordpress'); ?>
           </a>
         </li>
+        <?php } ?>
+        <?php if (get_theme_mod('business_phone')) { ?>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <?php _e('email', 'pfleury-wordpress'); ?>
+          <!-- Phone -->
+          <a href="tel:<?php echo get_theme_mod('business_phone'); ?>" class="nav-link">
+            <?php _e('Phone', 'pfleury-wordpress') ?>
           </a>
         </li>
+        <?php } ?>
       </ul>
     </nav>
 

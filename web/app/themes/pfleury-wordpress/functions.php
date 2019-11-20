@@ -323,6 +323,54 @@ function theme_customizer( $wp_customize ) {
     )
   );
 
+  // Business Settings
+  // ---------------
+
+  $wp_customize->add_section(
+    'business_settings',
+    array(
+      'title' => 'Business Settings',
+      'description' => 'Affaires',
+      'priority' => 35
+    )
+  );
+
+  // Email
+  $wp_customize->add_setting(
+    'business_email',
+    array(
+      'default' => '',
+      'placeholder' => 'hello@patrickfleury.ca'
+    )
+  );
+
+  $wp_customize->add_control(
+    'business_email',
+    array(
+      'label' => 'Adresse courriel',
+      'section' => 'business_settings',
+      'type' => 'email',
+    )
+  );
+
+  // Phone
+  $wp_customize->add_setting(
+    'business_phone',
+    array(
+      'default' => '',
+      'placeholder' => '+514-SOO-COOL'
+    )
+  );
+
+  $wp_customize->add_control(
+    'business_phone',
+    array(
+      'label' => 'Téléphone',
+      'section' => 'business_settings',
+      'type' => 'text',
+    )
+  );
+
   // Social Settings
   // ---------------
 
@@ -330,7 +378,7 @@ function theme_customizer( $wp_customize ) {
     'social_settings',
     array(
       'title' => 'Social Settings',
-      'description' => 'Theme-specific settings for customization',
+      'description' => 'Link to platforms elsewhere!',
       'priority' => 35
     )
   );

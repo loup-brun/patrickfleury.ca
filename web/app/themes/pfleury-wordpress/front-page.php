@@ -341,6 +341,7 @@ get_header(); ?>
 
         <?php endwhile; ?>
       </div>
+      <?php if (sizeof($testimonialsQuery->posts) > 1): ?>
       <button class="swipe-js-btn -prev">
         <div class="icon icon-arrow-left"></div>
       </button>
@@ -349,6 +350,7 @@ get_header(); ?>
       </button>
       <nav class="swipe-js-nav text-center">
       </nav>
+      <?php endif; ?>
     </div>
     <?php } else  { ?>
     <div class="text-center">
@@ -360,17 +362,23 @@ get_header(); ?>
   <section class="section-cta py-5 bg-yellow">
     <div class="container">
       <span class="h2 font-weight-normal mb-3">
-        Convinced? Reach out!
+        <?php _e('Convinced? Reach out!'); ?>
       </span>
 
       <p class="lead">
         <nav class="nav nav-links">
-          <a href="mailto:info@patrickfleury.ca" class="mr-4">
-            Email
+          <?php if (get_theme_mod('business_email')) { ?>
+          <!-- Email -->
+          <a href="mailto:<?php echo get_theme_mod('business_email'); ?>" class="mr-4">
+            <?php _e('Email'); ?>
           </a>
-          <a href="tel:+1514 865-7775" class="mr-4">
-            +514&nbsp;865-7775
+          <?php } ?>
+          <?php if (get_theme_mod('business_phone')) { ?>
+          <!-- Phone -->
+          <a href="tel:<?php echo get_theme_mod('business_phone'); ?>">
+            <?php echo get_theme_mod('business_phone'); ?>
           </a>
+          <?php } ?>
         </nav>
       </p>
     </div>

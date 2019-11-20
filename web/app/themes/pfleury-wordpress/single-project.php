@@ -41,7 +41,6 @@ while (have_posts()):
           <span class="sr-only"><?php _e('Tags:', 'pfleury-wordpress'); ?></span>
           <?php the_tags('<ul class="figure-featured__tags list-inline d-inline mb-0"><li class="list-inline-item">', '</li><li class="list-inline-item">', '</li></ul>'); ?>
           </ul>
-          <?php } ?>
         </div>
         <?php endif; ?>
 

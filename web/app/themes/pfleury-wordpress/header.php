@@ -130,12 +130,19 @@
       </div>
 
       <div id="contact" class="collapse collapse--contact" aria-expanded="false" data-parent="#toggle-big-links">
-        <a href="mailto:info@patrickfleury.com" class="link-animated">
+
+        <?php if (get_theme_mod('business_email')) { ?>
+        <!-- Email -->
+        <a href="mailto:<?php echo get_theme_mod('business_email'); ?>" class="link-animated">
           <?php _e('Email', 'pfleury-wordpress'); ?>
         </a>
-        <a href="tel:+1231231234" class="link-animated">
-          <?php _e('Phone', 'pfleury-wordpress'); ?>
+        <?php } ?>
+        <?php if (get_theme_mod('business_phone')) { ?>
+          <!-- Phone -->
+        <a href="tel:<?php echo get_theme_mod('business_phone'); ?>" class="link-animated">
+          <?php echo get_theme_mod('business_phone'); ?>
         </a>
+        <?php } ?>
       </div>
     </div>
   </nav>

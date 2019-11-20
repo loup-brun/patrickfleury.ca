@@ -14,7 +14,7 @@ get_header(); ?>
 
       <?php
       $homeFeaturedImage = get_the_post_thumbnail( $size = 'full' );
-      the_post_thumbnail('full', array('class'=> 'img-fluid'));
+      the_post_thumbnail('full', array('class'=> 'img-fluid mb-3'));
       ?>
     </div>
   </header>

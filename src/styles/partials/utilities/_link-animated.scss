@@ -3,10 +3,8 @@
 .link-animated {
   position: relative;
   margin-right: $spacer * 2;
-//  margin-top: $spacer / 2;
   white-space: nowrap;
   display: inline-block;
-  transition: all .15s; // may help smoothing bold reflow
   font-weight: 400;
   text-decoration: none;
   cursor: $link-cursor;
@@ -24,6 +22,7 @@
     z-index: 2;
     transition: .15s all ease;
     transform: translateX(-.25em) translateY(.2em) scale(.5);
+    transform-origin: bottom left;
     opacity: 0;
 
     // define the image
@@ -44,8 +43,8 @@
     top: 0.5em;
     left: 102%; // must be `left` for when text is set
     z-index: 2;
-    transition: .35s all ease;
-    transform: translateY(-.5em);
+    transition: .25s all ease;
+    transform: translateY(-.25em);
     opacity: 0;
     font-size: .4em;
   }
@@ -66,6 +65,7 @@
       transition-duration: .25s;
       opacity: 1;
       transform: translateX(0) translateY(0) scale(1);
+      transform-origin: bottom left;
     }
   }
 

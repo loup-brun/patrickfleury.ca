@@ -320,7 +320,7 @@ get_header(); ?>
     if (pll_current_language() === 'fr') {
       $testimonialsQuery = new WP_Query( array('category_name' => 'Témoignages') );
     } else if (pll_current_language() === 'en') {
-      $testimonialsQuery = new WP_Query( array('category_name' => 'Testimonies') );
+      $testimonialsQuery = new WP_Query( array('category_name' => 'Testimonials') );
     }
 
     if ($testimonialsQuery->have_posts()) { ?>

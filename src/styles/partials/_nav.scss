@@ -151,6 +151,7 @@
     @extend .link-animated;
     font-size: $h1-font-size * 0.65;
     transition: padding .3s;
+//    margin-right: 4em;
 
     @include media-breakpoint-up(md) {
       font-size: $h1-font-size;
@@ -184,6 +185,7 @@
       @extend .link-animated;
       @extend .link-animated-with-superscript;
       padding: .35rem .05rem .7rem;
+      margin-right: 0 !important;
       position: relative;
       &:hover {
         text-decoration: none;

@@ -2,15 +2,18 @@
 
 .link-animated {
   position: relative;
-  margin-right: $spacer * 2;
   white-space: nowrap;
+  margin-right: $spacer * 3;
   display: inline-block;
   font-weight: 400;
   text-decoration: none;
   cursor: $link-cursor;
 
-  padding-right: .08em; // compensate for weight change
+  padding-right: .12em; // compensate for weight change
 
+  &:last-child {
+    margin-right: 0;
+  }
   &::after {
     // arrow goes in pseudo-element
     content: '';

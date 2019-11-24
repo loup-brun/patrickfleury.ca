@@ -39,7 +39,10 @@
 
   &--secondary {
     width: 100%;
-    font-size: $h3-font-size;
+    font-size: $h4-font-size;
+    @include media-breakpoint-up('sm', $grid-breakpoints) {
+      font-size: $h3-font-size;
+    }
     padding-top: 0;
     padding-bottom: 0;
 

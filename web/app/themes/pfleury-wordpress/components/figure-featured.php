@@ -11,7 +11,7 @@
     </a>
     <?php
     if (get_the_post_thumbnail()) {
-      the_post_thumbnail('large', array('class'=> 'img-fluid'));
+      the_post_thumbnail('large', array('class'=> 'figure-featured__image'));
     } else { ?>
     <div class="figure-featured__image--default"></div>
     <?php } ?>

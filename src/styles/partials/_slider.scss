@@ -12,7 +12,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding: 20px;
+  padding: 22px;
 }
 
 
@@ -60,7 +60,8 @@
 
 .swipe-js-btn {
   position: absolute;
-  width: 80px;
+  width: 24px;
+  padding: 0;
   top: 0;
   right: 0;
   bottom: 0;
@@ -71,23 +72,36 @@
   border: 0;
   outline: none;
   background-color: transparent;
-  color: white;
-  font-size: 40px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
+
+  @include media-breakpoint-up('sm', $grid-breakpoints) {
+    width: 77px;
+    padding: 0 24px;
+  }
 
   &.-prev {
     z-index: 3;
     right: auto;
+    padding-left: 1%;
+    @include media-breakpoint-up('sm', $grid-breakpoints) {
+      padding-left: 24px;
+    }
   }
   &.-next {
     z-index: 4;
     left: auto;
+    padding-right: 1%;
     right: 0;
+    @include media-breakpoint-up('sm', $grid-breakpoints) {
+      padding-right: 24px;
+    }
+  }
+
+  .icon {
+    width: 100%;
+    padding-bottom: 100%;
+    margin: 0;
   }
 }
 .swipe-js-prev [class^="w-icon-"],

@@ -243,12 +243,12 @@ get_header(); ?>
   <section id="about" class="py-5 my-3">
     <div class="container content">
       <div class="row">
-        <div class="col col-sm-7">
+        <div class="col col-md-7 col-12">
           <p class="lead large-text">
             <?php echo get_the_excerpt($aboutPage->ID); ?>
           </p>
         </div>
-        <div class="col col-sm-5 d-flex flex-column align-items-end justify-content-end">
+        <div class="col col-md-5 col-12 d-flex flex-column align-items-end justify-content-end">
           <p class="lead">
             <a href="<?php the_permalink($aboutPage->ID); ?>" class="bold-link">
               About me <span class="icon icon-arrow-medium-right"></span>

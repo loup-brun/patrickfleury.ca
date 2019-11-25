@@ -18,7 +18,7 @@ get_header();
 
     </header>
 
-    <section class="row">
+    <section class="row mb-5">
       <div class="col-md-5">
         <h1 class="mt-0">
           <?php the_title(); ?>

@@ -22,167 +22,8 @@ get_header(); ?>
   endif;
   endwhile;
   ?>
-  <section id="instagram" class="py-3">
-    <div class="container">
-      <h3 class="text-center"><?php _e('What I’ve been up to lately'); ?></h3>
-    </div>
 
-    <div class="swipe-js instagram-swipe" id="instagram-swipe">
-      <div class="swipe-js-wrap d-flex flex-row">
-        <section class="swipe-js-slide d-flex flex-row align-items-start justify-content-between flex-wrap instagram-feed-slide">
-          <figure class="instagram-feed-figure">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-          <figure class="instagram-feed-figure mt-md-5">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-          <figure class="instagram-feed-figure">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-          <figure class="instagram-feed-figure mt-md-5">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-        </section>
-        <section class="swipe-js-slide d-flex flex-row align-items-start justify-content-between flex-wrap instagram-feed-slide">
-          <figure class="instagram-feed-figure">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-          <figure class="instagram-feed-figure mt-md-5">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-          <figure class="instagram-feed-figure">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-          <figure class="instagram-feed-figure mt-md-5">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-        </section>
-        <section class="swipe-js-slide d-flex flex-row align-items-start justify-content-between flex-wrap instagram-feed-slide">
-          <figure class="instagram-feed-figure">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-          <figure class="instagram-feed-figure mt-md-5">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-          <figure class="instagram-feed-figure">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-          <figure class="instagram-feed-figure mt-md-5">
-            <a href="#" class="instagram-anchor">
-              <div class="instagram-feed-image" style="background-image: url('https://source.unsplash.com/random')" role="img">
-              </div>
-            </a>
-            <figcaption>
-              <small>
-                — 2019.09.01
-              </small>
-            </figcaption>
-          </figure>
-        </section>
-      </div>
-      <footer class="swipe-js-numbers text-center">
-        <span class="slider-number-current"></span>
-        &nbsp;
-        <span class="slider-number-separator">/</span>
-        &nbsp;
-        <span class="slider-number-total"></span>
-      </footer>
-      <button class="swipe-js-btn -prev">
-        <div class="icon icon-arrow-left"></div>
-      </button>
-      <button class="swipe-js-btn -next">
-        <div class="icon icon-arrow-right"></div>
-      </button>
-    </div>
-  </section>
+  <?php echo do_shortcode('[catch-instagram-feed-gallery-widget username="_loupbrun" access_token="2282534268.63da809.22f251ffa6c94c55822f9cfa90c28d3c"]'); ?>
 
   <?php
   // Query projects
@@ -208,7 +49,7 @@ get_header(); ?>
         <?php if ($featuredProjectsCounter % 3 === 0) { ?>
         <div class="col col-12 col-md-6">
         <?php } else if ($featuredProjectsCounter % 2 === 0) { ?>
-        <div class="col col-10 col-md-5 ml-md-3 mt-md-5">
+        <div class="col col-10 col-md-5 ml-md-3 mt-md-5 -ratio-1-1">
         <?php } else { ?>
         <div class="col col-12 col-md-8">
         <?php } ?>
@@ -219,7 +60,7 @@ get_header(); ?>
       </div>
 
       <footer class="footer--all-projects text-center mt-5">
-        <a class="h3 bold-link" href="<?php if (pll_current_language() === 'en') { echo get_permalink( get_page_by_path( 'work' ) ); } else { echo get_permalink( get_page_by_path( 'travail' ) ); } ?>">
+        <a class="h3 bold-link" href="<?php if (pll_current_language() === 'en') { echo get_permalink( get_page_by_path( 'projects' ) ); } else { echo get_permalink( get_page_by_path( 'projets' ) ); } ?>">
           <?php _e('See All Projects', 'pfleury-wordpress'); ?> <span class="icon icon-arrow-medium-right"></span>
         </a>
       </footer>
@@ -277,54 +118,6 @@ get_header(); ?>
   endif;
   endwhile;
   ?>
-
-  <section class="py-5" id="testimonials">
-    <h3 class="text-center"><?php _e('What clients are saying', 'pfleury-wordpress'); ?></h3>
-    <?php
-    // Query testimonials
-    $testimonialsQuery = array();
-
-    if (pll_current_language() === 'fr') {
-      $testimonialsQuery = new WP_Query( array('category_name' => 'Témoignages', 'nopaging' => true, 'orderby' => 'weight', 'order' => 'ASC') );
-    } else if (pll_current_language() === 'en') {
-      $testimonialsQuery = new WP_Query( array('category_name' => 'Testimonials', 'nopaging' => true, 'orderby' => 'weight', 'order' => 'ASC' ) );
-    }
-
-    if ($testimonialsQuery->have_posts()) { ?>
-    <div class="swipe-js">
-      <div class="swipe-js-wrap d-flex flex-row">
-        <?php while ($testimonialsQuery->have_posts()) : $testimonialsQuery->the_post(); ?>
-
-        <section class="swipe-js-slide d-flex flex-column justify-content-center">
-          <div class="container d-flex justify-content-center">
-            <blockquote class="big-quote">
-              <?php the_content(); ?>
-              <?php if (get_field('testimony_author')): ?>
-              <cite><?php echo get_field('testimony_author'); ?></cite>
-              <?php endif; ?>
-            </blockquote>
-          </div>
-        </section>
-
-        <?php endwhile; ?>
-      </div>
-      <?php if (sizeof($testimonialsQuery->posts) > 1): ?>
-      <button class="swipe-js-btn -prev">
-        <div class="icon icon-arrow-left"></div>
-      </button>
-      <button class="swipe-js-btn -next">
-        <div class="icon icon-arrow-right"></div>
-      </button>
-      <nav class="swipe-js-nav text-center">
-      </nav>
-      <?php endif; ?>
-    </div>
-    <?php } else  { ?>
-    <div class="text-center">
-      No slides!
-    </div>
-    <?php } ?>
-  </section>
 
   <section class="section-cta py-5 bg-yellow">
     <div class="container">

@@ -76,6 +76,14 @@ function pfleury_wordpress_register_required_plugins() {
 			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
 		),
 
+		array(
+			'name'         => 'PFLEURY Catch Instagram Feed',
+			'slug'         => 'catch-instagram-feed',
+			'source'       => get_stylesheet_directory() . '/lib/catch-instagram-feed-gallery-widget.php',
+			'required'     => false,
+		),
+
+
 		// This is an example of how to include a plugin from an arbitrary external source in your theme.
 		array(
 			'name'         => 'Page Builder by SiteOrigin', // The plugin name.
@@ -90,7 +98,7 @@ function pfleury_wordpress_register_required_plugins() {
 			'slug'         => 'polylang', // The plugin slug (typically the folder name).
 			'source'       => 'https://downloads.wordpress.org/plugin/polylang.2.6.5.zip', // The plugin source.
 			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
-		),
+		)
 
 		// This is an example of how to include a plugin from a GitHub repository in your theme.
 		// This presumes that the plugin code is based in the root of the GitHub repository
@@ -255,17 +263,6 @@ add_action('init', function() {
     )
   );
 });
-
-
-// Load instagram embed feed plugin
-//add_action('after_setup_theme', 'load_social_feed_plugin');
-//function load_social_feed_plugin() {
-//  if (!class_exists('Social')) {
-//    // load Social if not already loaded
-//    include_once(TEMPLATEPATH.'/plugins/catch-instagram-feed-gallery-widget/public/catch-instagram-feed-gallery-widget.php');
-//  }
-//}
-
 
 // Allow SVG uploads
 add_filter('upload_mimes', function($mimes) {

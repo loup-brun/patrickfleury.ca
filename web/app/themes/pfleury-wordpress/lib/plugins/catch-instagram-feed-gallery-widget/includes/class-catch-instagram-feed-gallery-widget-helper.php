@@ -105,7 +105,7 @@ class Catch_Instagram_Feed_Gallery_Widget_Helper {
 			return $output;
 		} elseif ( isset( $data['meta']['error_message'] ) ) {
 			if ( isset( $data['meta']['error_type'] ) ) {
-				$output .= esc_html__( 'Provide API access token / Username', 'catch-instagram-feed-gallery-widget' );
+				$output .=  '<!-- Provide API access token / Username', 'catch-instagram-feed-gallery-widget -->';
 				return $output;
 			} else {
 				$output .= esc_html( $data['meta']['error_message'] );

@@ -4,11 +4,11 @@
 get_header();
 ?>
 
-<main class="main container-fluid">
+<main class="main">
   <?php while (have_posts()) : the_post(); ?>
   <article class="content">
 
-    <header class="header-page-article mb-5">
+    <header class="header-page-article mb-5 container-fluid">
 
       <?php
       if (has_post_thumbnail()) {
@@ -18,7 +18,7 @@ get_header();
 
     </header>
 
-    <section class="row mb-5">
+    <section class="row mb-5 container-fluid">
       <div class="col-md-5">
         <h1 class="mt-0">
           <?php the_title(); ?>
@@ -30,7 +30,9 @@ get_header();
       </div>
     </section>
 
-    <?php the_content(); ?>
+    <section class="container content">
+      <?php the_content(); ?>
+    </section>
 
     <?php if (get_field('show_testimonials')): ?>
     <section class="py-5" id="testimonials">

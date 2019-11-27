@@ -22,7 +22,7 @@ while (have_posts()):
     <header class="header-page-article">
 
       <?php if (get_custom_header()) { ?>
-      <img src="<?php header_image(); ?>" alt="" />
+      <img src="<?php header_image(); ?>" alt="" class="mb-5" />
       <?php } ?>
 
       <h1>

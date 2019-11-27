@@ -79,8 +79,8 @@ function pfleury_wordpress_register_required_plugins() {
 		array(
 			'name'         => 'PFLEURY Catch Instagram Feed',
 			'slug'         => 'catch-instagram-feed',
-			'source'       => get_stylesheet_directory() . '/lib/catch-instagram-feed-gallery-widget.php',
-			'required'     => false,
+			'source'       => get_stylesheet_directory() . '/lib/catch-instagram-feed-gallery-widget.zip',
+			'required'     => true,
 		),
 
 

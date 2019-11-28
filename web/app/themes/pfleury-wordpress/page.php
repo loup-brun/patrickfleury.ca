@@ -30,7 +30,7 @@ get_header();
       </div>
     </section>
 
-    <section class="container content">
+    <section class="container-fluid content">
       <?php the_content(); ?>
     </section>
 

@@ -23,20 +23,18 @@
       <?php
       $related_projects = get_field('related_projects');
       $related_counter = 0;
-      if ( $related_projects ) {
+      if ( $related_projects && $related_counter < 2 ) {
         foreach($related_projects as $project) {
-          if ($related_counter < 2) {
-            setup_postdata($project); ?>
+          setup_postdata($project); ?>
 
       <div class="col-12 col-md-6">
         <?php get_template_part('components/figure-featured'); ?>
       </div>
 
       <?php
-          }
           $related_counter++;
         } // end forEach
-        wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+        wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
       } // end if ?>
       <div class="col-12 col-md-6">
         <?php get_template_part('components/figure-featured'); ?>

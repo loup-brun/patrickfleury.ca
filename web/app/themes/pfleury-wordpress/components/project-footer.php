@@ -23,7 +23,7 @@
       <?php
       $related_projects = get_field('related_projects');
       $related_counter = 0;
-      if ( $related_projects && $related_counter < 2 ) {
+      if ( $related_projects && $related_counter < 1 ) {
         foreach($related_projects as $project) {
           setup_postdata($project); ?>
 

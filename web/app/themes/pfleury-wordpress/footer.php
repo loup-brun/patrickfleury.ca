@@ -1,3 +1,31 @@
+<!-- Pre-footer CTA -->
+<?php if (!the_field('hide_cta')) { ?>
+<section class="section-cta py-5 bg-yellow">
+  <div class="container">
+    <span class="h2 font-weight-normal mb-3">
+      <?php _e('Convinced? Reach out!'); ?>
+    </span>
+
+    <p class="lead">
+      <nav class="nav nav-links">
+        <?php if (get_theme_mod('business_email')) { ?>
+        <!-- Email -->
+        <a href="mailto:<?php echo get_theme_mod('business_email'); ?>" class="mr-4">
+          <?php _e('Email'); ?>
+        </a>
+        <?php } ?>
+        <?php if (get_theme_mod('business_phone')) { ?>
+        <!-- Phone -->
+        <a href="tel:<?php echo get_theme_mod('business_phone'); ?>">
+          <?php echo get_theme_mod('business_phone'); ?>
+        </a>
+        <?php } ?>
+      </nav>
+    </p>
+  </div>
+</section>
+<?php } // end if ?>
+
 <footer class="footer">
   <div class="container-fluid d-flex flex-wrap md-flex-nowrap justify-content-between">
     <div class="copyright-text mr-3">

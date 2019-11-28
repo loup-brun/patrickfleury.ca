@@ -34,7 +34,7 @@
   ?>
 </head>
 
-<body <?php body_class($backgroundClass); ?>>
+<body <?php body_class(array($backgroundClass, 'transition-fade')); ?> id="swup">
 
 <header class="header accordion" id="toggle-big-links">
   <nav class="navbar navbar-expand-md navbar--primary align-items-center">

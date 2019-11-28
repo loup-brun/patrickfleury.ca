@@ -31,7 +31,7 @@ while (have_posts()):
 
       <section class="section-page-meta row pb-3">
         <?php if (get_field('year')) { ?>
-        <div class="col-12 col-md-3 mb-2">
+        <div class="col-12 col-md-2 mb-2">
           <span class="project__year">
             <?php the_field('year'); ?>
           </span>
@@ -39,7 +39,7 @@ while (have_posts()):
         <?php } ?>
 
         <?php if ($tags): ?>
-        <div class="col-12 col-md-3 mb-2">
+        <div class="col-12 col-md-4 mb-2">
           <span class="sr-only"><?php _e('Tags:', 'pfleury-wordpress'); ?></span>
           <?php the_tags('<ul class="figure-featured__tags list-inline d-inline mb-0"><li class="list-inline-item">', '</li><li class="list-inline-item">', '</li></ul>'); ?>
           </ul>

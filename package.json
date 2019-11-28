@@ -7,7 +7,7 @@
     "node": ">=8 <10"
   },
   "scripts": {
-    "preinstall": "composer install",
+    "preinstall": "composer install --ignore-platform-reqs",
     "install:wp": "node scripts/install.js",
     "uninstall:wp": "vendor/bin/wp db reset",
     "dev:wp": "cross-env DEV=true vendor/bin/wp server --docroot=web --host=0.0.0.0 --port=3000 --color --quiet",
@@ -32,7 +32,8 @@
     "milligram": "^1.3.0",
     "popper.js": "^1.15.0",
     "rimraf": "2.6.2",
-    "swipejs": "^2.2.14"
+    "swipejs": "^2.2.14",
+    "swup": "^2.0.8"
   },
   "devDependencies": {
     "@ueno/eslint-config": "1.2.4",

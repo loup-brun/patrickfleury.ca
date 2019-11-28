@@ -117,7 +117,7 @@ class Catch_Instagram_Feed_Gallery_Widget_Helper {
       if ( ( isset( $options['title'] ) && ! empty( $options['title'] ) ) && ( isset( $options['element'] ) && 'shortcode' === $options['element'] ) ) {
         $output .= '
       <div class="container">
-        <h3 class="text-center">' . esc_html( $options['title'] ) . '</h3>
+        <h3 class="h4 text-center">' . esc_html( $options['title'] ) . '</h3>
       </div>';
       }
       $instagram_posts_counter = 0;
@@ -145,8 +145,14 @@ class Catch_Instagram_Feed_Gallery_Widget_Helper {
           <section class="swipe-js-slide d-flex flex-row align-items-start justify-content-between flex-wrap instagram-feed-slide">';
         }
         if ($instagram_posts_counter < 12) { // max 12 posts
+          if ($instagram_posts_counter % 2) { // alternate class on even slides
           $output .= '
-            <figure class="instagram-feed-figure">
+            <figure class="instagram-feed-figure mt-md-5">';
+          } else {
+          $output .= '
+            <figure class="instagram-feed-figure">';
+          }
+          $output .= '
               <a class="instagram-anchor" target="_blank" href="' . esc_url( $src['link'] ) . '">';
           if ( 'video' === $src['type'] ) {
             if ( 'thumbnail' == $options['size'] ) {

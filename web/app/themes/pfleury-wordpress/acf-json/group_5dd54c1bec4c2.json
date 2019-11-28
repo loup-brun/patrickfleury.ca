@@ -1,6 +1,6 @@
 {
     "key": "group_5dd54c1bec4c2",
-    "title": "Projets",
+    "title": "Projet",
     "fields": [
         {
             "key": "field_5dd54c208b95e",
@@ -78,6 +78,7 @@
                 "post"
             ],
             "taxonomy": [
+                "category:projets",
                 "category:projects"
             ],
             "filters": [
@@ -115,5 +116,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1574880011
+    "modified": 1574913269
 }

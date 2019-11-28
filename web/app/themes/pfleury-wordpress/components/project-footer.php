@@ -20,9 +20,22 @@
   <section class="footer-project__related py-5">
     <h3 class="text-center mb-5"><?php _e('You Might Also Enjoy These Projects', 'pfleury-wordpress'); ?></h3>
     <div class="row">
+      <?php
+      $related_projects = get_field('related_projects');
+      $related_counter = 0;
+      if ( $related_projects ) {
+        foreach($related_projects as $project) {
+          if ($related_counter < 2) {
+            setup_postdata($project); ?>
+
       <div class="col-12 col-md-6">
         <?php get_template_part('components/figure-featured'); ?>
       </div>
+
+      <?php
+          }
+        } // end forEach
+      } // end if ?>
       <div class="col-12 col-md-6">
         <?php get_template_part('components/figure-featured'); ?>
       </div>

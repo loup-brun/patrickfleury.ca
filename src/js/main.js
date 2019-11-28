@@ -8,7 +8,7 @@ import Collapse from 'bootstrap/js/dist/collapse';
 
 function loaded() {
   activate();
-  pageTransitions(activate);
+//  pageTransitions(activate);
 }
 
 function activate() {

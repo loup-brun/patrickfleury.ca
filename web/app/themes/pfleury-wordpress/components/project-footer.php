@@ -34,7 +34,9 @@
 
       <?php
           }
+          $related_counter++;
         } // end forEach
+        wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
       } // end if ?>
       <div class="col-12 col-md-6">
         <?php get_template_part('components/figure-featured'); ?>

@@ -16,8 +16,8 @@ while (have_posts()):
   $tags = get_the_tags();
 ?>
 
-<main class="main content">
-  <article class="container-fluid">
+<main class="main">
+  <article class="content container-fluid">
 
     <header class="header-page-article my-3">
 

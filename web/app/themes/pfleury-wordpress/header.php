@@ -156,7 +156,7 @@
     <ul class="navbar-nav nav--secondary d-flex flex-row row flex-fill">
       <li class="nav-item col-md-7 col-6
         <?php if (
-        (is_home() || is_page( array('projets', 'projects', 'design') )) || in_category( array('projets', 'projects') )
+        is_home() || in_category( array('projets', 'projects') )
         ) { echo ' current_page_item'; } ?>">
         <a href="<?php echo $work_url; ?>" class="nav-link">
           <?php _e('Design', 'pfleury-wordpress'); ?>

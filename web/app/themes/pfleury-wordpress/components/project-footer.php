@@ -2,16 +2,24 @@
 
   <section class="footer-project__credits">
     <div class="row">
-      <div class="col-12 col-md-6">
-        <span class="h1 mb-3"><?php _e('Thank You!', 'pfleury-wordpress'); ?></span>
+      <div class="col-12 col-md-6 mb-3">
+        <span class="h1"><?php _e('Thank You!', 'pfleury-wordpress'); ?></span>
       </div>
 
-      <div class="col-12 col-md-6 mt-5">
+      <div class="col-12 col-md-6 mt-md-5">
         <!-- Credits -->
 
-        <h5><?php _e('Complete Credits', 'pfleury-wordpress'); ?></h5>
+        <h5 class="mb-2 mb-md-3"><?php _e('Complete Credits', 'pfleury-wordpress'); ?></h5>
 
-        <ul></ul>
+        <div class="content ml-md-5 small">
+          <?php
+          $credits = get_field('project_credits');
+
+          if ($credits) {
+            echo $credits;
+          }
+          ?>
+        </div>
       </div>
     </div>
   </section>
@@ -24,8 +32,10 @@
       $related_projects = get_field('related_projects');
       $related_counter = 0;
       if ( $related_projects && $related_counter < 1 ) {
-        foreach($related_projects as $project) {
-          setup_postdata($project); ?>
+        // variable must be called `$post`
+        // see documentation: https://www.advancedcustomfields.com/resources/relationship/
+        foreach($related_projects as $post) {
+          setup_postdata($post); ?>
 
       <div class="col-12 col-md-6">
         <?php get_template_part('components/figure-featured'); ?>
@@ -36,17 +46,13 @@
         } // end forEach
         wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
       } // end if ?>
-      <div class="col-12 col-md-6">
-        <?php get_template_part('components/figure-featured'); ?>
-      </div>
     </div>
   </section>
   <?php ?>
 
   <div class="footer-project__back text-center mt-5">
     <?php // get projects index page
-    $work_url = pll_current_language() === 'fr' ? '/fr/travail/' : '/en/work/';
-    $about_url = pll_current_language() === 'fr' ? '/en/a-propos/' : '/en/about/';
+    $work_url = pll_current_language() === 'fr' ? '/fr/projets/' : '/en/projects/';
     ?>
     <a class="h3 bold-link" href="<?php echo $work_url; ?>">
       <span class="icon icon-arrow-medium-left"></span> <?php _e('Back to all projects', 'pfleury-wordpress'); ?>

@@ -8,7 +8,7 @@ get_header();
   <?php while (have_posts()) : the_post(); ?>
   <article class="content">
 
-    <header class="header-page-article mb-5 container-fluid">
+    <header class="header-page-article container-fluid">
 
       <?php
       if (has_post_thumbnail()) {
@@ -16,19 +16,18 @@ get_header();
       }
       ?>
 
+      <section class="row mb-5">
+        <div class="col-md-5">
+          <h1 class="mt-0">
+            <?php the_title(); ?>
+          </h1>
+        </div>
+
+        <div class="col-md-7 section-page-meta mt-5 pb-3 lead">
+          <?php the_excerpt(); ?>
+        </div>
+      </section>
     </header>
-
-    <section class="row mb-5 container-fluid">
-      <div class="col-md-5">
-        <h1 class="mt-0">
-          <?php the_title(); ?>
-        </h1>
-      </div>
-
-      <div class="col-md-7 section-page-meta row mt-5 pb-3 lead">
-        <?php the_excerpt(); ?>
-      </div>
-    </section>
 
     <section class="container-fluid content">
       <?php the_content(); ?>

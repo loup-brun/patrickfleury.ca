@@ -9,16 +9,16 @@
  * that starts the plugin.
  *
  * @link              catchplugins.com
+ * @link              loupbrun.ca
  * @since             1.0.0
  * @package           Catch_Instagram_Feed_Gallery_Widget
  *
  * @wordpress-plugin
  * Plugin Name:       PFLEURY Social Gallery and Widget
- * Plugin URI:        wordpress.org/plugins/catch-instagram-feed-gallery-widget
  * Description:       AMENDED BY LOUIS Social Gallery and Widget Plugin is a simple solution to display your Instagram feed directly onto your website either using a widget or shortcode. You can also show your Instagram feeds in a post or page as well.
  * Version:           1.9.1
  * Author:            Catch Plugins, loupbrun
- * Author URI:        catchplugins.com
+ * Author URI:        catchplugins.com, loupbrun.ca
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       catch-instagram-feed-gallery-widget

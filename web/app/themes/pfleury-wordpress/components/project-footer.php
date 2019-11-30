@@ -6,16 +6,17 @@
         <span class="h1"><?php _e('Thank You!', 'pfleury-wordpress'); ?></span>
       </div>
 
-      <div class="col-12 col-md-6 mt-md-5">
-        <!-- Credits -->
+      <?php
+      $credits = get_field('project_credits');
 
+      if ($credits) {
+      ?>
+      <!-- Credits -->
+      <div class="col-12 col-md-6 mt-md-5">
         <h5 class="mb-2 mb-md-3"><?php _e('Complete Credits', 'pfleury-wordpress'); ?></h5>
 
         <div class="content ml-md-5 small">
           <?php
-          $credits = get_field('project_credits');
-
-          if ($credits) {
             echo $credits;
           }
           ?>

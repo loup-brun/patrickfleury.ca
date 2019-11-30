@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Register the GitHub Gist shortcode
  */
@@ -23,7 +23,7 @@ function catch_instagram_assets() {
 } // End function catch_guten_cgb_editor_assets().
 
 // Hook: Editor assets.
-add_action( 'enqueue_block_editor_assets', 'catch_instagram_assets' );
+//add_action( 'enqueue_block_editor_assets', 'catch_instagram_assets' );
 
 function catch_init() {
     global $pagenow;

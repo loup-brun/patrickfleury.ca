@@ -6,13 +6,13 @@ get_header();
 
 <main class="main">
   <?php while (have_posts()) : the_post(); ?>
-  <article class="content">
+  <article class="content container-fluid">
 
-    <header class="header-page-article container-fluid">
+    <header class="header-page-article my-3">
 
       <?php
       if (has_post_thumbnail()) {
-        the_post_thumbnail('full');
+        the_post_thumbnail('full', array('class'=> 'img-fluid mb-5'));
       }
       ?>
 

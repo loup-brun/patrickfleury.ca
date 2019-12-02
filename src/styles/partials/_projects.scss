@@ -8,9 +8,8 @@
   }
 
   &__image {
-//    max-width: none;
-    object-fit: cover;
     width: 100%;
+    height: auto; // just fit image naturally
   }
 
   &__image--default {

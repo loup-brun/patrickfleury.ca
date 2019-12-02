@@ -2,26 +2,24 @@
 <?php if (!the_field('hide_cta')) { ?>
 <section class="section-cta py-5 bg-yellow">
   <div class="container">
-    <span class="h2 font-weight-normal mb-3">
+    <h2 class="font-weight-normal my-5">
       <?php _e('Convinced? Reach out!', 'pfleury-wordpress'); ?>
-    </span>
+    </h2>
 
-    <p class="lead">
-      <nav class="nav nav-links">
-        <?php if (get_theme_mod('business_email')) { ?>
-        <!-- Email -->
-        <a href="mailto:<?php echo get_theme_mod('business_email'); ?>" class="mr-4">
-          <?php _e('Email', 'pfleury-wordpress'); ?>
-        </a>
-        <?php } ?>
-        <?php if (get_theme_mod('business_phone')) { ?>
-        <!-- Phone -->
-        <a href="tel:<?php echo get_theme_mod('business_phone'); ?>">
-          <?php echo get_theme_mod('business_phone'); ?>
-        </a>
-        <?php } ?>
-      </nav>
-    </p>
+    <nav class="nav nav-links lead my-5">
+      <?php if (get_theme_mod('business_email')) { ?>
+      <!-- Email -->
+      <a href="mailto:<?php echo get_theme_mod('business_email'); ?>" class="mr-4">
+        <?php _e('Email', 'pfleury-wordpress'); ?>
+      </a>
+      <?php } ?>
+      <?php if (get_theme_mod('business_phone')) { ?>
+      <!-- Phone -->
+      <a href="tel:<?php echo get_theme_mod('business_phone'); ?>">
+        <?php echo get_theme_mod('business_phone'); ?>
+      </a>
+      <?php } ?>
+    </nav>
   </div>
 </section>
 <?php } // end if ?>

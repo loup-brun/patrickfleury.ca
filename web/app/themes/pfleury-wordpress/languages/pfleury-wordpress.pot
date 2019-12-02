@@ -1,6 +1,5 @@
 # Copyright (C) 2019 pfleury-wordpress
 # This file is distributed under the same license as the pfleury-wordpress package.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: pfleury-wordpress\n"
@@ -12,13 +11,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/loup-brun/patrickfleury.ca/issues\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../footer.php:6
 msgid "Convinced? Reach out!"
@@ -44,12 +40,24 @@ msgstr ""
 msgid "Homepage"
 msgstr ""
 
+#: ../front-page.php:43
+msgid "Latest additions"
+msgstr ""
+
 #: ../front-page.php:64
 msgid "See All Projects"
 msgstr ""
 
 #: ../front-page.php:95
 msgid "About me"
+msgstr ""
+
+#: ../header.php:65
+msgid "Follow"
+msgstr ""
+
+#: ../header.php:68
+msgid "Contact"
 msgstr ""
 
 #: ../header.php:162

@@ -52,6 +52,14 @@ msgstr "Voir tous les projets"
 msgid "About me"
 msgstr "À propos de moi"
 
+#: ../header.php:65
+msgid "Follow"
+msgstr "Me suivre"
+
+#: ../header.php:68
+msgid "Contact"
+msgstr "Contact"
+
 #: ../header.php:162
 msgid "Design"
 msgstr "Design"

@@ -62,10 +62,10 @@
       <div class="collapse navbar-collapse expand-into-menu col-md-5 col-lg-5 ml-md-auto" id="topNav">
         <ul class="navbar-nav d-flex flex-column align-items-start justify-content-between align-content-between flex-md-row flex-grow-1">
           <li class="nav-item mr-md-3 mr-lg-5">
-            <a href="#" class="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" data-target="#follow" aria-controls="follow">Follow</a>
+            <a href="#" class="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" data-target="#follow" aria-controls="follow"><?php _e('Follow', 'pfleury-wordpress'); ?></a>
           </li>
           <li class="nav-item mr-md-3 mr-lg-5">
-            <a href="#" class="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" data-target="#contact" aria-controls="contact">Contact</a>
+            <a href="#" class="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" data-target="#contact" aria-controls="contact"><?php _e('Contact', 'pfleury-wordpress'); ?></a>
           </li>
           <li class="nav-item">
             <!-- Language switch -->

@@ -3,7 +3,7 @@
 <section class="section-cta py-5 bg-yellow">
   <div class="container">
     <span class="h2 font-weight-normal mb-3">
-      <?php _e('Convinced? Reach out!'); ?>
+      <?php _e('Convinced? Reach out!', 'pfleury-wordpress'); ?>
     </span>
 
     <p class="lead">
@@ -11,7 +11,7 @@
         <?php if (get_theme_mod('business_email')) { ?>
         <!-- Email -->
         <a href="mailto:<?php echo get_theme_mod('business_email'); ?>" class="mr-4">
-          <?php _e('Email'); ?>
+          <?php _e('Email', 'pfleury-wordpress'); ?>
         </a>
         <?php } ?>
         <?php if (get_theme_mod('business_phone')) { ?>

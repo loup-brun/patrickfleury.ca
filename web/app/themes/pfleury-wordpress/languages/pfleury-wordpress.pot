@@ -1,0 +1,101 @@
+# Copyright (C) 2019 pfleury-wordpress
+# This file is distributed under the same license as the pfleury-wordpress package.
+msgid ""
+msgstr ""
+"Project-Id-Version: pfleury-wordpress\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Team StephGiroux+LOB\n"
+"Last-Translator: Louis-Olivier Brassrad <louis@loupbrun.ca>\n"
+"Report-Msgid-Bugs-To: https://github.com/loup-brun/patrickfleury.ca/issues\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../footer.php:6
+msgid "Convinced? Reach out!"
+msgstr ""
+
+#: ../footer.php:14, ../footer.php:56, ../header.php:137
+msgid "Email"
+msgstr ""
+
+#: ../footer.php:37
+msgid "All rights reserved."
+msgstr ""
+
+#: ../footer.php:64
+msgid "Phone"
+msgstr ""
+
+#: ../footer.php:120
+msgid "Credits"
+msgstr ""
+
+#: ../front-page.php:2
+msgid "Homepage"
+msgstr ""
+
+#: ../front-page.php:64
+msgid "See All Projects"
+msgstr ""
+
+#: ../header.php:162
+msgid "Design"
+msgstr ""
+
+#: ../header.php:164, ../index.php:12
+msgid "Explore my work"
+msgstr ""
+
+#: ../header.php:170
+msgid "Studio"
+msgstr ""
+
+#: ../header.php:172
+msgid "About"
+msgstr ""
+
+#: ../index.php:2
+msgid "Projects List (Work)"
+msgstr ""
+
+#: ../page.php:2
+msgid "Page"
+msgstr ""
+
+#: ../page.php:38
+msgid "What clients are saying"
+msgstr ""
+
+#: ../single-project.php:3
+msgid "Project"
+msgstr ""
+
+#: ../single-project.php:43, ../components/figure-featured.php:25
+msgid "Tags:"
+msgstr ""
+
+#: ../components/figure-featured.php:10
+msgid "View project"
+msgstr ""
+
+#: ../components/project-footer.php:6
+msgid "Thank You!"
+msgstr ""
+
+#: ../components/project-footer.php:16
+msgid "Complete Credits"
+msgstr ""
+
+#: ../components/project-footer.php:30
+msgid "You Might Also Enjoy These Projects"
+msgstr ""
+
+#: ../components/project-footer.php:59
+msgid "Back to all projects"
+msgstr ""

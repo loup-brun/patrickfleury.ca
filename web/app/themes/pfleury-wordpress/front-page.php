@@ -40,7 +40,7 @@ get_header(); ?>
   <section id="curated-projects" class="py-5">
     <div class="container">
 
-      <h2 class="text-center mb-5">Latest additions</h2>
+      <h2 class="text-center mb-5"><?php _e('Latest additions', 'pfleury-wordpress'); ?></h2>
 
       <div class="row d-flex flex-row flex-wrap">
         <?php while ($featuredProjectsQuery->have_posts()) : $featuredProjectsQuery->the_post(); ?>
@@ -92,7 +92,7 @@ get_header(); ?>
         <div class="col col-md-5 col-12 d-flex flex-column align-items-end justify-content-end">
           <p class="lead">
             <a href="<?php the_permalink($aboutPage->ID); ?>" class="bold-link">
-              About me <span class="icon icon-arrow-medium-right"></span>
+              <?php _e('About me', 'pfleury-wordpress'); ?> <span class="icon icon-arrow-medium-right"></span>
             </a>
           </p>
         </div>

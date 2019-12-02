@@ -40,4 +40,6 @@ if (!defined('ABSPATH')) {
   define('ABSPATH', WEB_ROOT_DIR . '/wp/');
 }
 
+define('WPLANG', 'fr_CA');
+
 require_once(ABSPATH . 'wp-settings.php');

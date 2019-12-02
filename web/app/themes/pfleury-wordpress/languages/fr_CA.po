@@ -1,6 +1,5 @@
 # Copyright (C) 2019 pfleury-wordpress
 # This file is distributed under the same license as the pfleury-wordpress package.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: pfleury-wordpress\n"
@@ -8,102 +7,103 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: Team StephGiroux+LOB\n"
-"Last-Translator: Louis-Olivier Brassrad <louis@loupbrun.ca>\n"
 "Report-Msgid-Bugs-To: https://github.com/loup-brun/patrickfleury.ca/issues\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "X-Generator: Poedit 2.2.4\n"
+"Last-Translator: \n"
+"Language: fr_CA\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: ../footer.php:6
 msgid "Convinced? Reach out!"
-msgstr ""
+msgstr "Convaincu? Dites bonjour!"
 
 #: ../footer.php:14, ../footer.php:56, ../header.php:137
 msgid "Email"
-msgstr ""
+msgstr "Courriel"
 
 #: ../footer.php:37
 msgid "All rights reserved."
-msgstr ""
+msgstr "Tous droits réservés."
 
 #: ../footer.php:64
 msgid "Phone"
-msgstr ""
+msgstr "Téléphone"
 
 #: ../footer.php:120
 msgid "Credits"
-msgstr ""
+msgstr "Crédits"
 
 #: ../front-page.php:2
 msgid "Homepage"
-msgstr ""
+msgstr "Page d’accueil"
 
 #: ../front-page.php:64
 msgid "See All Projects"
-msgstr ""
+msgstr "Voir tous les projets"
 
 #: ../front-page.php:95
 msgid "About me"
-msgstr ""
+msgstr "À propos de moi"
 
 #: ../header.php:162
 msgid "Design"
-msgstr ""
+msgstr "Design"
 
 #: ../header.php:164, ../index.php:12
 msgid "Explore my work"
-msgstr ""
+msgstr "Explorer mon travail"
 
 #: ../header.php:170
 msgid "Studio"
-msgstr ""
+msgstr "Studio"
 
 #: ../header.php:172
 msgid "About"
-msgstr ""
+msgstr "À propos"
 
 #: ../index.php:2
 msgid "Projects List (Work)"
-msgstr ""
+msgstr "Liste des projets"
 
 #: ../page.php:2
 msgid "Page"
-msgstr ""
+msgstr "Page"
 
 #: ../page.php:38
 msgid "What clients are saying"
-msgstr ""
+msgstr "Ce qu’en disent mes clients"
 
 #: ../single-project.php:3
 msgid "Project"
-msgstr ""
+msgstr "Projet"
 
 #: ../single-project.php:43, ../components/figure-featured.php:25
 msgid "Tags:"
-msgstr ""
+msgstr "Étiquettes:"
 
 #: ../components/figure-featured.php:10
 msgid "View project"
-msgstr ""
+msgstr "Voir le projet"
 
 #: ../components/project-footer.php:6
 msgid "Thank You!"
-msgstr ""
+msgstr "Merci!"
 
 #: ../components/project-footer.php:16
 msgid "Complete Credits"
-msgstr ""
+msgstr "Crédits complets"
 
 #: ../components/project-footer.php:30
 msgid "You Might Also Enjoy These Projects"
-msgstr ""
+msgstr "Vous aimerez aussi ces projets"
 
 #: ../components/project-footer.php:59
 msgid "Back to all projects"
-msgstr ""
+msgstr "Retourner aux projets"

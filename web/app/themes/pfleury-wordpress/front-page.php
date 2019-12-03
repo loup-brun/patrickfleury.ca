@@ -27,36 +27,37 @@ get_header(); ?>
 
   <?php
   // Query projects
-  $featuredProjectsQuery = array();
-  $featuredProjectsCounter = 1;
-
-  if (pll_current_language() === 'fr') {
-    $featuredProjectsQuery = new WP_Query( array('category_name' => 'projets', 'orderby' => 'weight', 'order' => 'ASC', 'meta_key' => 'featured') );
-  } else if (pll_current_language() === 'en') {
-    $featuredProjectsQuery = new WP_Query( array('category_name' => 'projects', 'order' => 'weight', 'order_by' => 'ASC') );
-  }
-
-  if ($featuredProjectsQuery->have_posts()): ?>
+  $featured_projects = get_field('featured_projects');
+  $featured_counter = 1;
+  if ( $featured_projects ):
+  ?>
   <section id="curated-projects" class="py-5">
     <div class="container">
 
       <h2 class="text-center mb-5"><?php _e('Latest additions', 'pfleury-wordpress'); ?></h2>
 
       <div class="row d-flex flex-row flex-wrap">
-        <?php while ($featuredProjectsQuery->have_posts()) : $featuredProjectsQuery->the_post(); ?>
+        <?php
+        // variable must be called `$post`
+        // see documentation: https://www.advancedcustomfields.com/resources/relationship/
+        foreach($featured_projects as $post) {
+          setup_postdata($post); ?>
 
-        <?php // Cycle through the different layouts ?>
-        <?php if ($featuredProjectsCounter % 3 === 0) { ?>
+        <?php if ($featured_counter % 3 === 0) { ?>
         <div class="col col-12 col-md-6">
-        <?php } else if ($featuredProjectsCounter % 2 === 0) { ?>
-        <div class="col col-10 col-md-5 ml-md-3 mt-md-5 -ratio-1-1">
+        <?php } else if ($featured_counter % 2 === 0) { ?>
+        <div class="col col-10 col-md-5 ml-md-3 mt-md-5">
         <?php } else { ?>
         <div class="col col-12 col-md-8">
         <?php } ?>
+
           <?php get_template_part('components/figure-featured'); ?>
+
+        <?php $featured_counter++; ?>
         </div>
-        <?php $featuredProjectsCounter++; ?>
-        <?php endwhile; // end of the projects loop. ?>
+        <?php
+        } // end forEach
+        wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
       </div>
 
       <footer class="footer--all-projects text-center mt-5">

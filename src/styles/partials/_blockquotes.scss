@@ -25,10 +25,15 @@
     font-size: $font-size-base;
     font-weight: 700;
     font-style: normal;
+    display: block;
+    position: relative;
+    padding-left: 1.15em;
 
     &::before {
       content: '—';
       display: inline-block;
+      position: absolute;
+      margin-left: -1.15em;
       margin-right: .25em;
     }
   }

@@ -56,7 +56,11 @@ get_header();
               <blockquote class="big-quote">
                 <?php the_content(); ?>
                 <?php if (get_field('testimony_author')): ?>
-                <cite><?php echo get_field('testimony_author'); ?></cite>
+                <cite><?php echo get_field('testimony_author'); ?>
+                  <?php if (get_field('testimony_company')): ?>
+                    <br><span class="font-weight-normal"><?php echo get_field('testimony_company'); ?></span>
+                  <?php endif; ?>
+                </cite>
                 <?php endif; ?>
               </blockquote>
             </div>

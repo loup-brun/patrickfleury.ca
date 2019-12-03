@@ -283,7 +283,7 @@ add_theme_support( 'post-thumbnails', array('post', 'page') );
 
 // Add tags for pages
 add_post_type_support( 'page', array(
-    'author', 'excerpt', 'tag'
+    'author', 'excerpt', 'tag', 'weight'
 ) );
 
 /**

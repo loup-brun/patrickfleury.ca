@@ -44,6 +44,10 @@ msgstr "Crédits"
 msgid "Homepage"
 msgstr "Page d’accueil"
 
+#: ../front-page.php:43
+msgid "Latest additions"
+msgstr "Derniers projets ajoutés"
+
 #: ../front-page.php:64
 msgid "See All Projects"
 msgstr "Voir tous les projets"

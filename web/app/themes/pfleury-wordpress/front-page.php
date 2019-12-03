@@ -10,7 +10,7 @@ get_header(); ?>
   if (has_post_thumbnail()): ?>
 
   <header class="header-img">
-    <div class="container-fluid">
+    <div class="container-fluid content">
 
       <?php
       $homeFeaturedImage = get_the_post_thumbnail( $size = 'full' );

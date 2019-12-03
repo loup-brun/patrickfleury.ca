@@ -83,6 +83,11 @@ function pfleury_wordpress_register_required_plugins() {
 			'required'     => true,
 		),
 
+		array(
+			'name'         => 'Duplicate Page',
+			'slug'         => 'duplicate-page',
+			'required'     => false,
+		),
 
 		// This is an example of how to include a plugin from an arbitrary external source in your theme.
 		array(

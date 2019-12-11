@@ -448,7 +448,7 @@ function theme_customizer( $wp_customize ) {
 
   // LinkedIn
     $wp_customize->add_setting(
-    'follow_LinkedIn',
+    'follow_linkedin',
       array(
         'default' => '',
         'placeholder' => 'https://LinkedIn.com/slug'
@@ -456,7 +456,7 @@ function theme_customizer( $wp_customize ) {
   );
 
   $wp_customize->add_control(
-    'follow_LinkedIn',
+    'follow_linkedin',
     array(
         'label' => 'LinkedIn Full URL',
         'section' => 'social_settings',

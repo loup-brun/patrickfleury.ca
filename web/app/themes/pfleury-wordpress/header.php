@@ -43,7 +43,16 @@
         <a href="<?php echo home_url(); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center align-content-start">
           <span class="sr-only"><?php bloginfo('name'); ?></span>
 
-          <img src="<?php echo get_theme_mod( 'brand_name_img', get_theme_root_uri() . '/' . get_template() . '/assets/Nom.svg'); ?>" height="50" alt="<?php bloginfo('name'); ?>"
+          <?php
+          // Custom icon depending on theme language
+          $iconPath = get_theme_root_uri() . '/' . get_template() . '/assets/Nom.svg'; // default img
+
+          pll_current_language() === 'fr' ?
+            $iconPath = get_theme_root_uri() . '/' . get_template() . '/assets/Nom-fr.svg' : // fr
+            $iconPath = get_theme_root_uri() . '/' . get_template() . '/assets/Nom-en.svg'; // en
+          ?>
+
+          <img src="<?php echo get_theme_mod( 'brand_name_img', $iconPath); ?>" height="50" alt="<?php bloginfo('name'); ?>"
                class="brand-name">
 
           <img src="<?php echo get_theme_mod( 'brand_logo_img', get_theme_root_uri() . '/' . get_template() . '/assets/Logo.svg'); ?>"

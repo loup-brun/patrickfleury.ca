@@ -1,6 +1,6 @@
 {
     "key": "group_5ddbd3657187c",
-    "title": "Page",
+    "title": "About",
     "fields": [
         {
             "key": "field_5ddbd384c9227",
@@ -31,7 +31,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page.php"
+                "value": "about.php"
             }
         ]
     ],
@@ -43,5 +43,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1574913510
+    "modified": 1576084747
 }

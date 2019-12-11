@@ -41,14 +41,18 @@
       right: 0;
       height: $border-width;
       background-color: $border-color;
-      width: 0;
-      transition: width .3s $easeInOutCirc;
+      width: 100%;
+      transform: scaleX(0);
+      transition: transform .3s $easeInOutCirc;
+      transform-origin: top right;
+
     }
 
     &[aria-expanded="true"], &:hover {
 
       &::after {
-        width: 100%;
+        transform-origin: top left;
+        transform: scaleX(1);
       }
     }
   }

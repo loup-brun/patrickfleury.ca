@@ -27,8 +27,8 @@ get_header();
       $projectsCounter = 1;
       $tags = '';
 
-      if (get_the_tags()) {
-        $tags = get_the_tags($post)[0]->slug;
+      if (is_tag()) {
+        $tags =single_tag_title('', false);
       }
 
       if (pll_current_language() === 'fr') {
@@ -77,6 +77,7 @@ get_header();
         <?php  _e('Go Back Home?', 'pfleury-wordpress'); ?></a>
     </p>
     <?php } ?>
+    <?php wp_reset_postdata(); ?>
   </article>
 </main>
 

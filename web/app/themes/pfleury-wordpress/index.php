@@ -21,14 +21,14 @@ get_header();
     </h1>
 
     <?php
-    if (is_archive() || is_tag()) {
+    if (is_home() || is_archive() || is_tag()) {
       // Query projects
       $projectsQuery = array();
       $projectsCounter = 1;
       $tags = '';
 
       if (get_the_tags()) {
-        $tags = get_the_tags($post->id)[0]->slug;
+        $tags = get_the_tags($post)[0]->slug;
       }
 
       if (pll_current_language() === 'fr') {

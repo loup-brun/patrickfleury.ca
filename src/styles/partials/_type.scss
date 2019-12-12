@@ -228,5 +228,8 @@ mark,
     height: auto;
     max-width: none;
   }
+  img:not(.figure-featured__image) {
+    margin-top: $spacer * 1;
+  }
 }
 

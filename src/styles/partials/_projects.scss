@@ -50,6 +50,9 @@
   }
 
   &__tags {
+    @include media-breakpoint-down('sm', $grid-breakpoints) {
+      font-size: $font-size-sm;
+    }
     li:not(:last-child)::after {
       content: ',';
     }

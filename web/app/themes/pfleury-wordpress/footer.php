@@ -1,5 +1,5 @@
 <!-- Pre-footer CTA -->
-<?php if (!the_field('hide_cta')) { ?>
+<?php if (!the_field('hide_cta') && !is_404()) { ?>
 <section class="section-cta py-5 bg-yellow">
   <div class="container">
     <h2 class="font-weight-normal my-5">

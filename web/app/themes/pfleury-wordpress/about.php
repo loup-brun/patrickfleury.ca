@@ -11,22 +11,30 @@ get_header();
     <?php if (has_post_thumbnail()) { ?>
     <header class="header-page-article my-3">
       <?php
-        the_post_thumbnail('full', array('class'=> 'img-fluid mb-5'));
+        the_post_thumbnail('full', array('class'=> 'img-fluid mb-5 mt-0'));
       ?>
     </header>
     <?php } ?>
 
     <div class="row content">
-      <section class="col-lg-5 mb-3">
+      <section class="col-lg-4 mb-3">
         <h1 class="mt-0">
           <?php the_title(); ?>
         </h1>
       </section>
 
-      <section class="col-lg-7 lead">
-        <?php the_content(); ?>
+      <?php if (get_field('about_intro')): ?>
+      <section class="col-lg-8 lead">
+        <?php
+        the_field('about_intro');
+        ?>
       </section>
+      <?php endif; ?>
     </div>
+
+    <section class="content">
+      <?php the_content(); ?>
+    </section>
 
     <?php if (get_field('show_testimonials')): ?>
     <section class="py-5" id="testimonials">

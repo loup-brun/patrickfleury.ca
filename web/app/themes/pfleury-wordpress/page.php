@@ -12,7 +12,7 @@ get_header();
 
       <?php
       if (has_post_thumbnail()) {
-        the_post_thumbnail('full', array('class'=> 'img-fluid mb-5'));
+        the_post_thumbnail('full', array('class'=> 'img-fluid mb-5 mt-0'));
       }
       ?>
 

@@ -22,7 +22,7 @@ while (have_posts()):
     <header class="header-page-article my-3">
 
       <?php if (get_the_post_thumbnail()) {
-      the_post_thumbnail('full', array('class'=> 'img-fluid'));
+      the_post_thumbnail('full', array('class'=> 'img-fluid mt-0'));
       } ?>
 
       <h1 class="my-5">

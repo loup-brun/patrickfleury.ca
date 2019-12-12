@@ -28,7 +28,7 @@ get_header();
       $tags = '';
 
       if (is_tag()) {
-        $tags =single_tag_title('', false);
+        $tags = str_replace(' ', '-', single_tag_title('', false));
       }
 
       if (pll_current_language() === 'fr') {

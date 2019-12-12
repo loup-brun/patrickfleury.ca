@@ -1,0 +1,9 @@
+// WP-Blocks
+
+.content {
+  .wp-block-image,
+  .wp-block-columns,
+  .wp-block-gallery {
+    @extend .mb-5;
+  }
+}

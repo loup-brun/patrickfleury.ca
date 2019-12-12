@@ -24,7 +24,7 @@ get_header();
       </section>
 
       <?php if (get_field('about_intro')): ?>
-      <section class="col-lg-8 lead">
+      <section class="col-lg-8 lead mb-3">
         <?php
         the_field('about_intro');
         ?>

@@ -12,6 +12,13 @@ if (!defined('UENO_CONFIG_SET')) {
 
 require_once('lib/clean.php');
 
+/**
+ * Try to increase upload limit
+ */
+@ini_set( 'upload_max_size' , '10M' );
+@ini_set( 'post_max_size', '10M');
+@ini_set( 'max_execution_time', '300' );
+
 
 /**
  * Include the TGM_Plugin_Activation class.

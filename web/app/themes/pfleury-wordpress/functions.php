@@ -21,6 +21,16 @@ require_once('lib/clean.php');
 
 
 /**
+ * Doctype for Open Graph
+ */
+function doctype_opengraph($output) {
+    return $output . '
+    xmlns:og="http://opengraphprotocol.org/schema/"
+    xmlns:fb="http://www.facebook.com/2008/fbml"';
+}
+add_filter('language_attributes', 'doctype_opengraph');
+
+/**
  * Include the TGM_Plugin_Activation class.
  *
  * Depending on your implementation, you may want to change the include call:

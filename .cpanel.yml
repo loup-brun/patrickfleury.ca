@@ -1,5 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/patric15/staging.patrickfleury.ca/wp-content/themes/
-    - /bin/cp -R web/app/themes/pfleury-wordpress $DEPLOYPATH
+    - export DEPLOYSTAGING=/home/patric15/staging.patrickfleury.ca/wp-content/themes/
+    - export DEPLOYLIVE=/home/patric15/public_html/wp-content/themes/
+    - /bin/cp -R web/app/themes/pfleury-wordpress $DEPLOYSTAGING
+    - /bin/rm -rf $DEPLOYdSTAGING/pfleury-wordpress
+    - /bin/cp -R web/app/themes/pfleury-wordpress $DEPLOYLIVE

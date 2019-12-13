@@ -7,10 +7,18 @@
 }
 
 .transition-fade {
-  transition: .4s;
+  transition: .6s;
+  transform: translateX(0);
   opacity: 1;
   .is-animating & {
     opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  .is-leaving & {
+    opacity: 0;
+    transform: translateX(-50px);
+
   }
 }
 

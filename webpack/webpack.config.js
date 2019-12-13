@@ -22,10 +22,16 @@ function removeNil(as) {
 
 const wordpressCssBanner = `/*
 Theme Name: ${WP_THEME_NAME}
-Author: Louis-Olivier Brassard.
+Theme URI: https://github.com/loup-brun/patrickfleury.ca
+Author: Louis-Olivier Brassard
+Description: Thème personnalisé pour Patrick Fleury DGA. Conception web par Stéphanie Giroux, développement par Louis-Olivier Brassard.
+Version: 0.1 (Beta)
+License: WTFPL
+License URI: http://www.wtfpl.net/about/
+Author URI: https://loupbrun.ca
 Text Domain: pfleury-wordpress
 Domain Path: /languages/
-*/`;
+Tags: Custom, Custom Job, Graphic Design, Photographic, Typographic, Colorful, Single-Column, Custom-Social, Featured-Images, Translation Ready`;
 
 module.exports = {
   entry: removeNil([

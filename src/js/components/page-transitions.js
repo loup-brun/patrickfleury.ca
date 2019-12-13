@@ -2,10 +2,13 @@
 import Swup from 'swup';
 
 let swup;
+let PageTransitions = {
+  init: init
+}
 
-function PageTransitions(cb) {
-  cb = cb || function () {}; // default to noop
-  var dummy = document.querySelectorAll('div');
+function init(load, unload) {
+  load = load || function () {}; // default to noop
+  var dummy = [];
   if (typeof dummy.forEach === 'function') {
     // only bind once, don't re-create new swup instances
     if (swup instanceof Swup) {
@@ -15,8 +18,10 @@ function PageTransitions(cb) {
         animateScroll: true
       });
 
+      swup.on('willReplaceContent', unload);
       swup.on('contentReplaced', function () {
-        cb();
+        window.scrollTo(0, 0);
+        load()
       });
     }
   }

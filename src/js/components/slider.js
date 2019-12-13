@@ -1,7 +1,12 @@
 /* global window */
 import Swipe from 'swipejs';
 
-export default init;
+let slider = {
+  init: init,
+  destroy: destroy
+};
+
+export default slider;
 
 function init() {
   let swipeElements = [];
@@ -9,7 +14,7 @@ function init() {
   // if we have defined Swipe instances, kill them and start fresh
   if (window.swipeInstances && window.swipeInstances.length) {
     window.swipeInstances.forEach((swipeInst) => {
-      swipeInst.kill();
+      swipeInst.api.kill();
     });
   } else {
     // no Swipe instances defined; create empty collection
@@ -31,8 +36,14 @@ function init() {
     window.swipeInstances
       .push({
         wrapper: sliderElem,
-        instance: swipeInstance
+        api: swipeInstance
       });
+  });
+}
+
+function destroy() {
+  window.swipeInstances.forEach(function (swipeInst) {
+    swipeInst.api.kill();
   });
 }
 

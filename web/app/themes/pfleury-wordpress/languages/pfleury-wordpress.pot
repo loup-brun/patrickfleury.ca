@@ -16,23 +16,31 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../about.php:2, ../header.php:193
+msgid "About"
+msgstr ""
+
+#: ../about.php:41
+msgid "What clients are saying"
+msgstr ""
+
 #: ../footer.php:6
 msgid "Convinced? Reach out!"
 msgstr ""
 
-#: ../footer.php:14, ../footer.php:56, ../header.php:137
+#: ../footer.php:13, ../footer.php:54, ../header.php:158
 msgid "Email"
 msgstr ""
 
-#: ../footer.php:37
+#: ../footer.php:35
 msgid "All rights reserved."
 msgstr ""
 
-#: ../footer.php:64
+#: ../footer.php:62
 msgid "Phone"
 msgstr ""
 
-#: ../footer.php:120
+#: ../footer.php:118
 msgid "Credits"
 msgstr ""
 
@@ -40,52 +48,52 @@ msgstr ""
 msgid "Homepage"
 msgstr ""
 
-#: ../front-page.php:43
+#: ../front-page.php:37
 msgid "Latest additions"
 msgstr ""
 
-#: ../front-page.php:64
+#: ../front-page.php:65
 msgid "See All Projects"
 msgstr ""
 
-#: ../front-page.php:95
+#: ../front-page.php:96
 msgid "About me"
 msgstr ""
 
-#: ../header.php:65
+#: ../header.php:86
 msgid "Follow"
 msgstr ""
 
-#: ../header.php:68
+#: ../header.php:89
 msgid "Contact"
 msgstr ""
 
-#: ../header.php:162
+#: ../header.php:183
 msgid "Design"
 msgstr ""
 
-#: ../header.php:164, ../index.php:12
+#: ../header.php:185, ../index.php:14, ../index.php:18
 msgid "Explore my work"
 msgstr ""
 
-#: ../header.php:170
+#: ../header.php:191
 msgid "Studio"
-msgstr ""
-
-#: ../header.php:172
-msgid "About"
 msgstr ""
 
 #: ../index.php:2
 msgid "Projects List (Work)"
 msgstr ""
 
-#: ../page.php:2
-msgid "Page"
+#: ../index.php:72
+msgid "We Could Not Find That :("
 msgstr ""
 
-#: ../page.php:38
-msgid "What clients are saying"
+#: ../index.php:77
+msgid "Go Back Home?"
+msgstr ""
+
+#: ../page.php:2
+msgid "Page"
 msgstr ""
 
 #: ../single-project.php:3

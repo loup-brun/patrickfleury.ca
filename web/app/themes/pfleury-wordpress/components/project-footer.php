@@ -25,14 +25,15 @@
     </div>
   </section>
 
-  <?php ?>
+  <?php
+      $related_projects = get_field('related_projects');
+      $related_counter = 0;
+      if ( $related_projects && $related_counter < 1 ) {
+  ?>
   <section class="footer-project__related py-5">
     <h3 class="text-center mb-5"><?php _e('You Might Also Enjoy These Projects', 'pfleury-wordpress'); ?></h3>
     <div class="row">
       <?php
-      $related_projects = get_field('related_projects');
-      $related_counter = 0;
-      if ( $related_projects && $related_counter < 1 ) {
         // variable must be called `$post`
         // see documentation: https://www.advancedcustomfields.com/resources/relationship/
         foreach($related_projects as $post) {
@@ -46,10 +47,10 @@
           $related_counter++;
         } // end forEach
         wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
-      } // end if ?>
+      ?>
     </div>
   </section>
-  <?php ?>
+  <?php } // end if ?>
 
   <div class="footer-project__back text-center mt-5">
     <?php // get projects index page

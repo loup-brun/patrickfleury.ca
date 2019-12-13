@@ -84,6 +84,14 @@ msgstr "À propos"
 msgid "Projects List (Work)"
 msgstr "Liste des projets"
 
+#: ../index.php:72
+msgid "We Could Not Find That :("
+msgstr "Nous n’avons réussi à trouver ça :("
+
+#: ../index.php:77
+msgid "Go Back Home?"
+msgstr "Retourner à l’accueil?"
+
 #: ../page.php:2
 msgid "Page"
 msgstr "Page"

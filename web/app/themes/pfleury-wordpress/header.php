@@ -122,31 +122,31 @@
 
             <!-- Facebook -->
             <?php if (get_theme_mod('follow_facebook')) { ?>
-            <a href="<?php echo get_theme_mod('follow_facebook'); ?>" class="nav-item">Facebook</a>
+            <a href="<?php echo get_theme_mod('follow_facebook'); ?>" class="nav-item" target="_blank" rel="nofollow noopener">Facebook</a>
             <?php } ?>
             <!-- Twitter -->
             <?php if (get_theme_mod('follow_twitter')) { ?>
-            <a href="https://twitter.com/<?php echo get_theme_mod('follow_twitter'); ?>" class="nav-item">Twitter</a>
+            <a href="https://twitter.com/<?php echo get_theme_mod('follow_twitter'); ?>" class="nav-item" target="_blank" rel="nofollow noopener">Twitter</a>
             <?php } ?>
             <!-- Instagram -->
             <?php if (get_theme_mod('follow_instagram')) { ?>
-            <a href="https://instagram.com/<?php echo get_theme_mod('follow_instagram'); ?>" class="nav-item">Instagram</a>
+            <a href="https://instagram.com/<?php echo get_theme_mod('follow_instagram'); ?>" class="nav-item" target="_blank" rel="nofollow noopener">Instagram</a>
             <?php } ?>
             <!-- LinkedIn -->
             <?php if (get_theme_mod('follow_linkedin')) { ?>
-            <a href="<?php echo get_theme_mod('follow_linkedin'); ?>" class="nav-item">LinkedIn</a>
+            <a href="<?php echo get_theme_mod('follow_linkedin'); ?>" class="nav-item" target="_blank" rel="nofollow noopener">LinkedIn</a>
             <?php } ?>
             <!-- Behance -->
             <?php if (get_theme_mod('follow_behance')) { ?>
-            <a href="https://behance.net/<?php echo get_theme_mod('follow_behance'); ?>" class="nav-item">Behance</a>
+            <a href="https://behance.net/<?php echo get_theme_mod('follow_behance'); ?>" class="nav-item" target="_blank" rel="nofollow noopener">Behance</a>
             <?php } ?>
             <!-- Pinterest -->
             <?php if (get_theme_mod('follow_pinterest')) { ?>
-            <a href="https://behance.net/<?php echo get_theme_mod('follow_pinterest'); ?>" class="nav-item">Pinterest</a>
+            <a href="https://behance.net/<?php echo get_theme_mod('follow_pinterest'); ?>" class="nav-item" target="_blank" rel="nofollow noopener">Pinterest</a>
             <?php } ?>
             <!-- News -->
             <?php if (get_theme_mod('follow_news')) { ?>
-            <a href="<?php echo get_theme_mod('follow_news'); ?>" class="nav-item"><?php _e('News'); ?></a>
+            <a href="<?php echo get_theme_mod('follow_news'); ?>" class="nav-item" target="_blank" rel="nofollow noopener"><?php _e('News'); ?></a>
             <?php } ?>
           </div>
 

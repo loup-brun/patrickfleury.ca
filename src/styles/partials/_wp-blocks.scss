@@ -5,5 +5,12 @@
   .wp-block-columns,
   .wp-block-gallery {
     @extend .mb-5;
+
+    .wp-block-image,
+    .wp-block-columns,
+    .wp-block-gallery {
+      // Cancel padding on nested elements
+      @extend .mb-0;
+    }
   }
 }

@@ -74,6 +74,7 @@
         transition: transform .3s $easeInOutCirc;
         transform: scaleX(0);
         transform-origin: top right;
+        will-change: transform;
       }
       &:hover {
         &::before {

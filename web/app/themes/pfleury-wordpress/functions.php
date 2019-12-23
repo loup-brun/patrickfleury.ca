@@ -93,12 +93,12 @@ function pfleury_wordpress_register_required_plugins() {
 			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
 		),
 
-		array(
-			'name'         => 'PFLEURY Catch Instagram Feed',
-			'slug'         => 'catch-instagram-feed',
-			'source'       => get_stylesheet_directory() . '/lib/plugins/pfleury-instagram-feed-gallery-widget.zip',
-			'required'     => true,
-		),
+//		array(
+//			'name'         => 'PFLEURY Catch Instagram Feed',
+//			'slug'         => 'catch-instagram-feed',
+//			'source'       => get_stylesheet_directory() . '/lib/plugins/pfleury-instagram-feed-gallery-widget.zip',
+//			'required'     => true,
+//		),
 
 		array(
 			'name'         => 'Duplicate Page',
@@ -308,6 +308,26 @@ add_post_type_support( 'page', array(
  */
 add_post_type_support( 'post', 'page-attributes' );
 
+/**
+ * ========================================================
+ * SITE ORIGIN PAGE BUILDER
+ * ========================================================
+ */
+
+/**
+ * Register a custom layouts folder location.
+ */
+function siteorigin_layouts_folder( $layout_folders ) {
+    $layout_folders[] = get_template_directory() . '/inc/layouts';
+    return $layout_folders;
+}
+add_filter( 'siteorigin_panels_local_layouts_directories', 'siteorigin_layouts_folder' );
+
+/**
+ * ========================================================
+ * </> END SITE ORIGIN PAGE BUILDER
+ * ========================================================
+ */
 
 /**
  * i18n support

@@ -35,7 +35,6 @@
 
   &--primary {
     padding-top: $spacer * 2;
-    padding-bottom: $spacer * 2;
   }
 
   &--secondary {
@@ -44,8 +43,8 @@
     @include media-breakpoint-up('sm', $grid-breakpoints) {
       font-size: $h3-font-size;
     }
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: $spacer;
+    padding-bottom: $spacer;
 
     > ul {
       width: 100%;

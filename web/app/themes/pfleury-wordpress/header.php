@@ -101,27 +101,15 @@
                 foreach ($translations as $translation) {
                   if (!$translation['current_lang']) { ?>
                     <a href="<?php echo $translation['url']; ?>" class="nav-link">—<?php echo strtoupper($translation['slug']); ?></a>
-                  <?php
-                  }
-    //              var_dump($translation);s
-    //              if ($translation['id'] === pll_current_language()['id']) {
-    //                echo $translation['name'];
-    //              }
-                }
-                //if ($translations[0] === pll_current_language) {
-                //  echo $translations;
-                //} else {
-                //  echo $translations;
-                //}
-                ?>
-    <!--            <a href="#" class="nav-link">–&nbsp;Fr</a>-->
+                  <?php } ?>
+                <?php } ?>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <nav class="nav-giantlinks">
+      <section class="nav-giantlinks">
         <div class="container-fluid">
           <div id="follow" class="collapse" aria-expanded="false" data-parent="#toggle-big-links">
 
@@ -171,7 +159,7 @@
             <?php } ?>
           </div>
         </div>
-      </nav>
+      </section>
 
       <nav class="navbar navbar--secondary">
         <!-- Main Nav -->

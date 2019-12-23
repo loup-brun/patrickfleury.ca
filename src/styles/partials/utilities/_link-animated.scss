@@ -8,6 +8,7 @@
   font-weight: 400;
   text-decoration: none;
   cursor: $link-cursor;
+  line-height: 1.15; // reduced line-height, especially when there are multiple
 
   padding-right: .12em; // compensate for weight change
 

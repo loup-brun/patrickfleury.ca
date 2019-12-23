@@ -170,7 +170,7 @@
         <ul class="navbar-nav nav--secondary d-flex flex-row row flex-fill">
           <li class="nav-item col-5 col-lg-4
             <?php if (
-            is_home() || in_category( array('projets', 'projects') )
+            is_archive() || get_post_type() === 'projet'
             ) { echo ' current_page_item'; } ?>">
             <a href="<?php echo $work_url; ?>" class="nav-link">
               <?php _e('Design', 'pfleury-wordpress'); ?>

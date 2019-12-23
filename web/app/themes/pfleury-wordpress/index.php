@@ -32,9 +32,9 @@ get_header();
       }
 
       if (pll_current_language() === 'fr') {
-        $projectsQuery = new WP_Query( array('category_name' => 'projets', 'orderby' => 'weight', 'order' => 'ASC', 'nopaging' => true, 'tag' => $tags) );
+        $projectsQuery = new WP_Query( array('post_type' => 'projet', 'orderby' => 'weight', 'order' => 'ASC', 'nopaging' => true, 'tag' => $tags) );
       } else if (pll_current_language() === 'en') {
-        $projectsQuery = new WP_Query( array('category_name' => 'projects', 'order' => 'weight', 'order_by' => 'ASC', 'nopaging' => true, 'tag' => $tags) );
+        $projectsQuery = new WP_Query( array('post_type' => 'project', 'order' => 'weight', 'order_by' => 'ASC', 'nopaging' => true, 'tag' => $tags) );
       }
 
       if ($projectsQuery->have_posts()): ?>

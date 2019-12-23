@@ -24,7 +24,7 @@ get_header();
       </section>
 
       <?php if (get_field('about_intro')): ?>
-      <section class="col-lg-8 lead mb-3">
+      <section class="col-lg-8 lead mb-5">
         <?php
         the_field('about_intro');
         ?>
@@ -44,9 +44,9 @@ get_header();
       $testimonialsQuery = array();
 
       if (pll_current_language() === 'fr') {
-        $testimonialsQuery = new WP_Query( array('category_name' => 'Témoignages', 'nopaging' => true, 'orderby' => 'weight', 'order' => 'ASC') );
+        $testimonialsQuery = new WP_Query( array('post_type' => 'temoignage', 'nopaging' => true, 'orderby' => 'weight', 'order' => 'ASC') );
       } else if (pll_current_language() === 'en') {
-        $testimonialsQuery = new WP_Query( array('category_name' => 'Testimonials', 'nopaging' => true, 'orderby' => 'weight', 'order' => 'ASC' ) );
+        $testimonialsQuery = new WP_Query( array('post_type' => 'temoignage', 'nopaging' => true, 'orderby' => 'weight', 'order' => 'ASC' ) );
       }
 
       if ($testimonialsQuery->have_posts()) { ?>

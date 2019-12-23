@@ -293,20 +293,105 @@ add_filter('upload_mimes', function($mimes) {
 });
 
 /**
+ * Custom post type: Projects
+ */
+function create_posttype_projets() {
+  register_post_type( 'projet', array(
+    'supports' =>  array(
+      'title', // post title
+      'editor', // post content
+      'thumbnail', // featured images
+      'excerpt', // post excerpt
+      'custom-fields', // custom fields
+      'weight', // order
+      'tags', // tags
+      'revisions', // post revisions
+      'post-formats', // post formats
+    ),
+    'labels' => array(
+      'name' => _x('Projets', 'plural'),
+      'singular_name' => _x('Projet', 'singular'),
+      'menu_name' => _x('Projets', 'admin menu'),
+      'name_admin_bar' => _x('Projets', 'admin bar'),
+      'add_new' => _x('Nouveau projet', 'add new'),
+      'add_new_item' => __('Ajouter un nouveau projet'),
+      'new_item' => __('Nouveau projet'),
+      'edit_item' => __('Éditer projet'),
+      'view_item' => __('Voir le projet'),
+      'all_items' => __('Tous les projets'),
+      'search_items' => __('Chercher parmi les projets'),
+      'not_found' => __('Aucun projet trouvé.'),
+    ),
+    'public' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'projets'),
+    'has_archive' => true,
+    'hierarchical' => true,
+  ) );
+  register_taxonomy_for_object_type( 'post_tag', 'projet' );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype_projets' );
+
+function create_posttype_testimonials() {
+  register_post_type( 'temoignage', array(
+    'supports' =>  array(
+      'title', // post title
+      'editor', // post content
+      'custom-fields', // custom fields
+    ),
+    'labels' => array(
+      'name' => _x('Témoignages', 'plural'),
+      'singular_name' => _x('Témoignage', 'singular'),
+      'menu_name' => _x('Témoignages', 'admin menu'),
+      'name_admin_bar' => _x('Témoignages', 'admin bar'),
+      'add_new' => _x('Nouveau témoignage', 'add new'),
+      'add_new_item' => __('Ajouter un nouveau témoignage'),
+      'new_item' => __('Nouveau témoignage'),
+      'edit_item' => __('Éditer le témoignage'),
+      'view_item' => __('Voir le témoignage'),
+      'all_items' => __('Tous les témoignages'),
+      'search_items' => __('Chercher parmi les témoignages'),
+      'not_found' => __('Aucun témoignage trouvé.'),
+    ),
+    'public' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'projets'),
+    'has_archive' => true,
+    'hierarchical' => false,
+  ) );
+}
+add_action( 'init', 'create_posttype_testimonials' );
+
+/**
+ * Remove `posts` from admin menu
+ */
+add_action('admin_menu','remove_default_post_type');
+
+function remove_default_post_type() {
+	remove_menu_page('edit.php');
+}
+
+/**
  * Add theme support for header images
  */
 //add_theme_support( 'custom-header' );
-add_theme_support( 'post-thumbnails', array('post', 'page') );
+add_theme_support( 'post-thumbnails', array('post', 'page', 'projet') );
 
 // Add tags for pages
 add_post_type_support( 'page', array(
+    'author', 'excerpt', 'tag', 'weight'
+) );
+// Add tags for pages
+add_post_type_support( 'projet', array(
     'author', 'excerpt', 'tag', 'weight'
 ) );
 
 /**
  * Add page attributes to posts
  */
-add_post_type_support( 'post', 'page-attributes' );
+add_post_type_support( 'projet', 'page-attributes' );
+add_post_type_support( 'testimonials', 'page-attributes' );
 
 /**
  * ========================================================

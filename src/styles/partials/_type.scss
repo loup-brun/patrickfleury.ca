@@ -215,7 +215,7 @@ mark,
 
 .content {
 
-  p {
+  > p {
     @include media-breakpoint-up('lg', $grid-breakpoints) {
       // For large screens, keep a nice margin to limit paragraph width
       // Since 1/12 was not exactly flush (why, mystery), empirical testing

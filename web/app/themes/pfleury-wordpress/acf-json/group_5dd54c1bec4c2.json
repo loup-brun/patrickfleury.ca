@@ -3,29 +3,6 @@
     "title": "Projet",
     "fields": [
         {
-            "key": "field_5dd54c208b95e",
-            "label": "Featured",
-            "name": "featured",
-            "type": "checkbox",
-            "instructions": "Check to show on front page!",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Yes": "Yes"
-            },
-            "allow_custom": 0,
-            "default_value": [],
-            "layout": "vertical",
-            "toggle": 0,
-            "return_format": "value",
-            "save_custom": 0
-        },
-        {
             "key": "field_5ddec27c6d588",
             "label": "Year",
             "name": "year",
@@ -61,7 +38,7 @@
             "tabs": "visual",
             "toolbar": "full",
             "media_upload": 0,
-            "delay": 1
+            "delay": 0
         },
         {
             "key": "field_5ddec2d6464eb",
@@ -77,12 +54,9 @@
                 "id": ""
             },
             "post_type": [
-                "post"
+                "projet"
             ],
-            "taxonomy": [
-                "category:projets",
-                "category:projects"
-            ],
+            "taxonomy": "",
             "filters": [
                 "post_type"
             ],
@@ -97,16 +71,9 @@
     "location": [
         [
             {
-                "param": "post_category",
+                "param": "post_type",
                 "operator": "==",
-                "value": "category:projets"
-            }
-        ],
-        [
-            {
-                "param": "post_category",
-                "operator": "==",
-                "value": "category:projects"
+                "value": "projet"
             }
         ]
     ],
@@ -118,5 +85,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1575124989
+    "modified": 1577141416
 }

@@ -22,9 +22,6 @@ get_header(); ?>
   endif;
   endwhile;
   ?>
-
-  <?php echo do_shortcode('[catch-instagram-feed-gallery-widget username="_loupbrun" access_token="2282534268.63da809.22f251ffa6c94c55822f9cfa90c28d3c" title="What I’ve been up to lately"]'); ?>
-
   <?php
   // Query projects
   $featured_projects = get_field('featured_projects');

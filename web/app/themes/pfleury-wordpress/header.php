@@ -49,10 +49,10 @@
   <div id="swup" class="transition-fade"><!-- #swup -->
 
     <header class="header accordion" id="toggle-big-links">
-      <nav class="navbar navbar-expand-md navbar--primary align-items-center">
+      <nav class="navbar navbar-expand-lg navbar--primary align-items-center">
         <div class="row flex-fill">
-          <div class="col-8 col-md-6">
-            <a href="<?php echo home_url(); ?>" class="navbar-brand navbar-brand-primary d-flex flex-row align-items-center align-content-start">
+          <div class="col-10 col-lg-6">
+            <a href="<?php echo home_url(); ?>" class="navbar-brand navbar-brand-primary row d-flex flex-row align-items-center align-content-start">
               <span class="sr-only"><?php bloginfo('name'); ?></span>
 
               <?php
@@ -64,28 +64,33 @@
                 $iconPath = get_theme_root_uri() . '/' . get_template() . '/assets/Nom-en.svg'; // en
               ?>
 
-              <img src="<?php echo get_theme_mod( 'brand_name_img', $iconPath); ?>" height="50" alt="<?php bloginfo('name'); ?>"
-                   class="brand-name">
+              <div class="col-6 col-lg-9">
+                <img src="<?php echo get_theme_mod( 'brand_name_img', $iconPath); ?>"
+                     alt="<?php bloginfo('name'); ?>"
+                     class="brand-name">
+              </div>
 
-              <img src="<?php echo get_theme_mod( 'brand_logo_img', get_theme_root_uri() . '/' . get_template() . '/assets/Logo.svg'); ?>"
-                   alt="Logo"
-                   class="brand-logo ml-3 ml-sm-5" />
+              <div class="col p-lg-0">
+                <img src="<?php echo get_theme_mod( 'brand_logo_img', get_theme_root_uri() . '/' . get_template() . '/assets/Logo.svg'); ?>"
+                     alt="Logo"
+                     class="brand-logo" />
+              </div>
             </a>
           </div>
 
-          <button class="navbar-toggler element-hamburger ml-auto col-3" role="button" data-toggle="collapse" aria-expanded="false" data-target="#topNav">
+          <button class="navbar-toggler element-hamburger ml-auto col-2" role="button" data-toggle="collapse" aria-expanded="false" data-target="#topNav">
             <span></span>
             <span></span>
             <span></span>
           </button>
 
           <!-- Expandable links menu -->
-          <div class="collapse navbar-collapse expand-into-menu col-md-5 col-lg-5 ml-md-auto" id="topNav">
-            <ul class="navbar-nav d-flex flex-column align-items-start justify-content-between align-content-between flex-md-row flex-grow-1">
-              <li class="nav-item mr-md-3 mr-lg-5">
+          <div class="collapse navbar-collapse expand-into-menu col-lg-5 ml-auto" id="topNav">
+            <ul class="navbar-nav d-flex flex-column align-items-end justify-content-between align-content-between flex-lg-row flex-grow-1">
+              <li class="nav-item mr-lg-3 mr-lg-3">
                 <a href="#" class="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" data-target="#follow" aria-controls="follow"><?php _e('Follow', 'pfleury-wordpress'); ?></a>
               </li>
-              <li class="nav-item mr-md-3 mr-lg-5">
+              <li class="nav-item mr-lg-3 mr-lg-3">
                 <a href="#" class="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" data-target="#contact" aria-controls="contact"><?php _e('Contact', 'pfleury-wordpress'); ?></a>
               </li>
               <li class="nav-item">
@@ -175,21 +180,21 @@
         $about_url = pll_current_language() === 'fr' ? '/en/a-propos/' : '/en/about/';
         ?>
         <ul class="navbar-nav nav--secondary d-flex flex-row row flex-fill">
-          <li class="nav-item col-md-7 col-6
+          <li class="nav-item col-5 col-lg-4
             <?php if (
             is_home() || in_category( array('projets', 'projects') )
             ) { echo ' current_page_item'; } ?>">
             <a href="<?php echo $work_url; ?>" class="nav-link">
               <?php _e('Design', 'pfleury-wordpress'); ?>
-              <span class="link-animated-superscript">
+              <span class="link-animated-superscript d-none d-sm-block">
                 <?php _e('Explore my work', 'pfleury-wordpress'); ?>
               </span>
             </a>
           </li>
-          <li class="nav-item col-6 col-md-5<?php if (is_page( array('about', 'a-propos', 'studio') )) { echo ' current_page_item'; } ?>">
+          <li class="nav-item col-5 col-lg-4<?php if (is_page( array('about', 'a-propos', 'studio') )) { echo ' current_page_item'; } ?>">
             <a href="<?php echo $about_url; ?>" class="nav-link">
               <?php _e('Studio', 'pfleury-wordpress'); ?>
-              <span class="link-animated-superscript">
+              <span class="link-animated-superscript d-none d-sm-block">
                 <?php _e('About', 'pfleury-wordpress'); ?>
               </span>
             </a>

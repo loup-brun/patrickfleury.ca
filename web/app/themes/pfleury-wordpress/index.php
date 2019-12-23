@@ -31,11 +31,7 @@ get_header();
         $tags = str_replace(' ', '-', single_tag_title('', false));
       }
 
-      if (pll_current_language() === 'fr') {
-        $projectsQuery = new WP_Query( array('post_type' => 'projet', 'orderby' => 'weight', 'order' => 'ASC', 'nopaging' => true, 'tag' => $tags) );
-      } else if (pll_current_language() === 'en') {
-        $projectsQuery = new WP_Query( array('post_type' => 'project', 'order' => 'weight', 'order_by' => 'ASC', 'nopaging' => true, 'tag' => $tags) );
-      }
+      $projectsQuery = new WP_Query( array('post_type' => 'projet', 'nopaging' => true, 'tag' => $tags) );
 
       if ($projectsQuery->have_posts()): ?>
       <div class="row">

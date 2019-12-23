@@ -101,6 +101,12 @@ function pfleury_wordpress_register_required_plugins() {
 //		),
 
 		array(
+			'name'         => 'Post Types Order',
+			'slug'         => 'post-types-order',
+			'required'     => false,
+		),
+
+		array(
 			'name'         => 'Duplicate Page',
 			'slug'         => 'duplicate-page',
 			'required'     => false,
@@ -304,9 +310,10 @@ function create_posttype_projets() {
       'excerpt', // post excerpt
       'custom-fields', // custom fields
       'weight', // order
-      'tags', // tags
+      'order',
+      'slug',
       'revisions', // post revisions
-      'post-formats', // post formats
+      'editor' // support gutenberg editor
     ),
     'labels' => array(
       'name' => _x('Projets', 'plural'),
@@ -326,7 +333,8 @@ function create_posttype_projets() {
     'query_var' => true,
     'rewrite' => array('slug' => 'projets'),
     'has_archive' => true,
-    'hierarchical' => true,
+    'hierarchical' => false,
+    'show_in_rest' => true, // gutenberg editor
   ) );
   register_taxonomy_for_object_type( 'post_tag', 'projet' );
 }
@@ -339,6 +347,7 @@ function create_posttype_testimonials() {
       'title', // post title
       'editor', // post content
       'custom-fields', // custom fields
+      'editor'
     ),
     'labels' => array(
       'name' => _x('Témoignages', 'plural'),
@@ -359,6 +368,7 @@ function create_posttype_testimonials() {
     'rewrite' => array('slug' => 'projets'),
     'has_archive' => true,
     'hierarchical' => false,
+    'show_in_rest' => true
   ) );
 }
 add_action( 'init', 'create_posttype_testimonials' );

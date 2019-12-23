@@ -188,7 +188,7 @@
     > a {
       @extend .link-animated;
       @extend .link-animated-with-superscript;
-      padding: .35rem .05rem;
+      padding: .35rem .05rem .5rem;
       margin-right: 0 !important;
       position: relative;
       &:hover {

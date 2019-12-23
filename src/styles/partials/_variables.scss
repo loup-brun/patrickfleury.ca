@@ -278,7 +278,7 @@ $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
 
-$font-size-root:              22px;
+$font-size-root:              20px;
 $font-size-base:              1rem; // root
 $font-size-lg:                $font-size-base * 2.5; // 55px
 $font-size-sm:                $font-size-base * .727; // 16px
@@ -292,10 +292,10 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 3.273; // 72px
-$h2-font-size:                $font-size-base * 2.5; // 55px
-$h3-font-size:                $font-size-base * 1.636; // 36px
-$h4-font-size:                $font-size-base * 1.091; // 24px
+$h1-font-size:                $font-size-base * 3.3; // 66px
+$h2-font-size:                $font-size-base * 2.5; // 50px
+$h3-font-size:                $font-size-base * 1.8; // 36px
+$h4-font-size:                $font-size-base * 1.2; // 24px
 $h5-font-size:                $font-size-base * 1; // 22px
 $h6-font-size:                $font-size-base !default;
 

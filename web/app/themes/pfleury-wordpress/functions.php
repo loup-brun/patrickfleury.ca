@@ -337,6 +337,7 @@ function create_posttype_projets() {
     'show_in_rest' => true, // gutenberg editor
   ) );
   register_taxonomy_for_object_type( 'post_tag', 'projet' );
+  register_taxonomy_for_object_type( 'post_category', 'projet' );
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype_projets' );

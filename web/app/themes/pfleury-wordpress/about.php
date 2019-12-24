@@ -40,11 +40,7 @@ get_header();
       // Query testimonials
       $testimonialsQuery = array();
 
-      if (pll_current_language() === 'fr') {
-        $testimonialsQuery = new WP_Query( array('post_type' => 'temoignage', 'nopaging' => true, 'orderby' => 'weight', 'order' => 'ASC') );
-      } else if (pll_current_language() === 'en') {
-        $testimonialsQuery = new WP_Query( array('post_type' => 'temoignage', 'nopaging' => true, 'orderby' => 'weight', 'order' => 'ASC' ) );
-      }
+      $testimonialsQuery = new WP_Query( array('post_type' => 'temoignage') );
 
       if ($testimonialsQuery->have_posts()) { ?>
       <section class="py-5" id="testimonials">
@@ -85,6 +81,8 @@ get_header();
     <?php
       } // end if query
     } // end testimonials
+
+    wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
     ?>
 
   <?php if (get_field('about_outro')): ?>

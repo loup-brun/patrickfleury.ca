@@ -8,7 +8,6 @@ get_header(); ?>
   // Featured header image
   while (have_posts()): the_post();
   if (has_post_thumbnail()): ?>
-
   <header class="header-img">
     <div class="container-fluid content">
 
@@ -22,6 +21,88 @@ get_header(); ?>
   endif;
   endwhile;
   ?>
+
+  <?php // Begin WIP
+
+  $wipQuery = array();
+  $wipQuery = new WP_Query( array('post_type' => 'wip', 'nopaging' => true) );
+
+  if ($wipQuery->have_posts()) {
+    $output = ''; // setup output string
+
+    $output .= '<section id="instagram" class="py-3">';
+
+    $output .= '
+    <div class="container">
+      <h2 class="h4 text-center">' . __('What I’ve been up to lately', 'pfleury-wordpress') . '</h2>
+    </div>';
+
+    $wip_posts_counter = 0;
+
+    $output .= '
+    <div class="swipe-js instagram-swipe" id="instagram-swipe">
+      <div class="swipe-js-wrap d-flex flex-row">';
+
+    while ($wipQuery->have_posts()) : $wipQuery->the_post();
+      if ($wip_posts_counter % 4 === 0) {
+        $output .= '
+        <section class="swipe-js-slide d-flex flex-row align-items-start justify-content-between flex-wrap instagram-feed-slide">';
+      }
+      if ($wip_posts_counter < 12) { // max 12 posts
+        if ($wip_posts_counter % 2) { // alternate class on even slides
+        $output .= '
+          <figure class="instagram-feed-figure mt-md-5">';
+        } else {
+        $output .= '
+          <figure class="instagram-feed-figure">';
+        }
+
+        $output .= '<div class="instagram-feed-image" style="background-image: url(' . wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium_large')[0] . ')" role="img"></div>';
+        $output .= '
+            <figcaption>
+              <small>
+                — ' . the_date('Y.m.d', '', '', false) . '
+              </small>
+            </figcaption>
+          </figure>';
+        if ($wip_posts_counter % 4 === 3) {
+          $output .= '
+          </section>'; // close for each 4 posts
+        }
+        $wip_posts_counter++; // increment posts counter
+      }
+    endwhile; // End while().
+    $output .= '
+      </div>
+
+      <footer class="swipe-js-numbers text-center">
+        <span class="slider-number-current"></span>
+        &nbsp;
+        <span class="slider-number-separator">/</span>
+        &nbsp;
+        <span class="slider-number-total"></span>
+      </footer>';
+
+    if ($wip_posts_counter > 4) {
+      $output .= '
+      <button class="swipe-js-btn -prev">
+        <div class="icon icon-arrow-left"></div>
+      </button>
+      <button class="swipe-js-btn -next">
+        <div class="icon icon-arrow-right"></div>
+      </button>';
+    }
+    $output .= '
+    </div>
+  </section>';
+
+    // Return the HTML block.
+    echo $output;
+  } // End if().
+
+  wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
+  // End WIP ?>
+
   <?php
   // Query projects
   $featured_projects = get_field('featured_projects');

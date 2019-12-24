@@ -362,13 +362,42 @@ function create_posttype_testimonials() {
     ),
     'public' => true,
     'query_var' => true,
-    'rewrite' => array('slug' => 'projets'),
     'has_archive' => false,
     'hierarchical' => false,
     'show_in_rest' => true
   ) );
 }
 add_action( 'init', 'create_posttype_testimonials' );
+
+function create_posttype_wip() {
+  register_post_type( 'wip', array(
+    'supports' =>  array(
+      'title', // post title
+      'custom-fields', // custom fields
+      'thumbnail',
+    ),
+    'labels' => array(
+      'name' => _x('WIP', 'plural'),
+      'singular_name' => _x('WIP', 'singular'),
+      'menu_name' => _x('WIP', 'admin menu'),
+      'name_admin_bar' => _x('WPI', 'admin bar'),
+      'add_new' => _x('Nouveau WIP', 'add new'),
+      'add_new_item' => __('Ajouter un nouveau WIP'),
+      'new_item' => __('Nouveau WIP'),
+      'edit_item' => __('Éditer le WIP'),
+      'view_item' => __('Voir le WIP'),
+      'all_items' => __('Tous les WIP'),
+      'search_items' => __('Chercher parmi les WIP'),
+      'not_found' => __('Aucun WIP trouvé.'),
+    ),
+    'public' => true,
+    'query_var' => true,
+    'has_archive' => false,
+    'hierarchical' => false,
+    'show_in_rest' => true
+  ) );
+}
+add_action( 'init', 'create_posttype_wip' );
 
 /**
  * Remove `posts` from admin menu

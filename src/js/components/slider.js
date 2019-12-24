@@ -166,7 +166,7 @@ function updateSliderNumbers(sliderElem, swipeInstance) {
   if (totalElem) {
     // set total if not set
     if (totalElem.innerHTML === '') {
-      totalElem.innerHTML = sliderElem.querySelector('.swipe-js-wrap').children.length;
+      totalElem.innerHTML = swipeInstance.getNumSlides();
     }
   }
 

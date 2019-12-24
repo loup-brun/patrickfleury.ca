@@ -51,7 +51,7 @@
     <header class="header accordion" id="toggle-big-links">
       <nav class="navbar navbar-expand-lg navbar--primary align-items-center">
         <div class="row flex-fill">
-          <div class="col-10 col-lg-6">
+          <div class="col-10 col-lg-6 pr-3">
             <a href="<?php echo home_url(); ?>" class="navbar-brand navbar-brand-primary row d-flex flex-row align-items-center align-content-start">
               <span class="sr-only"><?php bloginfo('name'); ?></span>
 

@@ -84,11 +84,15 @@
 }
 
 .brand-name {
-  max-height: $brand-height;
+  max-width: 100%;
+  max-height: 100%;
+  height: $brand-height;
+  width: auto;
 }
-
 .brand-logo {
   max-height: $brand-height;
+  max-width: 100%;
+  display: block;
 }
 
 

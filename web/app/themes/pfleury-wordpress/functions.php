@@ -309,9 +309,6 @@ function create_posttype_projets() {
       'thumbnail', // featured images
       'excerpt', // post excerpt
       'custom-fields', // custom fields
-      'weight', // order
-      'order',
-      'slug',
       'revisions', // post revisions
       'editor' // support gutenberg editor
     ),
@@ -323,7 +320,7 @@ function create_posttype_projets() {
       'add_new' => _x('Nouveau projet', 'add new'),
       'add_new_item' => __('Ajouter un nouveau projet'),
       'new_item' => __('Nouveau projet'),
-      'edit_item' => __('Éditer projet'),
+      'edit_item' => __('Éditer le projet'),
       'view_item' => __('Voir le projet'),
       'all_items' => __('Tous les projets'),
       'search_items' => __('Chercher parmi les projets'),
@@ -331,7 +328,6 @@ function create_posttype_projets() {
     ),
     'public' => true,
     'query_var' => true,
-    'rewrite' => array('slug' => 'projets'),
     'has_archive' => true,
     'hierarchical' => false,
     'show_in_rest' => true, // gutenberg editor

@@ -21,8 +21,11 @@ while (have_posts()):
 
     <header class="header-page-article my-3">
 
-      <?php if (get_the_post_thumbnail()) {
-      the_post_thumbnail('full', array('class'=> 'img-fluid mt-0'));
+       <?php
+      $header_image = get_field('header_image');
+      $size = 'full';
+      if ($header_image) {
+        echo wp_get_attachment_image($header_image, $size);
       } ?>
 
       <h1 class="my-5">

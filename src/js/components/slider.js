@@ -54,7 +54,8 @@ function createSlider(sliderElem) {
       updateSliderNumbers(sliderElem, swipeInstance);
 
       updateSliderNav(sliderElem, swipeInstance);
-    }
+    },
+    draggable: true
   });
 
   makeSliderNavigation(sliderElem, swipeInstance);

@@ -51,7 +51,7 @@
     <header class="header accordion" id="toggle-big-links">
       <nav class="navbar navbar-expand-lg navbar--primary align-items-center">
         <div class="row flex-fill">
-          <div class="col-10 col-lg-6 pr-3">
+          <div class="col-10 col-lg-6">
             <a href="<?php echo home_url(); ?>" class="navbar-brand navbar-brand-primary row d-flex flex-row align-items-center align-content-start">
               <span class="sr-only"><?php bloginfo('name'); ?></span>
 
@@ -64,7 +64,7 @@
                 $iconPath = get_theme_root_uri() . '/' . get_template() . '/assets/Nom-en.svg'; // en
               ?>
 
-              <div class="col-6 col-lg-9">
+              <div class="col-6 col-lg-9 pr-3">
                 <img src="<?php echo get_theme_mod( 'brand_name_img', $iconPath); ?>"
                      alt="<?php bloginfo('name'); ?>"
                      class="brand-name">

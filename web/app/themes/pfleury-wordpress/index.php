@@ -13,7 +13,7 @@ get_header();
       if(is_tag()) {
         single_tag_title(_e('Explore my work', 'pfleury-wordpress') . ' / ');
       } else if (is_404()) {
-        echo 'Whoops! 404';
+        echo _e('Whoops! 404', 'pfleury-wordpress');
       } else {
         _e('Explore my work', 'pfleury-wordpress');
       }

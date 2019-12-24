@@ -363,7 +363,7 @@ function create_posttype_testimonials() {
     'public' => true,
     'query_var' => true,
     'rewrite' => array('slug' => 'projets'),
-    'has_archive' => true,
+    'has_archive' => false,
     'hierarchical' => false,
     'show_in_rest' => true
   ) );

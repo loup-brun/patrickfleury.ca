@@ -12,7 +12,7 @@
       <div class="col-12 col-md-6 mt-md-5">
         <h5 class="mb-2 mb-md-3"><?php _e('Complete Credits', 'pfleury-wordpress'); ?></h5>
 
-        <div class="content ml-md-5 small">
+        <div class="ml-md-5 small">
           <?php echo $credits; ?>
         </div>
       </div>

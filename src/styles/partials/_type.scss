@@ -1,5 +1,10 @@
 // stylelint-disable declaration-no-important, selector-list-comma-newline-after
 
+::selection {
+  background-color: rgba($body-color, .75);
+  color: invert($body-color);
+}
+
 //
 // Headings
 //

@@ -328,7 +328,7 @@ function create_posttype_projets() {
     ),
     'public' => true,
     'query_var' => true,
-    'has_archive' => true,
+    'has_archive' => false,
     'hierarchical' => false,
     'show_in_rest' => true, // gutenberg editor
   ) );

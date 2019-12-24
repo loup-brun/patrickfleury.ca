@@ -97,7 +97,6 @@ function addSliderNav(sliderElem, swipeInstance) {
       i;
 
   if (sliderNavWrapper) {
-    console.log('we have a slider nav wrapper');
     for (i = 0; i < numSlides; i++) {
       bindEach(i);
     }

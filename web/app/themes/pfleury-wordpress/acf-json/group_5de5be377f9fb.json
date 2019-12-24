@@ -1,0 +1,51 @@
+{
+    "key": "group_5de5be377f9fb",
+    "title": "Front Page",
+    "fields": [
+        {
+            "key": "field_5de5be3e8f0c8",
+            "label": "Featured Projects",
+            "name": "featured_projects",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "projet"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "post_type"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": 3,
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "front-page.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1577151060
+}

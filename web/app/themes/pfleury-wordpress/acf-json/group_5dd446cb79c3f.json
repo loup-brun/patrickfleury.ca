@@ -1,0 +1,62 @@
+{
+    "key": "group_5dd446cb79c3f",
+    "title": "Témoignages",
+    "fields": [
+        {
+            "key": "field_5dd446f430977",
+            "label": "Auteur du témoignage",
+            "name": "testimony_author",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Author’s name, ex. Barack Obama",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ddec32459187",
+            "label": "Entreprise (facultative)",
+            "name": "testimony_company",
+            "type": "text",
+            "instructions": "Ajouter un nom d’entreprise qui apparaîtra sous le nom.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "temoignage"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1577150984
+}

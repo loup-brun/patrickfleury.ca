@@ -337,7 +337,7 @@ function create_posttype_projets() {
     'show_in_rest' => true, // gutenberg editor
   ) );
   register_taxonomy_for_object_type( 'post_tag', 'projet' );
-  register_taxonomy_for_object_type( 'post_category', 'projet' );
+  register_taxonomy_for_object_type( 'category', 'projet' );
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype_projets' );
@@ -401,8 +401,7 @@ add_post_type_support( 'projet', array(
 /**
  * Add page attributes to posts
  */
-add_post_type_support( 'projet', 'page-attributes' );
-add_post_type_support( 'testimonials', 'page-attributes' );
+//add_post_type_support( 'projet', 'page-attributes' );
 
 /**
  * ========================================================

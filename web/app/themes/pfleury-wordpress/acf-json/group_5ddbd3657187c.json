@@ -3,29 +3,6 @@
     "title": "About",
     "fields": [
         {
-            "key": "field_5ddbd384c9227",
-            "label": "Afficher les témoignages",
-            "name": "show_testimonials",
-            "type": "checkbox",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "true": "Oui"
-            },
-            "allow_custom": 0,
-            "default_value": [],
-            "layout": "vertical",
-            "toggle": 0,
-            "return_format": "value",
-            "save_custom": 0
-        },
-        {
             "key": "field_5df1b1d5f55d3",
             "label": "Texte d’introduction",
             "name": "about_intro",
@@ -62,5 +39,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578436685
+    "modified": 1578436825
 }

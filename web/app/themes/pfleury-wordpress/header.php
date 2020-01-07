@@ -78,11 +78,13 @@
             </a>
           </div>
 
-          <button class="navbar-toggler element-hamburger ml-auto col-2" role="button" data-toggle="collapse" aria-expanded="false" data-target="#topNav">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <div class="col-2 d-flex justify-content-end d-lg-none">
+            <button class="navbar-toggler pr-0 element-hamburger" role="button" data-toggle="collapse" aria-expanded="false" data-target="#topNav">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
 
           <!-- Expandable links menu -->
           <div class="collapse navbar-collapse expand-into-menu col-lg-5 ml-auto" id="topNav">

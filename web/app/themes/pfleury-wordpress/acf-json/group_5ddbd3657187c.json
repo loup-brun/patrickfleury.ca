@@ -30,26 +30,7 @@
             "label": "Texte d’introduction",
             "name": "about_intro",
             "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_5e01981c1e3cb",
-            "label": "Contenu après le carousel",
-            "name": "about_outro",
-            "type": "wysiwyg",
-            "instructions": "Poursuivez le contenu après les témoignages.",
+            "instructions": "Texte de plus grande taille qui accompagne le titre, avant le contenu principal.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -81,5 +62,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1577163035
+    "modified": 1578436685
 }

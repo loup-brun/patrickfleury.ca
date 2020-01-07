@@ -83,7 +83,6 @@ get_header();
     } // end testimonials
 
     wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-    ?>
 
   <?php if (get_field('about_outro')): ?>
   <section class="content">

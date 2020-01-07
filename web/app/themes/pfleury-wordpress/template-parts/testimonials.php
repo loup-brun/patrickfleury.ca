@@ -13,7 +13,7 @@ function testimonials_template_code() {
 
   if ($testimonialsQuery->have_posts()) {
     $return_string .= '
-      <div class="swipe-js py-3" id="testimonials">
+      <div class="swipe-js my-3" id="testimonials">
         <div class="swipe-js-wrap d-flex flex-row">';
           while ($testimonialsQuery->have_posts()) : $testimonialsQuery->the_post();
 

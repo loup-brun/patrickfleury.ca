@@ -450,6 +450,18 @@ add_filter( 'siteorigin_panels_local_layouts_directories', 'siteorigin_layouts_f
  */
 
 /**
+ * TESTIMONIALS
+ */
+
+require_once(get_template_directory() . '/template-parts/testimonials.php');
+
+add_shortcode('pfleury-testimonials', 'testimonials_shortcode');
+function testimonials_shortcode() {
+    return testimonials_template_code();
+}
+
+
+/**
  * i18n support
  */
 

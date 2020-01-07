@@ -13,9 +13,7 @@ function testimonials_template_code() {
 
   if ($testimonialsQuery->have_posts()) {
     $return_string .= '
-    <section class="py-5" id="testimonials">
-      <h3 class="text-center">' . __('What clients are saying', 'pfleury-wordpress') . '</h3>
-      <div class="swipe-js">
+      <div class="swipe-js py-3" id="testimonials">
         <div class="swipe-js-wrap d-flex flex-row">';
           while ($testimonialsQuery->have_posts()) : $testimonialsQuery->the_post();
 
@@ -44,11 +42,11 @@ function testimonials_template_code() {
           <button class="swipe-js-btn -next">
             <div class="icon icon-arrow-right"></div>
           </button>
-          <nav class="swipe-js-nav text-center">
+          <nav class="swipe-js-numbers">
+            <span class="slider-number-current"></span> / <span class="slider-number-total"></span>
           </nav>';
         endif; // if sizesof > 1
-       $return_string .= '</div>
-    </section>';
+      $return_string .= '</div>';
   } // end if query
 
   wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly

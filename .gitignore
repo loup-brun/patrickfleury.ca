@@ -47,7 +47,7 @@ flow-coverage/
 .DS_Store
 
 # Composer
-vendor/
+/vendor/
 
 # WordPress
 web/wp

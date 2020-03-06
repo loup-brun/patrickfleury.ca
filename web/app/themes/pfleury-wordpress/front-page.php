@@ -156,7 +156,7 @@ get_header(); ?>
         $output .= '
             <figcaption>
               <small>
-                — ' . the_date('Y.m.d', '', '', false) . '
+                ' . the_title() . '
               </small>
             </figcaption>
           </figure>';

@@ -102,7 +102,7 @@
           <?php if (get_theme_mod('follow_pinterest')) { ?>
           <!-- Pinterest -->
           <li class="nav-item">
-            <a href="https://pinterest.com/<?php echo get_theme_mod('follow_pinterest'); ?>" class="nav-link text-uppercase" target="_blank" rel="nofollow noopener">Pint</a>
+            <a href="https://pinterest.com/<?php echo get_theme_mod('follow_pinterest'); ?>" class="nav-link text-uppercase" target="_blank" rel="nofollow noopener">Pin</a>
           </li>
           <?php } ?>
           <?php if (get_theme_mod('follow_news')) { ?>

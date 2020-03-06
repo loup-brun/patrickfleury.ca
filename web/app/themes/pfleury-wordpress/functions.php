@@ -656,7 +656,7 @@ function theme_customizer( $wp_customize ) {
     'follow_pinterest',
       array(
         'default' => '',
-        'placeholder' => '@username'
+        'placeholder' => 'username'
       )
   );
 

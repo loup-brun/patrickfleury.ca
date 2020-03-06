@@ -137,7 +137,7 @@
             <?php } ?>
             <!-- Pinterest -->
             <?php if (get_theme_mod('follow_pinterest')) { ?>
-            <a href="https://behance.net/<?php echo get_theme_mod('follow_pinterest'); ?>" class="nav-item" target="_blank" rel="nofollow noopener">Pinterest</a>
+            <a href="https://pinterest.com/<?php echo get_theme_mod('follow_pinterest'); ?>" class="nav-item" target="_blank" rel="nofollow noopener">Pinterest</a>
             <?php } ?>
             <!-- News -->
             <?php if (get_theme_mod('follow_news')) { ?>
